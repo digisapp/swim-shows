@@ -52,7 +52,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #ff1493, #00b7a8);
+            background: #000000; /* Changed to solid black */
             color: var(--white);
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -98,13 +98,16 @@
             margin: 0 auto;
             max-width: 1200px;
             padding: 15px 20px;
+            gap: 20px;
         }
 
         .sticky-logo {
             filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
-            height: 45px;
+            height: 60px;
             width: auto;
             transition: var(--transition-standard);
+            flex: 0 0 auto;
+            order: 2; /* Center the logo */
         }
 
         .sticky-logo:hover {
@@ -115,7 +118,10 @@
         .countdown-wrapper {
             align-items: center;
             display: flex;
-            gap: 20px;
+            gap: 10px;
+            flex: 1;
+            justify-content: flex-end;
+            order: 1; /* Left side */
         }
 
         .swim-week-text {
@@ -141,6 +147,9 @@
         .sticky-cta-buttons {
             display: flex;
             gap: 12px;
+            flex: 1;
+            justify-content: flex-start;
+            order: 3; /* Right side */
         }
 
         .sticky-cta-button {
@@ -196,107 +205,30 @@
             color: var(--primary-color);
         }
 
-        .main-logo {
-            filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 1));
-            height: auto;
+        .flyer-instagram-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
             margin: 40px auto;
-            max-width: 280px;
-            display: block;
-            transition: var(--transition-standard);
-        }
-
-        .main-logo:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(0px 0px 25px rgba(0, 255, 204, 1));
-        }
-
-        .section-header {
-            animation: gradientText 10s ease infinite;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
-            background-size: 300% auto;
-            font-size: clamp(28px, 5vw, 48px);
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin: 40px 0;
-            text-align: center;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-            text-transform: uppercase;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
-        }
-
-        .section-header::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
-            border-radius: 2px;
-            animation: shimmer 2s ease-in-out infinite;
-        }
-
-        @keyframes gradientText {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes shimmer {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
+            max-width: 1200px;
         }
 
         .flyer-image {
             height: auto;
-            margin: 20px auto;
-            max-width: 600px;
-            display: block;
-            border-radius: var(--border-radius-medium);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
-        }
-
-        .video-container {
-            aspect-ratio: 16 / 9;
-            border-radius: var(--border-radius-medium);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
-            margin: 20px auto;
-            overflow: hidden;
-            max-width: 900px;
-            background: var(--glass-bg);
-            border: 2px solid var(--glass-border);
-        }
-
-        .video-container iframe {
-            border: none;
-            display: block;
-            height: 100%;
+            max-width: 100%;
             width: 100%;
+            max-width: 500px;
             border-radius: var(--border-radius-medium);
-        }
-
-        /* Added: Styling for video groups and titles */
-        .video-group {
-            margin: 40px auto;
-            max-width: 900px;
-        }
-
-        .video-title {
-            color: var(--white);
-            font-size: clamp(20px, 3vw, 24px);
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-align: left;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            flex: 1;
+            min-width: 300px;
         }
 
         .instagram-embed-container {
-            margin: 80px auto;
-            max-width: 900px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
         }
 
         .instagram-feed {
@@ -310,8 +242,36 @@
         .instagram-feed iframe {
             border: none;
             display: block;
-            height: 700px;
+            height: 500px;
             width: 100%;
+        }
+
+        .video-group {
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .video-container {
+            aspect-ratio: 16 / 9;
+            border-radius: var(--border-radius-medium);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            overflow: hidden;
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+        }
+
+        .video-container iframe {
+            border: none;
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: var(--border-radius-medium);
         }
 
         .upcoming-shows-container {
@@ -547,37 +507,14 @@
             font-weight: 300;
         }
 
-        .back-to-top {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border: 2px solid var(--glass-border);
-            border-radius: 50%;
-            bottom: 30px;
-            color: var(--white);
-            cursor: pointer;
-            font-size: 20px;
-            height: 60px;
-            opacity: 0;
-            position: fixed;
-            right: 30px;
-            transition: var(--transition-standard);
-            width: 60px;
-            z-index: 1000;
-            box-shadow: 0 8px 25px rgba(255, 20, 147, 0.4);
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-        }
-
-        .back-to-top:hover {
-            transform: scale(1.15) rotate(360deg);
-            box-shadow: 0 12px 30px rgba(255, 20, 147, 0.6);
-        }
-
         @media (max-width: 1024px) {
             .main-section {
                 margin: 30px 20px;
                 padding: 35px 25px;
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -588,16 +525,18 @@
                 padding: 10px 15px;
             }
             
-            .sticky-logo {
-                height: 35px;
-            }
-            
             .countdown-wrapper {
                 display: none;
             }
             
+            .sticky-logo {
+                height: 50px;
+                order: 1;
+            }
+            
             .sticky-cta-buttons {
                 gap: 8px;
+                order: 2;
             }
             
             .show-item {
@@ -616,10 +555,14 @@
                 width: 100%;
             }
             
-            .video-container,
-            .instagram-embed-container,
-            .upcoming-shows-container {
-                margin: 50px 15px;
+            .flyer-instagram-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .flyer-image,
+            .instagram-embed-container {
+                max-width: 100%;
             }
             
             .instagram-feed iframe {
@@ -629,11 +572,15 @@
             .upcoming-shows-container {
                 padding: 30px 20px;
             }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
-            .main-logo {
-                max-width: 200px;
+            .sticky-logo {
+                height: 40px;
             }
             
             .sticky-cta-button {
@@ -694,8 +641,7 @@
         }
 
         .sticky-cta-button:focus,
-        .show-button:focus,
-        .back-to-top:focus {
+        .show-button:focus {
             outline: 3px solid var(--secondary-color);
             outline-offset: 3px;
         }
@@ -728,19 +674,19 @@
     <main class="main-section">
         <header class="sticky-header" role="banner">
             <div class="sticky-header-content">
-                <img src="images/Swim Shows Logo.png" 
-                     alt="EXA SWIM Logo" 
-                     class="sticky-logo" 
-                     loading="eager" 
-                     decoding="async">
                 <div class="countdown-wrapper">
-                    <span class="swim-week-text">NY Fashion Week Show</span>
+                    <span class="swim-week-text">NYFW</span>
                     <div class="sticky-countdown" id="countdown" aria-live="polite" role="timer">
                         <span id="countdown-days">00</span>D 
                         <span id="countdown-hours">00</span>H 
                         <span id="countdown-minutes">00</span>M
                     </div>
                 </div>
+                <img src="images/Swim Shows Logo.png" 
+                     alt="EXA SWIM Logo" 
+                     class="sticky-logo" 
+                     loading="eager" 
+                     decoding="async">
                 <div class="sticky-cta-buttons">
                     <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="sticky-cta-button" aria-label="Purchase tickets for EXA SWIM shows">
                         TICKETS
@@ -752,501 +698,434 @@
             </div>
         </header>
 
-        <img src="images/Swim Shows Logo.png" 
-             alt="EXA SWIM Logo" 
-             class="main-logo fade-in" 
-             loading="eager" 
-             decoding="async">
+        <div class="flyer-instagram-container fade-in">
+            <img src="images/Swim Shows World Tour Flyer.JPG" 
+                 alt="EXA SWIM World Tour Flyer" 
+                 class="flyer-image" 
+                 loading="lazy" 
+                 decoding="async">
+            <div class="instagram-embed-container" aria-label="EXA SWIM Instagram feed">
+                <div class="instagram-feed">
+                    <iframe src="https://www.instagram.com/swim.shows/embed" 
+                            width="100%" 
+                            height="500" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            allowtransparency="true" 
+                            loading="lazy"
+                            title="EXA SWIM Instagram Feed"></iframe>
+                    <p style="display: none; text-align: center; color: var(--white);">Instagram feed unavailable. Visit <a href="https://www.instagram.com/swim.shows" target="_blank" rel="noopener">EXA SWIM on Instagram</a>.</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="video-container fade-in" aria-label="EXA SWIM featured video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LyMckCEBd4A?si=WwrXJyrdaRwKkn6V" 
-                    title="EXA SWIM - Official Video" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen
-                    loading="lazy"></iframe>
-        </section>
-
-        <img src="images/Swim Shows World Tour Flyer.JPG" 
-             alt="EXA SWIM World Tour Flyer" 
-             class="flyer-image fade-in" 
-             loading="lazy" 
-             decoding="async">
-
-        <section class="video-container fade-in" aria-label="EXA SWIM additional video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Cc0N7a-eCZw?si=0z4ITSxJiQcoDWLK" 
-                    title="EXA SWIM - Additional Video" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen
-                    loading="lazy"></iframe>
-        </section>
-
-        <section class="instagram-embed-container fade-in" aria-label="EXA SWIM Instagram feed">
-            <div class="instagram-feed">
-                <iframe src="https://www.instagram.com/swim.shows/embed" 
-                        width="100%" 
-                        height="700" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        allowtransparency="true" 
-                        loading="lazy"
-                        title="EXA SWIM Instagram Feed"></iframe>
-                <p style="display: none; text-align: center; color: var(--white);">Instagram feed unavailable. Visit <a href="https://www.instagram.com/swim.shows" target="_blank" rel="noopener">EXA SWIM on Instagram</a>.</p>
-            </div>
-        </section>
-
-        <!-- Added: SWIM SHOWS TV Section -->
-        <section class="video-group fade-in" aria-label="SWIM SHOWS TV Videos">
-            <h2 class="section-header">SWIM SHOWS TV</h2>
-            
-            <!-- Swim Week 2025 Videos -->
-            <h3 class="video-title">Swim Week 2025 Videos</h3>
-            <div class="video-container" aria-label="Sexy Media Full Show Day 1">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QFDBeGQILzY?si=Bhs7K74T3fa6tVmD" 
-                        title="Sexy Media - Full Show Day 1" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Sexy Media Full Show Day 2">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1vyiIpJhHA?si=xA_9Er_E3_hMd-pK" 
-                        title="Sexy Media - Full Show Day 2" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Miami Swim Week TV -->
-            <h3 class="video-title">Miami Swim Week TV</h3>
-            <div class="video-container" aria-label="Miami Swim Week TV - EXA Swim">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Cc0N7a-eCZw?si=0z4ITSxJiQcoDWLK" 
-                        title="Miami Swim Week TV - EXA Swim" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Miami Swim Week TV - Pia Bolte">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/yU6lVxgVAfU?si=poh0k2u_7EDSQzCE" 
-                        title="Miami Swim Week TV - Pia Bolte" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Miami Swim Week TV - Super">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/CyXsa4-yi7U?si=fyLx2y-OdWY1p-Po" 
-                        title="Miami Swim Week TV - Super" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Miami Swim Week TV - Mariella Swim">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/A5oiq5XhylI?si=U5_7BMuOdxBFMoRq" 
-                        title="Miami Swim Week TV - Mariella Swim" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Miami Swim Week TV - Veve">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/00aJzz0qEcA?si=SD5WBymxoM3Cs94C" 
-                        title="Miami Swim Week TV - Veve" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Miami Swim Week TV - Bikini Flavors">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/x4AB3dFsMKs?si=Q9miTgIPfkXAnzye" 
-                        title="Miami Swim Week TV - Bikini Flavors" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Miami Swim Week TV - Karen">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/K0egMLGe0so?si=SvywErvvcagoNw6l" 
-                        title="Miami Swim Week TV - Karen" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Miami Swim Week TV - Sherbert Lemons">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LRzzpEl7kiU?si=KnPcmjpLTP-JF2rz" 
-                        title="Miami Swim Week TV - Sherbert Lemons" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Miami Swim Week TV - Bronzed">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Kowpi6S7UO0?si=XA_QARthJQoLAupV" 
-                        title="Miami Swim Week TV - Bronzed" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Miami Swim Week TV - Capristan">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/mU0A202Dik8?si=lGCw20ppG85G2sMv" 
-                        title="Miami Swim Week TV - Capristan" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Jeff Sarita -->
-            <h3 class="video-title">Jeff Sarita</h3>
-            <div class="video-container" aria-label="Jeff Sarita - Capristan">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/PTaE4eTGAWg?si=ldKpv3Fc0Gl1FWZO" 
-                        title="Jeff Sarita - Capristan" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Jeff Sarita - Super">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/6m3C7xIPB4A?si=_qX5glPXjwrAScCN" 
-                        title="Jeff Sarita - Super" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Jeff Sarita - Mariella">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/JZNTZsJDKuI?si=lbyl6PnNIWKlo8zH" 
-                        title="Jeff Sarita - Mariella" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Zexy Baddies -->
-            <h3 class="video-title">Zexy Baddies</h3>
-            <div class="video-container" aria-label="Zexy Baddies - Super">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/wFvgmtTRbGo?si=evMR1F6J3VgQfWec" 
-                        title="Zexy Baddies - Super" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Zexy Baddies - Sewhi">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/vdt1lbuJC24?si=B8faJ8tOPITOEhdI" 
-                        title="Zexy Baddies - Sewhi" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Zexy Baddies - Casting Call">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/WGbjoyq09H0?si=2oyOP2fGJmpFkmva" 
-                        title="Zexy Baddies - Casting Call" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Projet Nu -->
-            <h3 class="video-title">Projet Nu</h3>
-            <div class="video-container" aria-label="Projet Nu - EXA Swim">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LyMckCEBd4A?si=WwrXJyrdaRwKkn6V" 
-                        title="Projet Nu - EXA Swim" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Golden">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/g2Il6jXLwRw?si=LzL3G4As11ilkXqa" 
-                        title="Projet Nu - Golden" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Sewhi">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/bYzzNSEEKuM?si=Vhn8UnMmIPt9azHe" 
-                        title="Projet Nu - Sewhi" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Bronzed">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VykF9PVNXHk?si=6QTbNrl1YxQkRR9X" 
-                        title="Projet Nu - Bronzed" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Suzu">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/72wRZWY8SRE?si=LzyRdH1fb0L2IoN3" 
-                        title="Projet Nu - Suzu" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Capristan">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/X9kA6BWWY2c?si=9NY0jlu2BS6ATfm9" 
-                        title="Projet Nu - Capristan" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Origin">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/0OhZp4FSiMU?si=qienqVg0gSNNUI6v" 
-                        title="Projet Nu - Origin" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Mariella">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/aSo3-aF0ERQ?si=eR2UoepZ2C4MQL30" 
-                        title="Projet Nu - Mariella" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Super">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/lYzSnPZ-peE?si=prWFTM2RWh3JJgip" 
-                        title="Projet Nu - Super" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Veve">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Qxi9oHMvrH8?si=O0TIwkwxg-sbw9mZ" 
-                        title="Projet Nu - Veve" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Gari Fashion">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/urjn8b1O5Wk?si=vKntW6NNjebBg9G0" 
-                        title="Projet Nu - Gari Fashion" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Projet Nu - Sugarbush">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ns1wW6t2ZQs?si=3yyKLJxgJaBka98k" 
-                        title="Projet Nu - Sugarbush" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Chronos -->
-            <h3 class="video-title">Chronos</h3>
-            <div class="video-container" aria-label="Chronos - Heritage Swim">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/btLFa48v3Wo?si=RnAIG5ea-aZ6WGXx" 
-                        title="Chronos - Heritage Swim" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Chronos - Oliwia Moon DJ Set @ EXA Swim Shows">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8QTck6rpc08?si=SaPvqeTAK2CQKSjo" 
-                        title="Chronos - Oliwia Moon DJ Set @ EXA Swim Shows" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Chronos - Super">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3S1sBv7YBh8?si=c2vPoOqR3qRMSQsu" 
-                        title="Chronos - Super" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Evoke Channel -->
-            <h3 class="video-title">Evoke Channel</h3>
-            <div class="video-container" aria-label="Evoke Channel - Casting Call">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tUzkvoJsiRU?si=JxzzE0oyXMTDV91I" 
-                        title="Evoke Channel - Casting Call" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Photomeike -->
-            <h3 class="video-title">Photomeike</h3>
-            <div class="video-container" aria-label="Photomeike - Bronzed Babe">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rufD0qzE77I?si=ds0qUrOd4GGapODj" 
-                        title="Photomeike - Bronzed Babe" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Photomeike - Mariella Swim">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/GR26qaWnZFI?si=tLbq5_osHG6b7MoQ" 
-                        title="Photomeike - Mariella Swim" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- TheDailyStarDust -->
-            <h3 class="video-title">TheDailyStarDust</h3>
-            <div class="video-container" aria-label="TheDailyStarDust - EXA Swim @ The Moore">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3DRfyJ3-sRQ?si=nJSsiCW3frnkVxcY" 
-                        title="TheDailyStarDust - EXA Swim @ The Moore" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- JemiibyDQ -->
-            <h3 class="video-title">JemiibyDQ</h3>
-            <div class="video-container" aria-label="JemiibyDQ - Suzu">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/onz6kpDmO3g?si=1R6nMdiu8-Tt0S59" 
-                        title="JemiibyDQ - Suzu" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Heat Pop -->
-            <h3 class="video-title">Heat Pop</h3>
-            <div class="video-container" aria-label="Heat Pop - Sherbert Lemons @ The Moore">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ttK5mMYTkQA?si=9UNH6P-1AOtrE5Ik" 
-                        title="Heat Pop - Sherbert Lemons @ The Moore" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Heat Pop - EXA Swim @ The Moore">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xQ-sDj8CK-A?si=X77p2UHZXZAhUYsC" 
-                        title="Heat Pop - EXA Swim @ The Moore" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Kevin B Johnson -->
-            <h3 class="video-title">Kevin B Johnson</h3>
-            <div class="video-container" aria-label="Kevin B Johnson - Goalden Swimwear">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/9RFm_jgvjK4?si=yB_C_lul_yTUjcAD" 
-                        title="Kevin B Johnson - Goalden Swimwear" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Kevin B Johnson - Mariella Swim">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TEqGkid7M7o?si=iFT6iFDyB0wwHQiP" 
-                        title="Kevin B Johnson - Mariella Swim" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- Shot by Townes -->
-            <h3 class="video-title">Shot by Townes</h3>
-            <div class="video-container" aria-label="Shot by Townes - Super">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/iY8oHBP0czU?si=CLNfRbvgaFWFwod8" 
-                        title="Shot by Townes - Super" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-            <div class="video-container" aria-label="Shot by Townes - Suzu">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/MwD0IK_NEqs?si=YvHQ4y2WzHPqV_MD" 
-                        title="Shot by Townes - Suzu" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
-            </div>
-
-            <!-- NewYorkFashionTimes -->
-            <h3 class="video-title">NewYorkFashionTimes</h3>
-            <div class="video-container" aria-label="NewYorkFashionTimes - Showcase">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/faAncNuyjCY?si=gVFAGoJSo9ohPRT6" 
-                        title="NewYorkFashionTimes - Showcase" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy"></iframe>
+        <section class="video-group fade-in" aria-label="EXA SWIM Videos">
+            <div class="video-grid">
+                <div class="video-container" aria-label="Sexy Media Full Show Day 1">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QFDBeGQILzY?si=Bhs7K74T3fa6tVmD" 
+                            title="Sexy Media - Full Show Day 1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Sexy Media Full Show Day 2">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Y1vyiIpJhHA?si=xA_9Er_E3_hMd-pK" 
+                            title="Sexy Media - Full Show Day 2" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - EXA Swim">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Cc0N7a-eCZw?si=0z4ITSxJiQcoDWLK" 
+                            title="Miami Swim Week TV - EXA Swim" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - Pia Bolte">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yU6lVxgVAfU?si=poh0k2u_7EDSQzCE" 
+                            title="Miami Swim Week TV - Pia Bolte" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - Super">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CyXsa4-yi7U?si=fyLx2y-OdWY1p-Po" 
+                            title="Miami Swim Week TV - Super" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - Mariella Swim">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/A5oiq5XhylI?si=U5_7BMuOdxBFMoRq" 
+                            title="Miami Swim Week TV - Mariella Swim" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - Veve">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/00aJzz0qEcA?si=SD5WBymxoM3Cs94C" 
+                            title="Miami Swim Week TV - Veve" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - Bikini Flavors">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x4AB3dFsMKs?si=Q9miTgIPfkXAnzye" 
+                            title="Miami Swim Week TV - Bikini Flavors" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - Karen">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/K0egMLGe0so?si=SvywErvvcagoNw6l" 
+                            title="Miami Swim Week TV - Karen" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - Sherbert Lemons">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LRzzpEl7kiU?si=KnPcmjpLTP-JF2rz" 
+                            title="Miami Swim Week TV - Sherbert Lemons" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - Bronzed">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Kowpi6S7UO0?si=XA_QARthJQoLAupV" 
+                            title="Miami Swim Week TV - Bronzed" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Miami Swim Week TV - Capristan">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mU0A202Dik8?si=lGCw20ppG85G2sMv" 
+                            title="Miami Swim Week TV - Capristan" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Jeff Sarita - Capristan">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PTaE4eTGAWg?si=ldKpv3Fc0Gl1FWZO" 
+                            title="Jeff Sarita - Capristan" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Jeff Sarita - Super">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6m3C7xIPB4A?si=_qX5glPXjwrAScCN" 
+                            title="Jeff Sarita - Super" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Jeff Sarita - Mariella">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JZNTZsJDKuI?si=lbyl6PnNIWKlo8zH" 
+                            title="Jeff Sarita - Mariella" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Zexy Baddies - Super">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wFvgmtTRbGo?si=evMR1F6J3VgQfWec" 
+                            title="Zexy Baddies - Super" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Zexy Baddies - Sewhi">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vdt1lbuJC24?si=B8faJ8tOPITOEhdI" 
+                            title="Zexy Baddies - Sewhi" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Zexy Baddies - Casting Call">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WGbjoyq09H0?si=2oyOP2fGJmpFkmva" 
+                            title="Zexy Baddies - Casting Call" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - EXA Swim">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LyMckCEBd4A?si=WwrXJyrdaRwKkn6V" 
+                            title="Projet Nu - EXA Swim" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Golden">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/g2Il6jXLwRw?si=LzL3G4As11ilkXqa" 
+                            title="Projet Nu - Golden" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Sewhi">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bYzzNSEEKuM?si=Vhn8UnMmIPt9azHe" 
+                            title="Projet Nu - Sewhi" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Bronzed">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VykF9PVNXHk?si=6QTbNrl1YxQkRR9X" 
+                            title="Projet Nu - Bronzed" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Suzu">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/72wRZWY8SRE?si=LzyRdH1fb0L2IoN3" 
+                            title="Projet Nu - Suzu" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Capristan">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/X9kA6BWWY2c?si=9NY0jlu2BS6ATfm9" 
+                            title="Projet Nu - Capristan" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Origin">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0OhZp4FSiMU?si=qienqVg0gSNNUI6v" 
+                            title="Projet Nu - Origin" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Mariella">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aSo3-aF0ERQ?si=eR2UoepZ2C4MQL30" 
+                            title="Projet Nu - Mariella" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Super">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lYzSnPZ-peE?si=prWFTM2RWh3JJgip" 
+                            title="Projet Nu - Super" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Veve">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Qxi9oHMvrH8?si=O0TIwkwxg-sbw9mZ" 
+                            title="Projet Nu - Veve" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Gari Fashion">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/urjn8b1O5Wk?si=vKntW6NNjebBg9G0" 
+                            title="Projet Nu - Gari Fashion" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Projet Nu - Sugarbush">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ns1wW6t2ZQs?si=3yyKLJxgJaBka98k" 
+                            title="Projet Nu - Sugarbush" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Chronos - Heritage Swim">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/btLFa48v3Wo?si=RnAIG5ea-aZ6WGXx" 
+                            title="Chronos - Heritage Swim" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Chronos - Oliwia Moon DJ Set @ EXA Swim Shows">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8QTck6rpc08?si=SaPvqeTAK2CQKSjo" 
+                            title="Chronos - Oliwia Moon DJ Set @ EXA Swim Shows" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Chronos - Super">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3S1sBv7YBh8?si=c2vPoOqR3qRMSQsu" 
+                            title="Chronos - Super" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Evoke Channel - Casting Call">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tUzkvoJsiRU?si=JxzzE0oyXMTDV91I" 
+                            title="Evoke Channel - Casting Call" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Photomeike - Bronzed Babe">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rufD0qzE77I?si=ds0qUrOd4GGapODj" 
+                            title="Photomeike - Bronzed Babe" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Photomeike - Mariella Swim">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GR26qaWnZFI?si=tLbq5_osHG6b7MoQ" 
+                            title="Photomeike - Mariella Swim" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="TheDailyStarDust - EXA Swim @ The Moore">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3DRfyJ3-sRQ?si=nJSsiCW3frnkVxcY" 
+                            title="TheDailyStarDust - EXA Swim @ The Moore" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="JemiibyDQ - Suzu">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/onz6kpDmO3g?si=1R6nMdiu8-Tt0S59" 
+                            title="JemiibyDQ - Suzu" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Heat Pop - Sherbert Lemons @ The Moore">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ttK5mMYTkQA?si=9UNH6P-1AOtrE5Ik" 
+                            title="Heat Pop - Sherbert Lemons @ The Moore" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Heat Pop - EXA Swim @ The Moore">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xQ-sDj8CK-A?si=X77p2UHZXZAhUYsC" 
+                            title="Heat Pop - EXA Swim @ The Moore" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Kevin B Johnson - Goalden Swimwear">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9RFm_jgvjK4?si=yB_C_lul_yTUjcAD" 
+                            title="Kevin B Johnson - Goalden Swimwear" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Kevin B Johnson - Mariella Swim">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TEqGkid7M7o?si=iFT6iFDyB0wwHQiP" 
+                            title="Kevin B Johnson - Mariella Swim" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Shot by Townes - Super">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iY8oHBP0czU?si=CLNfRbvgaFWFwod8" 
+                            title="Shot by Townes - Super" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="Shot by Townes - Suzu">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MwD0IK_NEqs?si=YvHQ4y2WzHPqV_MD" 
+                            title="Shot by Townes - Suzu" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
+                <div class="video-container" aria-label="NewYorkFashionTimes - Showcase">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/faAncNuyjCY?si=gVFAGoJSo9ohPRT6" 
+                            title="NewYorkFashionTimes - Showcase" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            loading="lazy"></iframe>
+                </div>
             </div>
         </section>
 
@@ -1352,10 +1231,6 @@
         <p class="copyright">© 2025 EXA SWIM. All rights reserved.</p>
     </footer>
 
-    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top" title="Back to Top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
     <script>
         function startCountdown() {
             const countdownElement = document.getElementById("countdown");
@@ -1414,22 +1289,6 @@
             observer.observe(document.body);
         }
 
-        function handleBackToTop() {
-            const backToTop = document.getElementById("backToTop");
-            if (!backToTop) {
-                console.warn("Back to top button not found");
-                return;
-            }
-
-            window.addEventListener("scroll", () => {
-                backToTop.classList.toggle("visible", window.scrollY > 500);
-            });
-
-            backToTop.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        }
-
         function handleImageLoad() {
             const images = document.querySelectorAll("img[loading='lazy']");
             if ("IntersectionObserver" in window) {
@@ -1452,7 +1311,6 @@
             try {
                 startCountdown();
                 handleStickyHeader();
-                handleBackToTop();
                 handleImageLoad();
             } catch (error) {
                 console.error("Error initializing scripts:", error);
