@@ -205,13 +205,77 @@
             color: var(--primary-color);
         }
 
-        .flyer-instagram-container {
+        .flyer-buttons-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
             margin: 40px auto;
             max-width: 1200px;
+        }
+
+        .flyer-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        .buttons-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .action-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border: 2px solid var(--white);
+            border-radius: 25px;
+            box-shadow: 0 6px 15px rgba(255, 20, 147, 0.4);
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: var(--transition-standard);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        .action-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.6s;
+        }
+
+        .action-button:hover::before {
+            left: 100%;
+        }
+
+        .action-button:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
+            box-shadow: 0 10px 25px rgba(0, 255, 204, 0.6);
+            transform: translateY(-3px);
+            border-color: var(--secondary-color);
+        }
+
+        .instagram-container {
+            margin: 60px auto 40px auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
         }
 
         .flyer-image {
@@ -555,14 +619,18 @@
                 width: 100%;
             }
             
-            .flyer-instagram-container {
+            .flyer-buttons-container {
                 flex-direction: column;
                 align-items: center;
             }
             
-            .flyer-image,
-            .instagram-embed-container {
+            .flyer-section,
+            .buttons-section {
                 max-width: 100%;
+            }
+            
+            .instagram-container {
+                margin: 40px auto;
             }
             
             .instagram-feed iframe {
@@ -692,18 +760,40 @@
                         TICKETS
                     </a>
                     <a href="https://www.examodels.com/shop" target="_blank" rel="noopener noreferrer" class="sticky-cta-button outline" aria-label="Shop Swim Shows merchandise">
-                        SHOP
+                        SWIM SHOP
                     </a>
                 </div>
             </div>
         </header>
 
-        <div class="flyer-instagram-container fade-in">
-            <img src="./images/swim-shows-flyer.jpg" 
-                 alt="Swim Shows World Tour Flyer" 
-                 class="flyer-image" 
-                 loading="lazy" 
-                 decoding="async">
+        <div class="flyer-buttons-container fade-in">
+            <div class="flyer-section">
+                <img src="./images/swim-shows-flyer.jpg" 
+                     alt="Swim Shows World Tour Flyer" 
+                     class="flyer-image" 
+                     loading="lazy" 
+                     decoding="async">
+            </div>
+            <div class="buttons-section">
+                <a href="https://www.examodels.com/swimmodel" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Model Submission">
+                    Model Submission
+                </a>
+                <a href="https://www.examodels.com/swimdesigner" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Designer Application">
+                    Designer Application
+                </a>
+                <a href="https://www.examodels.com/swimmedia" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Media Passes">
+                    Media Passes
+                </a>
+                <a href="https://www.examodels.com/swim-magazine" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Swim Magazine">
+                    Swim Magazine
+                </a>
+                <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Purchase Tickets">
+                    Tickets
+                </a>
+            </div>
+        </div>
+
+        <div class="instagram-container fade-in">
             <div class="instagram-embed-container" aria-label="Swim Shows Instagram feed">
                 <div class="instagram-feed">
                     <iframe src="https://www.instagram.com/swim.shows/embed" 
