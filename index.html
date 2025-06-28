@@ -3,25 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Swim Shows - Premier swim & resort fashion TV featuring global designers and top models in luxurious collections.">
-    <meta name="keywords" content="Swim Shows, Swim & Resort Fashion, Luxury Swimwear, Fashion TV, Designer Swimwear, Miami Swim Week">
+    <meta name="description" content="Swim Shows - Premier swim & resort fashion featuring global designers and top models in luxurious collections. Experience Miami Swim Week, NYFW, and exclusive runway shows.">
+    <meta name="keywords" content="Swim Shows, Swim Resort Fashion, Luxury Swimwear, Fashion TV, Designer Swimwear, Miami Swim Week, NYFW, Runway Shows">
     <meta name="author" content="Swim Shows">
-    <meta property="og:title" content="Swim Shows - Swim & Resort Fashion TV">
-    <meta property="og:description" content="Experience the pinnacle of swim & resort fashion with Swim Shows' exclusive designer collections and runway shows.">
+    <meta name="theme-color" content="#ff1493">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swimshows.com/">
+    <meta property="og:title" content="Swim Shows - Premier Swim & Resort Fashion">
+    <meta property="og:description" content="Experience the pinnacle of swim & resort fashion with Swim Shows' exclusive designer collections and runway shows featuring the world's top models.">
+    <meta property="og:image" content="./images/swim-shows-og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Swim Shows - Swim & Resort Fashion TV">
-    <meta name="twitter:description" content="Experience the pinnacle of swim & resort fashion with Swim Shows' exclusive designer collections and runway shows.">
-    <title>Swim Shows - Swim & Resort Fashion TV</title>
+    <meta name="twitter:url" content="https://swimshows.com/">
+    <meta name="twitter:title" content="Swim Shows - Premier Swim & Resort Fashion">
+    <meta name="twitter:description" content="Experience the pinnacle of swim & resort fashion with Swim Shows' exclusive designer collections and runway shows featuring the world's top models.">
+    <meta name="twitter:image" content="./images/swim-shows-og-image.jpg">
+    
+    <title>Swim Shows - Premier Swim & Resort Fashion | Miami Swim Week & NYFW</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/swim-shows-icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/swim-shows-icon-16.png">
+    <link rel="shortcut icon" type="image/png" href="./images/swim-shows-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/swim-shows-icon-180.png">
+    <link rel="manifest" href="./manifest.json">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+    <link rel="preload" href="./images/swim-shows-logo.png" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube.com" crossorigin>
+    <link rel="preconnect" href="https://open.spotify.com" crossorigin>
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Font Awesome with integrity check -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Swim Shows",
+        "description": "Premier swim & resort fashion featuring global designers and top models in luxurious collections.",
+        "url": "https://swimshows.com",
+        "logo": "https://swimshows.com/images/swim-shows-logo.png",
+        "sameAs": [
+            "https://www.instagram.com/swim.shows",
+            "https://www.youtube.com/@SwimShows",
+            "https://www.tiktok.com/@swim.shows"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@examodels.com",
+            "contactType": "customer service"
+        },
+        "event": [
+            {
+                "@type": "Event",
+                "name": "New York Fashion Week",
+                "startDate": "2025-09-10",
+                "location": {
+                    "@type": "Place",
+                    "name": "New York City, NY"
+                }
+            },
+            {
+                "@type": "Event",
+                "name": "Art Basel Miami",
+                "startDate": "2025-12-04",
+                "location": {
+                    "@type": "Place",
+                    "name": "Miami, FL"
+                }
+            },
+            {
+                "@type": "Event",
+                "name": "Miami Swim Week",
+                "startDate": "2025-05-27",
+                "endDate": "2025-05-28",
+                "location": {
+                    "@type": "Place",
+                    "name": "Miami, FL"
+                }
+            }
+        ]
+    }
+    </script>
 
     <style>
         :root {
@@ -39,42 +113,51 @@
             --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             --glass-bg: rgba(255, 255, 255, 0.1);
             --glass-border: rgba(255, 255, 255, 0.2);
+            --backdrop-blur: blur(10px);
+            --z-index-header: 1000;
+            --z-index-modal: 2000;
+            --container-max-width: 1200px;
+            --container-padding: 20px;
+        }
+
+        /* Reset and base styles */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
         html {
             scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
-            background: #000000;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
             color: var(--white);
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
             text-shadow: var(--text-shadow);
             min-height: 100vh;
+            font-feature-settings: "kern" 1, "liga" 1;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .main-section {
-            background: linear-gradient(135deg, #ff1493, #ff69b4, #00ffcc, #00b7a8);
-            background-size: 400% 400%;
-            border-radius: var(--border-radius-large);
-            box-shadow: var(--box-shadow-primary);
-            margin: 40px auto;
-            max-width: 1200px;
-            padding: 40px 30px;
-            position: relative;
-            text-align: center;
-        }
+        /* Skip link for accessibility */
 
+        /* Header styles */
         .sticky-header {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--glass-bg);
+            backdrop-filter: var(--backdrop-blur);
+            -webkit-backdrop-filter: var(--backdrop-blur);
             border: 1px solid var(--glass-border);
             border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -82,7 +165,8 @@
             top: 0;
             transition: var(--transition-standard);
             width: 100%;
-            z-index: 1000;
+            z-index: var(--z-index-header);
+            will-change: transform, background-color;
         }
 
         .sticky-header.scrolled {
@@ -96,8 +180,8 @@
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
-            max-width: 1200px;
-            padding: 15px 20px;
+            max-width: var(--container-max-width);
+            padding: 15px var(--container-padding);
             gap: 20px;
         }
 
@@ -107,49 +191,20 @@
             width: auto;
             transition: var(--transition-standard);
             flex: 0 0 auto;
-            order: 2;
         }
 
-        .sticky-logo:hover {
+        .sticky-logo:hover,
+        .sticky-logo:focus {
             transform: scale(1.1);
             filter: drop-shadow(0px 0px 15px rgba(0, 255, 204, 0.8));
-        }
-
-        .countdown-wrapper {
-            align-items: center;
-            display: flex;
-            gap: 10px;
-            flex: 1;
-            justify-content: flex-end;
-            order: 1;
-        }
-
-        .swim-week-text {
-            color: var(--white);
-            font-size: clamp(16px, 2vw, 20px);
-            font-weight: 600;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-            letter-spacing: 1px;
-        }
-
-        .sticky-countdown {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 25px;
-            color: var(--white);
-            font-size: clamp(14px, 2vw, 16px);
-            font-weight: 700;
-            padding: 12px 20px;
-            text-align: center;
-            white-space: nowrap;
         }
 
         .sticky-cta-buttons {
             display: flex;
             gap: 12px;
             flex: 1;
-            justify-content: flex-start;
-            order: 3;
+            justify-content: flex-end;
+            flex-wrap: wrap;
         }
 
         .sticky-cta-button {
@@ -169,6 +224,7 @@
             white-space: nowrap;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .sticky-cta-button::before {
@@ -180,6 +236,7 @@
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: 0.6s;
+            will-change: left;
         }
 
         .sticky-cta-button:hover::before {
@@ -193,6 +250,12 @@
             box-shadow: 0 8px 25px rgba(255, 20, 147, 0.4);
             color: var(--white);
             transform: translateY(-3px) scale(1.05);
+            outline: none;
+        }
+
+        .sticky-cta-button:focus-visible {
+            outline: 3px solid var(--secondary-color);
+            outline-offset: 3px;
         }
 
         .sticky-cta-button.outline {
@@ -205,200 +268,159 @@
             color: var(--primary-color);
         }
 
-        .flyer-buttons-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+        /* Main content styles */
+        .main-content {
+            min-height: calc(100vh - 200px);
+        }
+
+        .title-section {
+            text-align: center;
             margin: 40px auto;
-            max-width: 1200px;
+            max-width: var(--container-max-width);
+            padding: var(--container-padding);
         }
 
-        .flyer-section {
-            flex: 1;
-            min-width: 300px;
-            max-width: 500px;
+        .hero-tagline {
+            font-size: clamp(16px, 2.5vw, 22px);
+            font-weight: 400;
+            margin: 0 auto;
+            max-width: 1000px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientText 6s ease infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .buttons-section {
-            flex: 1;
-            min-width: 300px;
-            max-width: 500px;
+        @media (max-width: 768px) {
+            .hero-tagline {
+                white-space: normal;
+                font-size: clamp(14px, 4vw, 18px);
+                line-height: 1.4;
+            }
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            margin: 40px auto;
+            max-width: var(--container-max-width);
+            padding: 0 var(--container-padding);
+        }
+
+        .image-section {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            justify-content: center;
+            gap: 20px;
+            flex: 2;
         }
 
-        .action-button {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border: 2px solid var(--white);
-            border-radius: 25px;
-            box-shadow: 0 6px 15px rgba(255, 20, 147, 0.4);
-            color: var(--white);
-            font-size: 16px;
-            font-weight: 600;
-            padding: 15px 30px;
-            text-align: center;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: var(--transition-standard);
+        .image-container {
             position: relative;
             overflow: hidden;
-            letter-spacing: 1px;
-            display: block;
+            border-radius: var(--border-radius-medium);
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            transition: var(--transition-standard);
         }
 
-        .action-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: 0.6s;
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 255, 204, 0.4);
         }
 
-        .action-button:hover::before {
-            left: 100%;
-        }
-
-        .action-button:hover {
-            background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
-            box-shadow: 0 10px 25px rgba(0, 255, 204, 0.6);
-            transform: translateY(-3px);
-            border-color: var(--secondary-color);
-        }
-
-        .instagram-container {
-            margin: 60px auto 40px auto;
-            max-width: 1200px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .flyer-image {
+        .showcase-image {
             height: auto;
             max-width: 100%;
             width: 100%;
-            max-width: 500px;
             border-radius: var(--border-radius-medium);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            transition: transform 0.5s ease;
+            will-change: transform;
+        }
+
+        .image-container:hover .showcase-image {
+            transform: scale(1.05);
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
             flex: 1;
-            min-width: 300px;
+            max-width: 400px;
         }
 
-        .instagram-embed-container {
-            flex: 1;
-            min-width: 300px;
-            max-width: 500px;
-        }
-
-        .instagram-feed {
-            border-radius: var(--border-radius-medium);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
-            overflow: hidden;
-            background: var(--glass-bg);
-            border: 2px solid var(--glass-border);
-        }
-
-        .instagram-feed iframe {
-            border: none;
-            display: block;
-            height: 500px;
-            width: 100%;
-        }
-
-        .video-group {
-            margin: 40px auto;
-            max-width: 1200px;
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .video-container {
-            aspect-ratio: 16 / 9;
-            border-radius: var(--border-radius-medium);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
-            overflow: hidden;
-            background: var(--glass-bg);
-            border: 2px solid var(--glass-border);
-        }
-
-        .video-container iframe {
-            border: none;
-            display: block;
-            height: 100%;
-            width: 100%;
-            border-radius: var(--border-radius-medium);
-        }
-
+        /* Upcoming shows styles */
         .upcoming-shows-container {
             background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(44, 44, 44, 0.9));
+            backdrop-filter: var(--backdrop-blur);
+            -webkit-backdrop-filter: var(--backdrop-blur);
             border: 2px solid var(--glass-border);
-            border-radius: 30px;
+            border-radius: var(--border-radius-large);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            margin: 80px auto;
-            max-width: 1100px;
-            padding: 60px;
-            overflow: visible;
+            padding: 30px;
+            position: relative;
         }
 
         .upcoming-shows-title {
             animation: gradientText 10s ease infinite;
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
             background-size: 300% auto;
-            font-size: clamp(28px, 5vw, 48px);
+            font-size: clamp(24px, 4vw, 32px);
             font-weight: 700;
-            margin-bottom: 40px;
-            position: relative;
+            margin-bottom: 30px;
             text-align: center;
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
             text-transform: uppercase;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            position: relative;
         }
 
         .upcoming-shows-title::after {
             background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
             border-radius: 3px;
-            bottom: -20px;
+            bottom: -15px;
             content: '';
-            height: 6px;
+            height: 4px;
             left: 50%;
             position: absolute;
             transform: translateX(-50%);
-            width: 150px;
+            width: 100px;
             box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
         }
 
         .upcoming-shows-list {
             display: flex;
             flex-direction: column;
-            gap: 25px;
-            margin-top: 40px;
+            gap: 20px;
         }
 
         .show-item {
-            align-items: center;
             animation: fadeInUp 0.6s ease forwards;
             background: linear-gradient(135deg, rgba(255, 20, 147, 0.15), rgba(0, 255, 204, 0.15));
             border: 2px solid var(--glass-border);
-            border-radius: 20px;
+            border-radius: var(--border-radius-medium);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             display: flex;
-            gap: 30px;
+            flex-direction: column;
+            gap: 15px;
             opacity: 0;
-            padding: 30px;
+            padding: 25px;
             position: relative;
             transition: var(--transition-standard);
             overflow: hidden;
+            will-change: transform;
         }
 
         .show-item::before {
@@ -410,6 +432,7 @@
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transition: 0.8s;
+            will-change: left;
         }
 
         .show-item:hover::before {
@@ -424,19 +447,6 @@
         .show-item:nth-child(1) { animation-delay: 0.1s; }
         .show-item:nth-child(2) { animation-delay: 0.3s; }
         .show-item:nth-child(3) { animation-delay: 0.5s; }
-        .show-item:nth-child(4) { animation-delay: 0.7s; }
-        .show-item:nth-child(5) { animation-delay: 0.9s; }
-
-        @keyframes fadeInUp {
-            from { 
-                opacity: 0; 
-                transform: translateY(30px);
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0);
-            }
-        }
 
         .show-date-badge {
             align-items: center;
@@ -447,28 +457,33 @@
             flex-direction: column;
             font-size: 16px;
             font-weight: 700;
-            height: 90px;
+            height: 70px;
             justify-content: center;
             text-align: center;
-            width: 90px;
+            width: 70px;
             flex-shrink: 0;
             box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
-            border: 3px solid rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            align-self: center;
+            transition: var(--transition-standard);
+        }
+
+        .show-date-badge:hover {
+            transform: scale(1.1);
         }
 
         .show-date-badge span {
             display: block;
-            line-height: 1.1;
+            line-height: 1.2;
         }
 
         .show-details {
-            flex: 1;
-            text-align: left;
+            text-align: center;
         }
 
         .show-name {
             color: var(--white);
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             margin-bottom: 8px;
             text-transform: uppercase;
@@ -477,32 +492,34 @@
 
         .show-location {
             color: var(--secondary-color);
-            font-size: 16px;
+            font-size: 14px;
             opacity: 0.9;
             font-weight: 400;
         }
 
         .show-actions {
-            align-items: center;
             display: flex;
+            justify-content: center;
         }
 
         .show-button {
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             border: 2px solid var(--white);
-            border-radius: 30px;
+            border-radius: 25px;
             box-shadow: 0 6px 15px rgba(255, 20, 147, 0.4);
             color: var(--white);
-            font-size: 15px;
+            font-size: 13px;
             font-weight: 600;
-            padding: 14px 28px;
+            padding: 12px 24px;
             text-align: center;
             text-decoration: none;
             text-transform: uppercase;
             transition: var(--transition-standard);
             position: relative;
             overflow: hidden;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: inline-block;
         }
 
         .show-button::before {
@@ -514,44 +531,142 @@
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: 0.6s;
+            will-change: left;
         }
 
         .show-button:hover::before {
             left: 100%;
         }
 
-        .show-button:hover {
+        .show-button:hover,
+        .show-button:focus {
             background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
             box-shadow: 0 10px 25px rgba(0, 255, 204, 0.6);
             transform: translateY(-3px);
             border-color: var(--secondary-color);
+            outline: none;
         }
 
-        .bottom-icon-container {
-            margin-top: 60px;
+        .show-button:focus-visible {
+            outline: 3px solid var(--secondary-color);
+            outline-offset: 3px;
+        }
+
+        /* Embed sections */
+        .embed-section {
+            border-radius: var(--border-radius-medium);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            overflow: hidden;
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            position: relative;
+            transition: var(--transition-standard);
+        }
+
+        .embed-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 255, 204, 0.4);
+        }
+
+        .embed-section iframe {
+            border: none;
+            display: block;
+            width: 100%;
+            border-radius: var(--border-radius-medium);
+        }
+
+        .spotify-embed iframe {
+            height: 352px;
+        }
+
+        .instagram-feed iframe {
+            height: 493px;
+        }
+
+        .instagram-feed .fallback-text {
+            display: none;
             text-align: center;
+            color: var(--white);
+            padding: 20px;
         }
 
-        .bottom-icon {
-            height: auto;
-            max-width: 140px;
-            transition: none;
+        /* Video section */
+        .video-group {
+            margin: 60px auto;
+            max-width: var(--container-max-width);
+            padding: 0 var(--container-padding);
         }
 
+        .video-section-title {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientText 8s ease infinite;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .video-container {
+            aspect-ratio: 16 / 9;
+            border-radius: var(--border-radius-medium);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            overflow: hidden;
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            position: relative;
+            transition: var(--transition-standard);
+            will-change: transform;
+        }
+
+        .video-container:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 50px rgba(0, 255, 204, 0.5);
+        }
+
+        .video-container iframe {
+            border: none;
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: var(--border-radius-medium);
+        }
+
+        .view-more-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Footer styles */
         .main-footer {
             background: var(--glass-bg);
+            backdrop-filter: var(--backdrop-blur);
+            -webkit-backdrop-filter: var(--backdrop-blur);
             border: 2px solid var(--glass-border);
             border-radius: var(--border-radius-medium);
             color: var(--white);
-            margin-top: 60px;
-            padding: 30px;
+            margin: 60px auto 40px;
+            padding: 40px;
             text-align: center;
+            max-width: var(--container-max-width);
         }
 
         .contact-info {
             font-size: 18px;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .contact-info a {
@@ -560,89 +675,180 @@
             transition: var(--transition-standard);
         }
 
-        .contact-info a:hover {
+        .contact-info a:hover,
+        .contact-info a:focus {
             color: var(--white);
             text-shadow: 0 0 10px var(--secondary-color);
+            outline: none;
+        }
+
+        .contact-info a:focus-visible {
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 25px 0;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 28px;
+            transition: var(--transition-standard);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+        }
+
+        .social-links a:hover,
+        .social-links a:focus {
+            color: var(--secondary-color);
+            transform: scale(1.2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            outline: none;
+        }
+
+        .social-links a:focus-visible {
+            outline: 3px solid var(--secondary-color);
+            outline-offset: 3px;
         }
 
         .copyright {
             font-size: 14px;
             opacity: 0.8;
             font-weight: 300;
+            margin-top: 20px;
         }
 
+        /* Animations */
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gradientText {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        /* Loading states */
+        .loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .loaded {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+
+        /* Error states */
+        .error-state {
+            background: rgba(255, 0, 0, 0.1);
+            border-color: rgba(255, 0, 0, 0.3);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            border-radius: var(--border-radius-medium);
+        }
+
+        /* Responsive design */
         @media (max-width: 1024px) {
-            .main-section {
-                margin: 30px 20px;
-                padding: 35px 25px;
+            .content-wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .right-column {
+                max-width: 100%;
+                margin: 0 auto;
             }
 
             .video-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
         }
 
         @media (max-width: 768px) {
+            :root {
+                --container-padding: 15px;
+            }
+
             .sticky-header-content {
                 flex-direction: column;
-                gap: 10px;
-                padding: 10px 15px;
+                gap: 15px;
+                padding: 15px var(--container-padding);
             }
-            
-            .countdown-wrapper {
-                display: none;
-            }
-            
+
             .sticky-logo {
                 height: 50px;
-                order: 1;
             }
-            
+
             .sticky-cta-buttons {
-                gap: 8px;
-                order: 2;
-            }
-            
-            .show-item {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: center;
-            }
-            
-            .show-date-badge {
-                margin-bottom: 15px;
-                align-self: center;
-            }
-            
-            .show-actions {
+                gap: 10px;
                 justify-content: center;
-                width: 100%;
+                flex-wrap: wrap;
             }
-            
-            .flyer-buttons-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .flyer-section,
-            .buttons-section {
+
+            .image-section {
                 max-width: 100%;
             }
-            
-            .instagram-container {
-                margin: 40px auto;
+
+            .show-item {
+                align-items: center;
+                text-align: center;
             }
-            
-            .instagram-feed iframe {
-                height: 420px;
+
+            .show-date-badge {
+                margin-bottom: 10px;
             }
-            
+
             .upcoming-shows-container {
-                padding: 30px 20px;
+                padding: 25px;
             }
 
             .video-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .title-section {
+                margin: 30px auto;
+                padding: 15px;
+            }
+
+            .hero-tagline {
+                font-size: clamp(14px, 4vw, 18px);
             }
         }
 
@@ -650,53 +856,79 @@
             .sticky-logo {
                 height: 40px;
             }
-            
+
             .sticky-cta-button {
                 font-size: 12px;
                 padding: 8px 16px;
             }
-            
+
             .show-button {
                 font-size: 12px;
-                padding: 10px 18px;
+                padding: 10px 20px;
             }
-            
+
             .show-date-badge {
-                height: 70px;
-                width: 70px;
+                height: 60px;
+                width: 60px;
                 font-size: 14px;
             }
-            
+
             .show-name {
-                font-size: 18px;
+                font-size: 16px;
             }
-            
+
             .show-location {
-                font-size: 14px;
+                font-size: 13px;
             }
-            
-            .main-section {
-                margin: 20px 10px;
-                padding: 25px 20px;
+
+            .title-section {
+                margin: 20px auto;
+                padding: 10px;
             }
-            
-            .instagram-feed iframe {
-                height: 350px;
+
+            .content-wrapper {
+                gap: 25px;
             }
-            
-            .flyer-image {
-                max-width: 100%;
+
+            .upcoming-shows-container {
+                padding: 20px;
+            }
+
+            .main-footer {
+                padding: 30px 20px;
+                margin: 40px auto 20px;
+            }
+
+            .social-links a {
+                width: 45px;
+                height: 45px;
+                font-size: 24px;
             }
         }
 
-        img[loading="lazy"] {
-            transition: opacity 0.4s ease;
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --text-shadow: none;
+                --glass-bg: rgba(255, 255, 255, 0.2);
+                --glass-border: rgba(255, 255, 255, 0.5);
+            }
+
+            .sticky-header,
+            .upcoming-shows-container,
+            .embed-section,
+            .video-container,
+            .main-footer {
+                border: 3px solid var(--white);
+            }
+
+            .show-button,
+            .sticky-cta-button {
+                border: 3px solid var(--white);
+            }
         }
 
-        img[loading="lazy"].loaded {
-            opacity: 1;
-        }
-
+        /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
             *,
             *::before,
@@ -706,706 +938,1152 @@
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
             }
-        }
 
-        .sticky-cta-button:focus,
-        .show-button:focus {
-            outline: 3px solid var(--secondary-color);
-            outline-offset: 3px;
-        }
-
-        @media (prefers-contrast: high) {
-            :root {
-                --text-shadow: 0 0 0 transparent;
-            }
-            
-            .main-section {
-                border: 2px solid var(--white);
-            }
-            
-            .sticky-header {
-                border: 2px solid var(--white);
+            .hero-tagline,
+            .upcoming-shows-title {
+                animation: none;
+                background: var(--primary-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
             }
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Print styles */
+        @media print {
+            .sticky-header,
+            .video-group,
+            .embed-section {
+                display: none;
+            }
+
+            body {
+                background: white;
+                color: black;
+                text-shadow: none;
+            }
+
+            .main-footer {
+                border: 1px solid black;
+                background: white;
+            }
         }
 
-        .fade-in {
-            animation: fadeIn 0.6s ease forwards;
+        /* Focus management */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Loading spinner */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid var(--secondary-color);
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <main class="main-section">
-        <header class="sticky-header" role="banner">
-            <div class="sticky-header-content">
-                <div class="countdown-wrapper">
-                    <span class="swim-week-text">NYFW</span>
-                    <div class="sticky-countdown" id="countdown" aria-live="polite" role="timer">
-                        <span id="countdown-days">00</span>D 
-                        <span id="countdown-hours">00</span>H 
-                        <span id="countdown-minutes">00</span>M
+    <header class="sticky-header" role="banner" aria-label="Site header">
+        <div class="sticky-header-content">
+            <img src="./images/swim-shows-logo.png" 
+                 alt="Swim Shows - Premier swim and resort fashion" 
+                 class="sticky-logo" 
+                 loading="eager" 
+                 decoding="async"
+                 width="120"
+                 height="60">
+            <nav class="sticky-cta-buttons" role="navigation" aria-label="Main navigation">
+                <a href="https://www.examodels.com/swimmodel" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="sticky-cta-button outline" 
+                   aria-label="Browse models for swim shows">
+                   <span>MODELS</span>
+                </a>
+                <a href="https://www.examodels.com/swimdesigner" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="sticky-cta-button outline" 
+                   aria-label="Explore swim designers">
+                   <span>DESIGNERS</span>
+                </a>
+                <a href="https://www.examodels.com/swimmedia" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="sticky-cta-button outline" 
+                   aria-label="Media coverage and press">
+                   <span>MEDIA</span>
+                </a>
+                <a href="https://www.examodels.com/shop" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="sticky-cta-button outline" 
+                   aria-label="Shop Swim Shows merchandise and swimwear">
+                   <span>SWIM SHOP</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-content">
+        <section class="title-section fade-in" aria-labelledby="hero-title">
+            <h1 id="hero-title" class="sr-only">Swim Shows - Premier Swim & Resort Fashion</h1>
+            <p class="hero-tagline" role="banner">
+                🔥Featuring the World's Top Models showcasing global Swimwear Brands🔥
+            </p>
+        </section>
+
+        <div class="content-wrapper fade-in">
+            <section class="image-section" aria-labelledby="showcase-title">
+                <h2 id="showcase-title" class="sr-only">Swim Shows Showcase Images</h2>
+                
+                <div class="image-container">
+                    <img src="./images/swim-shows-flyer.jpg" 
+                         alt="Swim Shows World Tour 2025 - Official event flyer featuring luxury swimwear fashion shows" 
+                         class="showcase-image" 
+                         loading="lazy" 
+                         decoding="async"
+                         width="500"
+                         height="700">
+                </div>
+                
+                <div class="image-container">
+                    <img src="./images/swim-shows-nyfw.png" 
+                         alt="Swim Shows at New York Fashion Week - Models showcasing designer swimwear collections" 
+                         class="showcase-image" 
+                         loading="lazy" 
+                         decoding="async"
+                         width="500"
+                         height="600">
+                </div>
+                
+                <div class="image-container">
+                    <img src="./images/swim-shows-models.png" 
+                         alt="Top international models featured in Swim Shows runway presentations" 
+                         class="showcase-image" 
+                         loading="lazy" 
+                         decoding="async"
+                         width="500"
+                         height="600">
+                </div>
+            </section>
+
+            <aside class="right-column">
+                <section class="upcoming-shows-container" aria-labelledby="upcoming-shows-title">
+                    <h2 id="upcoming-shows-title" class="upcoming-shows-title">Upcoming Shows</h2>
+                    <div class="upcoming-shows-list" role="list">
+                        <article class="show-item" role="listitem">
+                            <div class="show-date-badge" aria-label="September 10th">
+                                <span aria-hidden="true">Sep</span>
+                                <span aria-hidden="true">10</span>
+                            </div>
+                            <div class="show-details">
+                                <h3 class="show-name">New York Fashion Week</h3>
+                                <p class="show-location">New York City, NY</p>
+                            </div>
+                            <div class="show-actions">
+                                <a href="https://www.examodels.com/tickets" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="show-button" 
+                                   aria-label="Purchase tickets for New York Fashion Week show on September 10th">
+                                   Tickets
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <article class="show-item" role="listitem">
+                            <div class="show-date-badge" aria-label="December 4th">
+                                <span aria-hidden="true">Dec</span>
+                                <span aria-hidden="true">4</span>
+                            </div>
+                            <div class="show-details">
+                                <h3 class="show-name">Art Basel Miami</h3>
+                                <p class="show-location">Miami, FL</p>
+                            </div>
+                            <div class="show-actions">
+                                <a href="https://www.examodels.com/tickets" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="show-button" 
+                                   aria-label="Purchase tickets for Art Basel Miami show on December 4th">
+                                   Tickets
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <article class="show-item" role="listitem">
+                            <div class="show-date-badge" aria-label="May 27th to 28th">
+                                <span aria-hidden="true">May</span>
+                                <span aria-hidden="true">27-28</span>
+                            </div>
+                            <div class="show-details">
+                                <h3 class="show-name">Miami Swim Week</h3>
+                                <p class="show-location">Miami, FL</p>
+                            </div>
+                            <div class="show-actions">
+                                <a href="https://www.examodels.com/tickets" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="show-button" 
+                                   aria-label="Purchase tickets for Miami Swim Week show on May 27th-28th">
+                                   Tickets
+                                </a>
+                            </div>
+                        </article>
                     </div>
-                </div>
-                <img src="./images/swim-shows-logo.png" 
-                     alt="Swim Shows Logo" 
-                     class="sticky-logo" 
-                     loading="eager" 
-                     decoding="async">
-                <div class="sticky-cta-buttons">
-                    <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="sticky-cta-button" aria-label="Purchase tickets for Swim Shows">
-                        TICKETS
-                    </a>
-                    <a href="https://www.examodels.com/shop" target="_blank" rel="noopener noreferrer" class="sticky-cta-button outline" aria-label="Shop Swim Shows merchandise">
-                        SWIM SHOP
-                    </a>
-                </div>
-            </div>
-        </header>
+                </section>
 
-        <div class="flyer-buttons-container fade-in">
-            <div class="flyer-section">
-                <img src="./images/swim-shows-flyer.jpg" 
-                     alt="Swim Shows World Tour Flyer" 
-                     class="flyer-image" 
-                     loading="lazy" 
-                     decoding="async">
-            </div>
-            <div class="buttons-section">
-                <a href="https://www.examodels.com/swimmodel" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Model Submission">
-                    Model Submission
-                </a>
-                <a href="https://www.examodels.com/swimdesigner" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Designer Application">
-                    Designer Application
-                </a>
-                <a href="https://www.examodels.com/swimmedia" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Media Passes">
-                    Media Passes
-                </a>
-                <a href="https://www.examodels.com/swim-magazine" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Swim Magazine">
-                    Swim Magazine
-                </a>
-                <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="action-button" aria-label="Purchase Tickets">
-                    Tickets
-                </a>
-            </div>
-        </div>
-
-        <div class="instagram-container fade-in">
-            <div class="instagram-embed-container" aria-label="Swim Shows Instagram feed">
-                <div class="instagram-feed">
-                    <iframe src="https://www.instagram.com/swim.shows/embed" 
+                <section class="embed-section fade-in" aria-labelledby="spotify-title">
+                    <h2 id="spotify-title" class="sr-only">Swim Shows Spotify Playlist</h2>
+                    <iframe style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/playlist/2ECDbEnuIzJYlQMrxnimay?utm_source=generator&theme=0" 
                             width="100%" 
-                            height="500" 
-                            frameborder="0" 
-                            scrolling="no" 
-                            allowtransparency="true" 
+                            height="352" 
+                            frameBorder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                             loading="lazy"
-                            title="Swim Shows Instagram Feed"></iframe>
-                    <p style="display: none; text-align: center; color: var(--white);">Instagram feed unavailable. Visit <a href="https://www.instagram.com/swim.shows" target="_blank" rel="noopener">Swim Shows on Instagram</a>.</p>
-                </div>
-            </div>
+                            title="Swim Shows Official Spotify Playlist - Fashion show music and runway soundtracks"
+                            aria-label="Spotify playlist featuring music from Swim Shows events"></iframe>
+                </section>
+
+                <section class="embed-section fade-in" aria-labelledby="instagram-title">
+                    <h2 id="instagram-title" class="sr-only">Swim Shows Instagram Feed</h2>
+                    <div class="instagram-feed">
+                        <iframe src="https://www.instagram.com/swim.shows/embed" 
+                                width="100%" 
+                                height="493" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true" 
+                                loading="lazy"
+                                title="Swim Shows Instagram Feed - Latest photos and updates"
+                                aria-label="Instagram feed showing latest Swim Shows content"></iframe>
+                        <div class="fallback-text" role="alert">
+                            <p>Instagram feed unavailable. Visit <a href="https://www.instagram.com/swim.shows" target="_blank" rel="noopener" aria-label="Visit Swim Shows Instagram page">Swim Shows on Instagram</a>.</p>
+                        </div>
+                    </div>
+                </section>
+            </aside>
         </div>
 
-        <section class="video-group fade-in" aria-label="Swim Shows Videos">
-            <div class="video-grid">
-                <div class="video-container" aria-label="Sexy Media Full Show Day 1">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QFDBeGQILzY?si=Bhs7K74T3fa6tVmD" 
-                            title="Sexy Media - Full Show Day 1" 
+        <section class="video-group fade-in" aria-labelledby="videos-title">
+            <h2 id="videos-title" class="video-section-title">Swim Shows TV</h2>
+            <div class="video-grid" role="list">
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/QFDBeGQILzY?si=Bhs7K74T3fa6tVmD" 
+                            title="Sexy Media Full Show Day 1 - Complete runway presentation" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Sexy Media Full Show Day 2">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Y1vyiIpJhHA?si=xA_9Er_E3_hMd-pK" 
-                            title="Sexy Media - Full Show Day 2" 
+                            loading="lazy"
+                            aria-label="Watch Sexy Media Full Show Day 1 runway presentation"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/Y1vyiIpJhHA?si=xA_9Er_E3_hMd-pK" 
+                            title="Sexy Media Full Show Day 2 - Complete runway presentation" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Swim Shows">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Cc0N7a-eCZw?si=0z4ITSxJiQcoDWLK" 
-                            title="Miami Swim Week TV - Swim Shows" 
+                            loading="lazy"
+                            aria-label="Watch Sexy Media Full Show Day 2 runway presentation"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/Cc0N7a-eCZw?si=0z4ITSxJiQcoDWLK" 
+                            title="Miami Swim Week TV - EXA Swim designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Pia Bolte">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yU6lVxgVAfU?si=poh0k2u_7EDSQzCE" 
-                            title="Miami Swim Week TV - Pia Bolte" 
+                            loading="lazy"
+                            aria-label="Watch EXA Swim collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/yU6lVxgVAfU?si=poh0k2u_7EDSQzCE" 
+                            title="Miami Swim Week TV - Pia Bolte designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Super">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CyXsa4-yi7U?si=fyLx2y-OdWY1p-Po" 
-                            title="Miami Swim Week TV - Super" 
+                            loading="lazy"
+                            aria-label="Watch Pia Bolte collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/CyXsa4-yi7U?si=fyLx2y-OdWY1p-Po" 
+                            title="Miami Swim Week TV - Super designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Mariella Swim">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/A5oiq5XhylI?si=U5_7BMuOdxBFMoRq" 
-                            title="Miami Swim Week TV - Mariella Swim" 
+                            loading="lazy"
+                            aria-label="Watch Super collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/A5oiq5XhylI?si=U5_7BMuOdxBFMoRq" 
+                            title="Miami Swim Week TV - Mariella Swim designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Veve">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/00aJzz0qEcA?si=SD5WBymxoM3Cs94C" 
-                            title="Miami Swim Week TV - Veve" 
+                            loading="lazy"
+                            aria-label="Watch Mariella Swim collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/00aJzz0qEcA?si=SD5WBymxoM3Cs94C" 
+                            title="Miami Swim Week TV - Veve designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Bikini Flavors">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x4AB3dFsMKs?si=Q9miTgIPfkXAnzye" 
-                            title="Miami Swim Week TV - Bikini Flavors" 
+                            loading="lazy"
+                            aria-label="Watch Veve collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/x4AB3dFsMKs?si=Q9miTgIPfkXAnzye" 
+                            title="Miami Swim Week TV - Bikini Flavors designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Karen">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/K0egMLGe0so?si=SvywErvvcagoNw6l" 
-                            title="Miami Swim Week TV - Karen" 
+                            loading="lazy"
+                            aria-label="Watch Bikini Flavors collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/K0egMLGe0so?si=SvywErvvcagoNw6l" 
+                            title="Miami Swim Week TV - Karen designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Sherbert Lemons">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LRzzpEl7kiU?si=KnPcmjpLTP-JF2rz" 
-                            title="Miami Swim Week TV - Sherbert Lemons" 
+                            loading="lazy"
+                            aria-label="Watch Karen collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/LRzzpEl7kiU?si=KnPcmjpLTP-JF2rz" 
+                            title="Miami Swim Week TV - Sherbert Lemons designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Bronzed">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Kowpi6S7UO0?si=XA_QARthJQoLAupV" 
-                            title="Miami Swim Week TV - Bronzed" 
+                            loading="lazy"
+                            aria-label="Watch Sherbert Lemons collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/Kowpi6S7UO0?si=XA_QARthJQoLAupV" 
+                            title="Miami Swim Week TV - Bronzed designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Miami Swim Week TV - Capristan">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mU0A202Dik8?si=lGCw20ppG85G2sMv" 
-                            title="Miami Swim Week TV - Capristan" 
+                            loading="lazy"
+                            aria-label="Watch Bronzed collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/mU0A202Dik8?si=lGCw20ppG85G2sMv" 
+                            title="Miami Swim Week TV - Capristan designer collection showcase" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Jeff Sarita - Capristan">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PTaE4eTGAWg?si=ldKpv3Fc0Gl1FWZO" 
-                            title="Jeff Sarita - Capristan" 
+                            loading="lazy"
+                            aria-label="Watch Capristan collection at Miami Swim Week"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/PTaE4eTGAWg?si=ldKpv3Fc0Gl1FWZO" 
+                            title="Jeff Sarita Photography - Capristan behind the scenes" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Jeff Sarita - Super">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6m3C7xIPB4A?si=_qX5glPXjwrAScCN" 
-                            title="Jeff Sarita - Super" 
+                            loading="lazy"
+                            aria-label="Watch Jeff Sarita's behind the scenes coverage of Capristan"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/6m3C7xIPB4A?si=_qX5glPXjwrAScCN" 
+                            title="Jeff Sarita Photography - Super behind the scenes" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Jeff Sarita - Mariella">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JZNTZsJDKuI?si=lbyl6PnNIWKlo8zH" 
-                            title="Jeff Sarita - Mariella" 
+                            loading="lazy"
+                            aria-label="Watch Jeff Sarita's behind the scenes coverage of Super"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/JZNTZsJDKuI?si=lbyl6PnNIWKlo8zH" 
+                            title="Jeff Sarita Photography - Mariella behind the scenes" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Zexy Baddies - Super">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wFvgmtTRbGo?si=evMR1F6J3VgQfWec" 
-                            title="Zexy Baddies - Super" 
+                            loading="lazy"
+                            aria-label="Watch Jeff Sarita's behind the scenes coverage of Mariella"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/wFvgmtTRbGo?si=evMR1F6J3VgQfWec" 
+                            title="Zexy Baddies - Super collection runway show" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Zexy Baddies - Sewhi">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vdt1lbuJC24?si=B8faJ8tOPITOEhdI" 
-                            title="Zexy Baddies - Sewhi" 
+                            loading="lazy"
+                            aria-label="Watch Zexy Baddies coverage of Super collection"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/vdt1lbuJC24?si=B8faJ8tOPITOEhdI" 
+                            title="Zexy Baddies - Sewhi collection runway show" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Zexy Baddies - Casting Call">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WGbjoyq09H0?si=2oyOP2fGJmpFkmva" 
-                            title="Zexy Baddies - Casting Call" 
+                            loading="lazy"
+                            aria-label="Watch Zexy Baddies coverage of Sewhi collection"></iframe>
+                </article>
+                
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/WGbjoyq09H0?si=2oyOP2fGJmpFkmva" 
+                            title="Zexy Baddies - Casting Call behind the scenes" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Swim Shows">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LyMckCEBd4A?si=WwrXJyrdaRwKkn6V" 
-                            title="Projet Nu - Swim Shows" 
+                            loading="lazy"
+                            aria-label="Watch Zexy Baddies casting call behind the scenes"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/LyMckCEBd4A?si=WwrXJyrdaRwKkn6V" 
+                            title="Projet Nu - EXA Swim" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Golden">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/g2Il6jXLwRw?si=LzL3G4As11ilkXqa" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu EXA Swim"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/g2Il6jXLwRw?si=LzL3G4As11ilkXqa" 
                             title="Projet Nu - Golden" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Sewhi">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bYzzNSEEKuM?si=Vhn8UnMmIPt9azHe" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Golden"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/bYzzNSEEKuM?si=Vhn8UnMmIPt9azHe" 
                             title="Projet Nu - Sewhi" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Bronzed">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VykF9PVNXHk?si=6QTbNrl1YxQkRR9X" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Sewhi"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/VykF9PVNXHk?si=6QTbNrl1YxQkRR9X" 
                             title="Projet Nu - Bronzed" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Suzu">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/72wRZWY8SRE?si=LzyRdH1fb0L2IoN3" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Bronzed"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/72wRZWY8SRE?si=LzyRdH1fb0L2IoN3" 
                             title="Projet Nu - Suzu" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Capristan">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/X9kA6BWWY2c?si=9NY0jlu2BS6ATfm9" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Suzu"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/X9kA6BWWY2c?si=9NY0jlu2BS6ATfm9" 
                             title="Projet Nu - Capristan" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Origin">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0OhZp4FSiMU?si=qienqVg0gSNNUI6v" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Capristan"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/0OhZp4FSiMU?si=qienqVg0gSNNUI6v" 
                             title="Projet Nu - Origin" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Mariella">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aSo3-aF0ERQ?si=eR2UoepZ2C4MQL30" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Origin"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/aSo3-aF0ERQ?si=eR2UoepZ2C4MQL30" 
                             title="Projet Nu - Mariella" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Super">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lYzSnPZ-peE?si=prWFTM2RWh3JJgip" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Mariella"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/lYzSnPZ-peE?si=prWFTM2RWh3JJgip" 
                             title="Projet Nu - Super" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Veve">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Qxi9oHMvrH8?si=O0TIwkwxg-sbw9mZ" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Super"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/Qxi9oHMvrH8?si=O0TIwkwxg-sbw9mZ" 
                             title="Projet Nu - Veve" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Gari Fashion">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/urjn8b1O5Wk?si=vKntW6NNjebBg9G0" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Veve"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/urjn8b1O5Wk?si=vKntW6NNjebBg9G0" 
                             title="Projet Nu - Gari Fashion" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Projet Nu - Sugarbush">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ns1wW6t2ZQs?si=3yyKLJxgJaBka98k" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Gari Fashion"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/ns1wW6t2ZQs?si=3yyKLJxgJaBka98k" 
                             title="Projet Nu - Sugarbush" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Chronos - Heritage Swim">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/btLFa48v3Wo?si=RnAIG5ea-aZ6WGXx" 
-                            title="Chronos - Heritage Swim" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Chronos - Oliwia Moon DJ Set @ Swim Shows">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8QTck6rpc08?si=SaPvqeTAK2CQKSjo" 
-                            title="Chronos - Oliwia Moon DJ Set @ Swim Shows" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Chronos - Super">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3S1sBv7YBh8?si=c2vPoOqR3qRMSQsu" 
-                            title="Chronos - Super" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Evoke Channel - Casting Call">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tUzkvoJsiRU?si=JxzzE0oyXMTDV91I" 
+                            loading="lazy"
+                            aria-label="Watch Projet Nu Sugarbush"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/tUzkvoJsiRU?si=JxzzE0oyXMTDV91I" 
                             title="Evoke Channel - Casting Call" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Photomeike - Bronzed Babe">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rufD0qzE77I?si=ds0qUrOd4GGapODj" 
+                            loading="lazy"
+                            aria-label="Watch Evoke Channel Casting Call"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/rufD0qzE77I?si=ds0qUrOd4GGapODj" 
                             title="Photomeike - Bronzed Babe" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Photomeike - Mariella Swim">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GR26qaWnZFI?si=tLbq5_osHG6b7MoQ" 
+                            loading="lazy"
+                            aria-label="Watch Photomeike Bronzed Babe"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/GR26qaWnZFI?si=tLbq5_osHG6b7MoQ" 
                             title="Photomeike - Mariella Swim" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="TheDailyStarDust - Swim Shows @ The Moore">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3DRfyJ3-sRQ?si=nJSsiCW3frnkVxcY" 
-                            title="TheDailyStarDust - Swim Shows @ The Moore" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="JemiibyDQ - Suzu">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/onz6kpDmO3g?si=1R6nMdiu8-Tt0S59" 
+                            loading="lazy"
+                            aria-label="Watch Photomeike Mariella Swim"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/onz6kpDmO3g?si=1R6nMdiu8-Tt0S59" 
                             title="JemiibyDQ - Suzu" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Heat Pop - Sherbert Lemons @ The Moore">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ttK5mMYTkQA?si=9UNH6P-1AOtrE5Ik" 
+                            loading="lazy"
+                            aria-label="Watch JemiibyDQ Suzu"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/ttK5mMYTkQA?si=9UNH6P-1AOtrE5Ik" 
                             title="Heat Pop - Sherbert Lemons @ The Moore" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Heat Pop - Swim Shows @ The Moore">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xQ-sDj8CK-A?si=X77p2UHZXZAhUYsC" 
-                            title="Heat Pop - Swim Shows @ The Moore" 
+                            loading="lazy"
+                            aria-label="Watch Heat Pop Sherbert Lemons at The Moore"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/xQ-sDj8CK-A?si=X77p2UHZXZAhUYsC" 
+                            title="Heat Pop - EXA Swim @ The Moore" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Kevin B Johnson - Goalden Swimwear">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9RFm_jgvjK4?si=yB_C_lul_yTUjcAD" 
+                            loading="lazy"
+                            aria-label="Watch Heat Pop EXA Swim at The Moore"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/9RFm_jgvjK4?si=yB_C_lul_yTUjcAD" 
                             title="Kevin B Johnson - Goalden Swimwear" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Kevin B Johnson - Mariella Swim">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TEqGkid7M7o?si=iFT6iFDyB0wwHQiP" 
-                            title="Kevin B Johnson - Mariella Swim" 
+                            loading="lazy"
+                            aria-label="Watch Kevin B Johnson Goalden Swimwear"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/TEqGkid7M7o?si=iFT6iFDyB0wwHQiP" 
+                            title="Kevin B Johnson - Marielle Swim" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Shot by Townes - Super">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iY8oHBP0czU?si=CLNfRbvgaFWFwod8" 
+                            loading="lazy"
+                            aria-label="Watch Kevin B Johnson Marielle Swim"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/iY8oHBP0czU?si=CLNfRbvgaFWFwod8" 
                             title="Shot by Townes - Super" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="Shot by Townes - Suzu">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MwD0IK_NEqs?si=YvHQ4y2WzHPqV_MD" 
+                            loading="lazy"
+                            aria-label="Watch Shot by Townes Super"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/MwD0IK_NEqs?si=YvHQ4y2WzHPqV_MD" 
                             title="Shot by Townes - Suzu" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
-                <div class="video-container" aria-label="NewYorkFashionTimes - Showcase">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/faAncNuyjCY?si=gVFAGoJSo9ohPRT6" 
-                            title="NewYorkFashionTimes - Showcase" 
+                            loading="lazy"
+                            aria-label="Watch Shot by Townes Suzu"></iframe>
+                </article>
+
+                <article class="video-container" role="listitem">
+                    <iframe width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/faAncNuyjCY?si=gVFAGoJSo9ohPRT6" 
+                            title="NewYorkFashionTimes" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen
-                            loading="lazy"></iframe>
-                </div>
+                            loading="lazy"
+                            aria-label="Watch NewYorkFashionTimes"></iframe>
+                </article>
+            </div>
+            
+            <div class="view-more-container">
+                <a href="https://www.youtube.com/@Swim-Shows" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="show-button" 
+                   aria-label="View all Swim Shows videos on YouTube channel">
+                   View More Videos
+                </a>
             </div>
         </section>
-
-        <section class="upcoming-shows-container fade-in" aria-label="Upcoming Swim Shows">
-            <h2 class="upcoming-shows-title">Upcoming Shows</h2>
-            <div class="upcoming-shows-list">
-                <div class="show-item">
-                    <div class="show-date-badge">
-                        <span>Sep</span>
-                        <span>10</span>
-                        <span>2025</span>
-                    </div>
-                    <div class="show-details">
-                        <h3 class="show-name">New York Fashion Week</h3>
-                        <p class="show-location">New York City, NY</p>
-                    </div>
-                    <div class="show-actions">
-                        <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="show-button" aria-label="Get tickets for New York Fashion Week show">
-                            Tickets
-                        </a>
-                    </div>
-                </div>
-                <div class="show-item">
-                    <div class="show-date-badge">
-                        <span>Oct</span>
-                        <span>17</span>
-                        <span>2025</span>
-                    </div>
-                    <div class="show-details">
-                        <h3 class="show-name">San Diego Fashion Show</h3>
-                        <p class="show-location">San Diego, CA</p>
-                    </div>
-                    <div class="show-actions">
-                        <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="show-button" aria-label="Get tickets for San Diego Fashion Show">
-                            Tickets
-                        </a>
-                    </div>
-                </div>
-                <div class="show-item">
-                    <div class="show-date-badge">
-                        <span>Oct</span>
-                        <span>28</span>
-                        <span>2025</span>
-                    </div>
-                    <div class="show-details">
-                        <h3 class="show-name">Scottsdale Fashion Show</h3>
-                        <p class="show-location">Scottsdale, AZ</p>
-                    </div>
-                    <div class="show-actions">
-                        <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="show-button" aria-label="Get tickets for Scottsdale Fashion Show">
-                            Tickets
-                        </a>
-                    </div>
-                </div>
-                <div class="show-item">
-                    <div class="show-date-badge">
-                        <span>Dec</span>
-                        <span>4</span>
-                        <span>2025</span>
-                    </div>
-                    <div class="show-details">
-                        <h3 class="show-name">Art Basel Miami</h3>
-                        <p class="show-location">Miami, FL</p>
-                    </div>
-                    <div class="show-actions">
-                        <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="show-button" aria-label="Get tickets for Art Basel Miami show">
-                            Tickets
-                        </a>
-                    </div>
-                </div>
-                <div class="show-item">
-                    <div class="show-date-badge">
-                        <span>May</span>
-                        <span>27-28</span>
-                        <span>2026</span>
-                    </div>
-                    <div class="show-details">
-                        <h3 class="show-name">Miami Swim Week</h3>
-                        <p class="show-location">Miami, FL</p>
-                    </div>
-                    <div class="show-actions">
-                        <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="show-button" aria-label="Get tickets for Miami Swim Week show">
-                            Tickets
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="bottom-icon-container fade-in">
-            <img src="./images/swim-shows-icon.png" 
-                 alt="Swim Shows Bottom Logo" 
-                 class="bottom-icon" 
-                 loading="lazy" 
-                 decoding="async">
-        </div>
     </main>
 
     <footer class="main-footer fade-in" role="contentinfo">
         <div class="contact-info">
-            Contact Us: <a href="mailto:info@examodels.com" aria-label="Email Swim Shows">info@examodels.com</a>
+            Contact: 
+            <a href="mailto:info@examodels.com" 
+               aria-label="Send email to Swim Shows">
+               info@examodels.com
+            </a>
         </div>
         <p class="copyright">© 2025 Swim Shows. All rights reserved.</p>
     </footer>
 
     <script>
-        function startCountdown() {
-            const countdownElement = document.getElementById("countdown");
-            if (!countdownElement) {
-                console.warn("Countdown element not found");
-                return;
+        // Performance and accessibility improvements
+        class SwimShowsApp {
+            constructor() {
+                this.init();
             }
 
-            const targetDate = new Date("Sep 10, 2025 18:00:00").getTime();
+            init() {
+                this.handleStickyHeader();
+                this.handleLazyLoading();
+                this.handleErrorStates();
+                this.handleKeyboardNavigation();
+                this.handleReducedMotion();
+                this.handleIntersectionObserver();
+            }
 
-            const updateCountdown = () => {
-                const now = new Date().getTime();
-                const distance = targetDate - now;
+            handleStickyHeader() {
+                const header = document.querySelector('.sticky-header');
+                if (!header) return;
 
-                if (distance < 0) {
-                    clearInterval(interval);
-                    countdownElement.innerHTML = "Event Started!";
-                    return;
-                }
+                const observer = new IntersectionObserver(
+                    ([entry]) => {
+                        header.classList.toggle('scrolled', !entry.isIntersecting);
+                    },
+                    { 
+                        threshold: 0, 
+                        rootMargin: '-100px 0px 0px 0px' 
+                    }
+                );
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                observer.observe(document.body);
+            }
 
-                const daysEl = document.getElementById("countdown-days");
-                const hoursEl = document.getElementById("countdown-hours");
-                const minutesEl = document.getElementById("countdown-minutes");
+            handleLazyLoading() {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                
+                if ('IntersectionObserver' in window) {
+                    const imageObserver = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                img.classList.add('loaded');
+                                observer.unobserve(img);
+                            }
+                        });
+                    }, { rootMargin: '100px' });
 
-                if (daysEl && hoursEl && minutesEl) {
-                    daysEl.textContent = days.toString().padStart(2, "0");
-                    hoursEl.textContent = hours.toString().padStart(2, "0");
-                    minutesEl.textContent = minutes.toString().padStart(2, "0");
+                    images.forEach(img => {
+                        img.addEventListener('error', this.handleImageError.bind(this));
+                        imageObserver.observe(img);
+                    });
                 } else {
-                    console.warn("Countdown sub-elements not found");
+                    // Fallback for older browsers
+                    images.forEach(img => {
+                        img.classList.add('loaded');
+                        img.addEventListener('error', this.handleImageError.bind(this));
+                    });
                 }
-            };
-
-            const interval = setInterval(updateCountdown, 1000);
-            updateCountdown();
-        }
-
-        function handleStickyHeader() {
-            const header = document.querySelector(".sticky-header");
-            if (!header) {
-                console.warn("Sticky header not found");
-                return;
             }
 
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    header.classList.toggle("scrolled", !entry.isIntersecting);
-                },
-                { threshold: 0, rootMargin: "-100px 0px 0px 0px" }
-            );
+            handleImageError(event) {
+                const img = event.target;
+                const container = img.closest('.image-container');
+                if (container) {
+                    container.classList.add('error-state');
+                    container.innerHTML = `
+                        <div class="error-state">
+                            <p>Image temporarily unavailable</p>
+                        </div>
+                    `;
+                }
+            }
 
-            observer.observe(document.body);
-        }
-
-        function handleImageLoad() {
-            const images = document.querySelectorAll("img[loading='lazy']");
-            if ("IntersectionObserver" in window) {
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.classList.add("loaded");
-                            observer.unobserve(img);
+            handleErrorStates() {
+                // Handle iframe errors
+                const iframes = document.querySelectorAll('iframe');
+                iframes.forEach(iframe => {
+                    iframe.addEventListener('error', () => {
+                        const container = iframe.closest('.embed-section') || iframe.closest('.video-container');
+                        if (container) {
+                            container.classList.add('error-state');
+                            const fallback = container.querySelector('.fallback-text');
+                            if (fallback) {
+                                fallback.style.display = 'block';
+                            }
                         }
                     });
-                }, { rootMargin: "100px" });
-                images.forEach(img => imageObserver.observe(img));
-            } else {
-                images.forEach(img => img.classList.add("loaded"));
+                });
+            }
+
+            handleKeyboardNavigation() {
+                // Enhanced focus management
+                const focusableElements = document.querySelectorAll(
+                    'a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
+                );
+
+                focusableElements.forEach(element => {
+                    element.addEventListener('keydown', (e) => {
+                        // Enhanced keyboard navigation
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            if (element.tagName === 'A' || element.hasAttribute('role')) {
+                                e.preventDefault();
+                                element.click();
+                            }
+                        }
+                    });
+                });
+
+                // Skip link functionality - removed since skip link was deleted
+            }
+
+            handleReducedMotion() {
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+                
+                if (prefersReducedMotion.matches) {
+                    document.documentElement.style.setProperty('--transition-standard', 'none');
+                    
+                    // Remove animation classes
+                    const animatedElements = document.querySelectorAll('.fade-in, .show-item');
+                    animatedElements.forEach(el => {
+                        el.style.animation = 'none';
+                        el.style.opacity = '1';
+                        el.style.transform = 'none';
+                    });
+                }
+            }
+
+            handleIntersectionObserver() {
+                // Animate elements on scroll
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const fadeObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, observerOptions);
+
+                const fadeElements = document.querySelectorAll('.fade-in');
+                fadeElements.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(20px)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    fadeObserver.observe(el);
+                });
+            }
+
+            // Performance monitoring
+            measurePerformance() {
+                if ('performance' in window) {
+                    window.addEventListener('load', () => {
+                        setTimeout(() => {
+                            const perfData = performance.getEntriesByType('navigation')[0];
+                            console.log(`Page load time: ${perfData.loadEventEnd - perfData.loadEventStart}ms`);
+                        }, 0);
+                    });
+                }
+            }
+
+            // Error tracking
+            trackErrors() {
+                window.addEventListener('error', (e) => {
+                    console.error('JavaScript error:', e.error);
+                    // Here you could send error data to analytics service
+                });
+
+                window.addEventListener('unhandledrejection', (e) => {
+                    console.error('Unhandled promise rejection:', e.reason);
+                    // Here you could send error data to analytics service
+                });
             }
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
+        // Service Worker registration for PWA capabilities
+        function registerServiceWorker() {
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('SW registered: ', registration);
+                        })
+                        .catch(registrationError => {
+                            console.log('SW registration failed: ', registrationError);
+                        });
+                });
+            }
+        }
+
+        // Preload critical resources
+        function preloadCriticalResources() {
+            const criticalImages = [
+                './images/swim-shows-logo.png'
+            ];
+
+            criticalImages.forEach(src => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = src;
+                document.head.appendChild(link);
+            });
+        }
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', () => {
             try {
-                startCountdown();
-                handleStickyHeader();
-                handleImageLoad();
+                new SwimShowsApp();
+                preloadCriticalResources();
+                registerServiceWorker();
+                
+                // Performance optimization
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(() => {
+                        // Non-critical tasks
+                        console.log('Swim Shows website loaded successfully');
+                    });
+                }
             } catch (error) {
-                console.error("Error initializing scripts:", error);
+                console.error('Error initializing Swim Shows app:', error);
             }
         });
+
+        // Handle page visibility changes for performance
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                // Pause non-essential animations/processes
+                const videos = document.querySelectorAll('iframe[src*="youtube"]');
+                videos.forEach(video => {
+                    if (video.contentWindow) {
+                        video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                    }
+                });
+            }
+        });
+
+        // Optimize scroll performance
+        let ticking = false;
+        function updateOnScroll() {
+            // Throttle scroll events
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    // Scroll-dependent updates here
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', updateOnScroll, { passive: true });
+
+        // Handle network status
+        function handleNetworkChange() {
+            const status = navigator.onLine ? 'online' : 'offline';
+            document.body.classList.toggle('offline', !navigator.onLine);
+            
+            if (status === 'offline') {
+                // Show offline message
+                const offlineMsg = document.createElement('div');
+                offlineMsg.className = 'offline-message';
+                offlineMsg.innerHTML = `
+                    <div style="background: rgba(255, 0, 0, 0.9); color: white; padding: 10px; text-align: center; position: fixed; top: 0; left: 0; right: 0; z-index: 9999;">
+                        You're currently offline. Some features may not be available.
+                    </div>
+                `;
+                document.body.appendChild(offlineMsg);
+            } else {
+                // Remove offline message
+                const offlineMsg = document.querySelector('.offline-message');
+                if (offlineMsg) {
+                    offlineMsg.remove();
+                }
+            }
+        }
+
+        window.addEventListener('online', handleNetworkChange);
+        window.addEventListener('offline', handleNetworkChange);
+
+        // Add touch gestures for mobile
+        if ('ontouchstart' in window) {
+            let startX, startY;
+            
+            document.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+            }, { passive: true });
+            
+            document.addEventListener('touchmove', (e) => {
+                if (!startX || !startY) return;
+                
+                const diffX = startX - e.touches[0].clientX;
+                const diffY = startY - e.touches[0].clientY;
+                
+                // Handle swipe gestures if needed
+                if (Math.abs(diffX) > Math.abs(diffY)) {
+                    // Horizontal swipe
+                    if (diffX > 50) {
+                        // Swipe left
+                    } else if (diffX < -50) {
+                        // Swipe right
+                    }
+                }
+                
+                startX = null;
+                startY = null;
+            }, { passive: true });
+        }
+
+        // Critical CSS loader for above-the-fold content
+        function loadCriticalCSS() {
+            const criticalCSS = `
+                .sticky-header { display: flex; }
+                .title-section { display: block; }
+                .hero-tagline { display: block; }
+                .content-wrapper { display: flex; }
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = criticalCSS;
+            document.head.appendChild(style);
+        }
+
+        // Font loading optimization
+        if ('fonts' in document) {
+            document.fonts.ready.then(() => {
+                document.body.classList.add('fonts-loaded');
+            });
+        }
+
+        // Memory usage optimization
+        function cleanupMemory() {
+            // Clean up unused event listeners, objects, etc.
+            if (window.performance && window.performance.memory) {
+                const memInfo = window.performance.memory;
+                if (memInfo.usedJSHeapSize > memInfo.totalJSHeapSize * 0.8) {
+                    // High memory usage - trigger cleanup
+                    console.warn('High memory usage detected');
+                }
+            }
+        }
+
+        // Run cleanup periodically
+        setInterval(cleanupMemory, 30000); // Every 30 seconds
     </script>
+
+    <!-- Schema.org structured data for better SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Swim Shows",
+        "url": "https://swimshows.com",
+        "description": "Premier swim & resort fashion featuring global designers and top models in luxurious collections.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Swim Shows",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://swimshows.com/images/swim-shows-logo.png"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://swimshows.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Preconnect to external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//www.youtube.com">
+    <link rel="dns-prefetch" href="//open.spotify.com">
+    <link rel="dns-prefetch" href="//www.instagram.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
 </body>
 </html>
