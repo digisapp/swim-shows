@@ -3,446 +3,808 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Swim Shows Hawaii - February 2026. Experience luxury swimwear fashion in paradise featuring top designers and models.">
-    <meta name="keywords" content="Swim Shows, Hawaii Show, Luxury Swimwear, Fashion Hawaii, Designer Swimwear, Runway Shows, Hawaii 2026">
-    <meta name="author" content="Swim Shows">
+    <meta name="description" content="EXA Hawaii Shows - February 2026. Partner with us for world-class fashion events. Sponsorship opportunities available.">
+    <meta name="keywords" content="EXA Hawaii, Swim Shows, Hawaii Fashion, Sponsorship, Fashion Events, Designer Shows">
+    <meta name="author" content="EXA Models">
     <meta name="theme-color" content="#ff1493">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://swimshows.tv/hawaii">
-    <meta property="og:title" content="Swim Shows Hawaii - February 2026">
-    <meta property="og:description" content="Experience luxury swimwear fashion in paradise. Swim Shows Hawaii brings top designers and models to the islands.">
-    <meta property="og:image" content="./images/swim-shows-og-image.jpg">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://swimshows.tv/hawaii">
-    <meta name="twitter:title" content="Swim Shows Hawaii - February 2026">
-    <meta name="twitter:description" content="Experience luxury swimwear fashion in paradise. Swim Shows Hawaii brings top designers and models to the islands.">
-    <meta name="twitter:image" content="./images/swim-shows-og-image.jpg">
-
-    <title>Swim Shows Hawaii - February 2026 | Luxury Swimwear Fashion</title>
+    <title>EXA Hawai'i Shows - February 2026 | Sponsorship Deck</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/swim-shows-icon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/swim-shows-icon-16.png">
-    <link rel="shortcut icon" type="image/png" href="./images/swim-shows-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/swim-shows-icon-180.png">
-    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" href="./images/swim-shows-icon.png">
 
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
-    <link rel="preload" href="./images/swim-shows-logo.png" as="image">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        :root {
-            --accent-color: #ff69b4;
-            --border-radius-large: 20px;
-            --border-radius-medium: 15px;
-            --border-radius-small: 10px;
-            --box-shadow-primary: 0 0 25px rgba(0, 255, 204, 0.8), 0 0 40px rgba(255, 105, 180, 0.5);
-            --box-shadow-secondary: 0 4px 12px rgba(0, 0, 0, 0.15);
-            --primary-color: #ff1493;
-            --secondary-color: #00ffcc;
-            --tertiary-color: #00b7a8;
-            --transition-standard: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --white: #ffffff;
-            --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --backdrop-blur: blur(10px);
-            --z-index-header: 1000;
-            --container-max-width: 1200px;
-            --container-padding: 20px;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
+        :root {
+            --primary: #ff1493;
+            --secondary: #00ffcc;
+            --accent: #ff69b4;
+            --dark: #0a0a0a;
+            --darker: #000000;
+            --light: #ffffff;
+            --gray: rgba(255, 255, 255, 0.8);
+            --gradient-1: linear-gradient(135deg, #ff1493, #ff69b4);
+            --gradient-2: linear-gradient(135deg, #00ffcc, #00b7a8);
+            --gradient-3: linear-gradient(135deg, rgba(255, 20, 147, 0.9), rgba(0, 255, 204, 0.9));
         }
 
         body {
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-            color: var(--white);
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background: var(--darker);
+            color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
-            text-shadow: var(--text-shadow);
-            min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Header styles */
-        .sticky-header {
-            background: var(--glass-bg);
-            backdrop-filter: var(--backdrop-blur);
-            -webkit-backdrop-filter: var(--backdrop-blur);
-            border: 1px solid var(--glass-border);
-            border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            transition: var(--transition-standard);
-            width: 100%;
-            z-index: var(--z-index-header);
-        }
-
-        .sticky-header-content {
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
+        .deck-container {
+            max-width: 100%;
             margin: 0 auto;
-            max-width: var(--container-max-width);
-            padding: 15px var(--container-padding);
-            gap: 20px;
         }
 
-        .sticky-logo {
-            filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
-            height: 60px;
-            width: auto;
-            transition: var(--transition-standard);
-        }
-
-        .sticky-logo:hover {
-            transform: scale(1.1);
-            filter: drop-shadow(0px 0px 15px rgba(0, 255, 204, 0.8));
-        }
-
-        .sticky-cta-buttons {
+        /* Slide Layout */
+        .slide {
+            min-height: 100vh;
             display: flex;
-            gap: 12px;
-            flex: 1;
-            justify-content: flex-end;
-            flex-wrap: wrap;
-        }
-
-        .sticky-cta-button {
-            background: var(--glass-bg);
-            border: 2px solid var(--glass-border);
-            border-radius: 35px;
-            box-shadow: var(--box-shadow-secondary);
-            color: var(--white);
-            display: inline-flex;
             align-items: center;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            transition: var(--transition-standard);
-            white-space: nowrap;
-            cursor: pointer;
-        }
-
-        .sticky-cta-button:hover {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-color: var(--white);
-            box-shadow: 0 8px 25px rgba(255, 20, 147, 0.4);
-            transform: translateY(-3px) scale(1.05);
-        }
-
-        /* Hero Section */
-        .hero-section {
-            text-align: center;
+            justify-content: center;
             padding: 80px 20px;
-            background: linear-gradient(135deg, rgba(255, 20, 147, 0.2), rgba(0, 255, 204, 0.2));
-            border-radius: var(--border-radius-large);
-            margin: 40px auto;
-            max-width: var(--container-max-width);
+            position: relative;
+            scroll-snap-align: start;
         }
 
-        .hero-title {
-            font-size: clamp(40px, 8vw, 72px);
-            font-weight: 700;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            background-size: 300% auto;
+        .slide-content {
+            max-width: 1200px;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Cover Slide */
+        .cover-slide {
+            background: var(--gradient-3), url('./images/swim-shows-models.png') center/cover;
+            background-blend-mode: overlay;
+            text-align: center;
+        }
+
+        .cover-title {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 800;
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientText 6s ease infinite;
             margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
-        .hero-subtitle {
-            font-size: clamp(20px, 3vw, 28px);
-            color: var(--secondary-color);
-            margin-bottom: 15px;
+        .cover-subtitle {
+            font-size: clamp(24px, 4vw, 42px);
+            color: var(--secondary);
+            margin-bottom: 40px;
             font-weight: 600;
         }
 
-        .hero-date {
-            font-size: clamp(18px, 2.5vw, 24px);
-            color: var(--white);
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border: 2px solid var(--white);
-            border-radius: 40px;
-            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
-            color: var(--white);
+        .cover-cta {
+            background: var(--gradient-1);
+            color: var(--light);
+            padding: 20px 50px;
+            border-radius: 50px;
             font-size: 18px;
             font-weight: 700;
-            padding: 18px 50px;
             text-decoration: none;
-            text-transform: uppercase;
-            transition: var(--transition-standard);
             display: inline-block;
-            margin: 10px;
-            cursor: pointer;
+            margin-top: 30px;
+            border: 2px solid var(--light);
+            transition: all 0.3s ease;
         }
 
-        .cta-button:hover {
-            background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
-            box-shadow: 0 12px 30px rgba(0, 255, 204, 0.6);
-            transform: translateY(-5px) scale(1.05);
+        .cover-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.6);
         }
 
-        /* Content Section */
-        .content-section {
-            max-width: var(--container-max-width);
-            margin: 60px auto;
-            padding: 0 var(--container-padding);
+        /* Welcome Letter Slide */
+        .welcome-slide {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+        }
+
+        .welcome-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .welcome-header h2 {
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .welcome-header .signature {
+            font-size: 20px;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .welcome-content {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .welcome-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: var(--gray);
+        }
+
+        .welcome-content strong {
+            color: var(--light);
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about-slide {
+            background: var(--dark);
         }
 
         .section-title {
-            font-size: clamp(32px, 5vw, 48px);
+            font-size: clamp(36px, 6vw, 56px);
             font-weight: 700;
             text-align: center;
-            margin-bottom: 40px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            background-size: 300% auto;
+            margin-bottom: 60px;
+            background: var(--gradient-2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-transform: uppercase;
         }
 
-        .info-grid {
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: 0 20px 40px rgba(0, 255, 204, 0.3);
+        }
+
+        .about-card .icon {
+            font-size: 48px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .about-card h3 {
+            font-size: 24px;
+            color: var(--light);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .about-card p {
+            font-size: 16px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Sponsorship Categories */
+        .categories-slide {
+            background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .category-card {
+            background: var(--gradient-3);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.1), rgba(0, 255, 204, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .category-card:hover::before {
+            opacity: 1;
+        }
+
+        .category-card .icon {
+            font-size: 64px;
+            margin-bottom: 25px;
+        }
+
+        .category-card h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .category-card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Pricing Tables */
+        .pricing-slide {
+            background: var(--darker);
+            padding: 100px 20px;
+        }
+
+        .pricing-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin-top: 50px;
         }
 
-        .info-card {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(44, 44, 44, 0.9));
-            border: 2px solid var(--glass-border);
-            border-radius: var(--border-radius-large);
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(44, 44, 44, 0.95));
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
             padding: 40px 30px;
-            text-align: center;
-            transition: var(--transition-standard);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .info-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 255, 204, 0.4);
+        .pricing-card.featured {
+            border-color: var(--primary);
+            box-shadow: 0 0 40px rgba(255, 20, 147, 0.4);
+            transform: scale(1.05);
         }
 
-        .info-icon {
-            font-size: 48px;
-            color: var(--secondary-color);
+        .pricing-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--secondary);
+        }
+
+        .pricing-tier {
+            font-size: 14px;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .pricing-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--light);
             margin-bottom: 20px;
         }
 
-        .info-title {
-            font-size: 24px;
+        .pricing-amount {
+            font-size: 48px;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 15px;
+            color: var(--gray);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        .pricing-button {
+            width: 100%;
+            background: var(--gradient-1);
+            color: var(--light);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 16px;
             font-weight: 700;
-            color: var(--white);
-            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
             text-transform: uppercase;
         }
 
-        .info-text {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.8;
+        .pricing-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.5);
         }
 
-        /* Description */
-        .description {
-            background: linear-gradient(135deg, rgba(255, 20, 147, 0.15), rgba(0, 255, 204, 0.15));
-            border: 2px solid var(--glass-border);
-            border-radius: var(--border-radius-large);
-            padding: 50px;
-            margin: 60px 0;
+        /* CTA Slide */
+        .cta-slide {
+            background: var(--gradient-3);
             text-align: center;
         }
 
-        .description p {
-            font-size: clamp(16px, 2vw, 20px);
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: var(--white);
+        .cta-content h2 {
+            font-size: clamp(42px, 7vw, 72px);
+            font-weight: 800;
+            margin-bottom: 30px;
         }
 
-        /* Footer */
-        .main-footer {
-            background: var(--glass-bg);
-            backdrop-filter: var(--backdrop-blur);
-            border: 2px solid var(--glass-border);
-            border-radius: var(--border-radius-medium);
-            color: var(--white);
-            margin: 60px auto 40px;
-            padding: 40px;
-            text-align: center;
-            max-width: var(--container-max-width);
+        .cta-content p {
+            font-size: clamp(18px, 3vw, 24px);
+            margin-bottom: 50px;
+            color: var(--gray);
         }
 
-        .contact-info {
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 20px 50px;
+            border-radius: 50px;
             font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .contact-info a {
-            color: var(--secondary-color);
+            font-weight: 700;
             text-decoration: none;
-            transition: var(--transition-standard);
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
-        .contact-info a:hover {
-            color: var(--white);
-            text-shadow: 0 0 10px var(--secondary-color);
+        .cta-btn-primary {
+            background: var(--light);
+            color: var(--primary);
+            border: 2px solid var(--light);
         }
 
-        .copyright {
-            font-size: 14px;
-            opacity: 0.8;
-            font-weight: 300;
-            margin-top: 20px;
+        .cta-btn-primary:hover {
+            background: transparent;
+            color: var(--light);
+            transform: translateY(-5px);
         }
 
-        @keyframes gradientText {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .cta-btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+        }
+
+        .cta-btn-secondary:hover {
+            background: var(--light);
+            color: var(--primary);
+            transform: translateY(-5px);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .sticky-header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .hero-section {
+            .slide {
                 padding: 60px 20px;
             }
 
-            .cta-button {
-                font-size: 16px;
-                padding: 15px 35px;
+            .welcome-content {
+                padding: 30px 25px;
             }
 
-            .info-grid {
+            .pricing-grid {
                 grid-template-columns: 1fr;
             }
 
-            .description {
-                padding: 30px 20px;
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-btn {
+                width: 100%;
+            }
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator i {
+            font-size: 32px;
+            color: var(--secondary);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
             }
         }
     </style>
 </head>
 <body>
-    <header class="sticky-header" role="banner">
-        <div class="sticky-header-content">
-            <a href="/">
-                <img src="./images/swim-shows-logo.png"
-                     alt="Swim Shows Logo"
-                     class="sticky-logo"
-                     loading="eager"
-                     width="120"
-                     height="60">
-            </a>
-            <nav class="sticky-cta-buttons" role="navigation">
-                <a href="/" class="sticky-cta-button">HOME</a>
-                <a href="/models.html" class="sticky-cta-button">MODELS</a>
-                <a href="/designers.html" class="sticky-cta-button">DESIGNERS</a>
-                <a href="/media.html" class="sticky-cta-button">MEDIA</a>
-                <a href="/shop.html" class="sticky-cta-button">SWIM SHOP</a>
-            </nav>
-        </div>
-    </header>
+    <div class="deck-container">
 
-    <main>
-        <section class="hero-section">
-            <h1 class="hero-title">Hawai'i Show</h1>
-            <p class="hero-subtitle">Luxury Swimwear Fashion in Paradise</p>
-            <p class="hero-date">February 2026 | Hawai'i</p>
-            <div>
-                <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="cta-button">Get Tickets</a>
-                <a href="https://www.examodels.com/swimdesigner" target="_blank" rel="noopener noreferrer" class="cta-button">Designer Application</a>
+        <!-- Cover Slide -->
+        <section class="slide cover-slide">
+            <div class="slide-content">
+                <h1 class="cover-title">EXA HAWAI'I SHOWS</h1>
+                <p class="cover-subtitle">February 2026</p>
+                <p style="font-size: 20px; margin-bottom: 30px;">Sponsorship & Partnership Opportunities</p>
+                <a href="#welcome" class="cover-cta">View Sponsorship Deck</a>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </section>
 
-        <section class="content-section">
-            <div class="description">
-                <p>Join us in paradise for an unforgettable showcase of luxury swimwear and resort fashion.</p>
-                <p>Swim Shows brings the world's top designers and models to the beautiful islands of Hawai'i for an exclusive fashion experience like no other.</p>
-                <p>Experience runway shows featuring premier swimwear brands, network with industry leaders, and celebrate fashion in one of the world's most stunning destinations.</p>
-            </div>
+        <!-- Welcome Letter -->
+        <section id="welcome" class="slide welcome-slide">
+            <div class="slide-content">
+                <div class="welcome-header">
+                    <h2>WELCOME LETTER</h2>
+                    <p class="signature">Message from Kyani Bateman, Founder</p>
+                </div>
+                <div class="welcome-content">
+                    <p><strong>Aloha, and mahalo</strong> for your interest in partnering with EXA Hawaiʻi Shows. Our mission is to highlight Hawaiʻi's diverse fashion, culture, and talent through world-class shows that bring together designers, models, and community. Sponsors are the backbone of making these shows possible, and we look forward to aligning with brands who share our values of creativity, empowerment, and connection.</p>
 
-            <h2 class="section-title">Event Highlights</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3 class="info-title">When</h3>
-                    <p class="info-text">February 2026<br>Dates to be announced</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3 class="info-title">Where</h3>
-                    <p class="info-text">Hawai'i<br>Venue details coming soon</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon"><i class="fas fa-star"></i></div>
-                    <h3 class="info-title">Experience</h3>
-                    <p class="info-text">World-class runway shows<br>Top designers & models</p>
+                    <p>Since <strong>2020</strong>, EXA Models has been a premier source of elite talent, providing models for top fashion shows, campaigns, editorials, and brand launches.</p>
+
+                    <p>In <strong>2022</strong>, EXA began producing its own shows — quickly gaining attention for high-impact productions where swimwear fashion meets art. From Miami Swim Week to Art Basel and NYFW, EXA curates top international designers, world-class models, and live performances into unforgettable runway moments.</p>
+
+                    <p><strong>Coming February 2026</strong>, EXA brings its signature show experience to Hawaii — expanding its reach and continuing to redefine the fashion event landscape.</p>
                 </div>
             </div>
+        </section>
 
-            <div style="text-align: center; margin: 60px 0;">
-                <h2 class="section-title">Be Part of the Show</h2>
-                <p style="font-size: 18px; margin-bottom: 30px; color: rgba(255, 255, 255, 0.9);">
-                    Whether you're a designer, model, media professional, or fashion enthusiast, join us in Hawai'i.
+        <!-- Why Partner Section -->
+        <section class="slide about-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Why Partner With EXA?</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <h3>Audience</h3>
+                        <p>EXA attracts a highly engaged, fashion-forward audience made up of industry insiders, influencers, creatives, and trendsetters. Our events draw tastemakers who not only appreciate elevated fashion and art, but actively shape what's next in the culture.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon"><i class="fas fa-globe-americas"></i></div>
+                        <h3>Reach</h3>
+                        <p>With a growing presence across major markets like Miami, New York, and now Hawaii, EXA connects brands to a global audience through live events, digital campaigns, and media coverage. Our shows consistently generate high-impact content that extends far beyond the runway.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Opportunities</h3>
+                        <p>Partners gain access to unique brand integrations, influencer collaborations, and media visibility across EXA's high-profile platforms. From exclusive event placements to co-branded activations, we create tailored opportunities that drive real engagement and elevate brand presence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sponsorship Categories -->
+        <section class="slide categories-slide">
+            <div class="slide-content">
+                <h2 class="section-title">Sponsorship Categories</h2>
+                <p style="text-align: center; font-size: 20px; margin-bottom: 20px; color: var(--gray);">We welcome sponsors in three main categories:</p>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="icon">💰</div>
+                        <h3>Financial</h3>
+                        <p>Direct funds to support event production and execution</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="icon">🏢</div>
+                        <h3>Venue</h3>
+                        <p>Space for shows, rehearsals, mixers, and events</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="icon">🎁</div>
+                        <h3>Product & Services</h3>
+                        <p>Goods, beauty, catering, staging, production services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Sponsors -->
+        <section class="slide pricing-slide">
+            <div class="pricing-container">
+                <h2 class="section-title">Financial Sponsor Packages</h2>
+                <div class="pricing-grid">
+
+                    <!-- Ultimate Sponsor -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-tier">Ultimate Sponsor</div>
+                        <h3 class="pricing-title">Presented By</h3>
+                        <div class="pricing-amount">$8,000</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> "Presented by [Brand]" on all materials</li>
+                            <li><i class="fas fa-check"></i> Live stage acknowledgment</li>
+                            <li><i class="fas fa-check"></i> Top logo placement everywhere</li>
+                            <li><i class="fas fa-check"></i> Dedicated photoshoot with EXA models</li>
+                            <li><i class="fas fa-check"></i> 3x social media posts + highlight reels</li>
+                            <li><i class="fas fa-check"></i> VIP seating + backstage access</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Ultimate Sponsor Inquiry'">Become Ultimate Sponsor</button>
+                    </div>
+
+                    <!-- Gold Sponsor -->
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Gold Sponsor</div>
+                        <h3 class="pricing-title">Premium Partner</h3>
+                        <div class="pricing-amount">$5,000</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Logo on flyers, signage, programs</li>
+                            <li><i class="fas fa-check"></i> 1x social media post + story tags</li>
+                            <li><i class="fas fa-check"></i> Sponsored model content shoot</li>
+                            <li><i class="fas fa-check"></i> VIP seating + event recognition</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Gold Sponsor Inquiry'">Become Gold Sponsor</button>
+                    </div>
+
+                    <!-- Silver Sponsor -->
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Silver Sponsor</div>
+                        <h3 class="pricing-title">Featured Partner</h3>
+                        <div class="pricing-amount">$2,500</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Logo on select materials</li>
+                            <li><i class="fas fa-check"></i> "Thank You Sponsors" group post</li>
+                            <li><i class="fas fa-check"></i> Product placement opportunity</li>
+                            <li><i class="fas fa-check"></i> Event program recognition</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Silver Sponsor Inquiry'">Become Silver Sponsor</button>
+                    </div>
+
+                    <!-- Community Sponsor -->
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Community Sponsor</div>
+                        <h3 class="pricing-title">Community Partner</h3>
+                        <div class="pricing-amount">$750</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Listed in community partners</li>
+                            <li><i class="fas fa-check"></i> Social story recognition</li>
+                            <li><i class="fas fa-check"></i> Product sample opportunities</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Community Sponsor Inquiry'">Become Community Sponsor</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue Sponsors -->
+        <section class="slide pricing-slide">
+            <div class="pricing-container">
+                <h2 class="section-title">Venue Sponsor Packages</h2>
+                <div class="pricing-grid">
+
+                    <div class="pricing-card featured">
+                        <div class="pricing-tier">Tier 1</div>
+                        <h3 class="pricing-title">Full Event Venue</h3>
+                        <div class="pricing-amount" style="font-size: 32px;">2+ Days or Main Show</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> "Hosted at [Venue Name]" across all materials</li>
+                            <li><i class="fas fa-check"></i> Venue logo on programs & digital media</li>
+                            <li><i class="fas fa-check"></i> Location tagged in all content</li>
+                            <li><i class="fas fa-check"></i> Booth/activation opportunities</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Tier 1 Venue Sponsor Inquiry'">Partner as Tier 1 Venue</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Tier 2</div>
+                        <h3 class="pricing-title">Half-Day / Rehearsal Space</h3>
+                        <div class="pricing-amount" style="font-size: 32px;">Event Support</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Listed as "Official Location Partner"</li>
+                            <li><i class="fas fa-check"></i> Logo on event program & socials</li>
+                            <li><i class="fas fa-check"></i> Geotagged in content</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Tier 2 Venue Sponsor Inquiry'">Partner as Tier 2 Venue</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Tier 3</div>
+                        <h3 class="pricing-title">Short-Term / Meeting Space</h3>
+                        <div class="pricing-amount" style="font-size: 32px;">Community</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Listed in "Community Partners"</li>
+                            <li><i class="fas fa-check"></i> Social story recognition during usage</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Tier 3 Venue Sponsor Inquiry'">Partner as Tier 3 Venue</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Product & Service Sponsors -->
+        <section class="slide pricing-slide">
+            <div class="pricing-container">
+                <h2 class="section-title">Product & Service Packages</h2>
+                <div class="pricing-grid">
+
+                    <div class="pricing-card featured">
+                        <div class="pricing-tier">Tier 1 - Major Partner</div>
+                        <h3 class="pricing-title">Featured Integration</h3>
+                        <div class="pricing-amount">$3,500</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Featured in official campaign shoot</li>
+                            <li><i class="fas fa-check"></i> Dedicated social reel/carousel post</li>
+                            <li><i class="fas fa-check"></i> Logo on flyers as "Featured Product Partner"</li>
+                            <li><i class="fas fa-check"></i> Full sponsor credit in program</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Tier 1 Product Sponsor Inquiry'">Become Major Partner</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Tier 2 - Standard Partner</div>
+                        <h3 class="pricing-title">Brand Integration</h3>
+                        <div class="pricing-amount">$1,950</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Products featured in BTS content</li>
+                            <li><i class="fas fa-check"></i> Social tags & group "Thank You" post</li>
+                            <li><i class="fas fa-check"></i> Logo in program sponsor section</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Tier 2 Product Sponsor Inquiry'">Become Standard Partner</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Tier 3 - Contributor</div>
+                        <h3 class="pricing-title">Community Support</h3>
+                        <div class="pricing-amount">$500</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Community sponsor thank-you post</li>
+                            <li><i class="fas fa-check"></i> Listed by name in event program</li>
+                            <li><i class="fas fa-check"></i> Optional BTS mention if used</li>
+                        </ul>
+                        <button class="pricing-button" onclick="window.location.href='mailto:info@examodels.com?subject=Tier 3 Product Sponsor Inquiry'">Become Contributor</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="slide cta-slide">
+            <div class="slide-content cta-content">
+                <h2>Ready to Partner?</h2>
+                <p>Join us in creating an unforgettable fashion experience in Hawai'i</p>
+                <div class="cta-buttons">
+                    <a href="mailto:info@examodels.com?subject=EXA Hawaii Sponsorship Inquiry" class="cta-btn cta-btn-primary">
+                        Contact Us
+                    </a>
+                    <a href="/" class="cta-btn cta-btn-secondary">
+                        Back to Home
+                    </a>
+                </div>
+                <p style="margin-top: 50px; font-size: 18px;">
+                    📧 info@examodels.com<br>
+                    🌐 swimshows.tv
                 </p>
-                <a href="https://www.examodels.com/tickets" target="_blank" rel="noopener noreferrer" class="cta-button">Reserve Your Spot</a>
             </div>
         </section>
-    </main>
 
-    <footer class="main-footer" role="contentinfo">
-        <div class="contact-info">
-            Contact:
-            <a href="mailto:info@examodels.com">info@examodels.com</a>
-        </div>
-        <p class="copyright">© 2025 Swim Shows. All rights reserved.</p>
-    </footer>
+    </div>
 
     <!-- Vercel Analytics -->
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Hide scroll indicator after first scroll
+        let hasScrolled = false;
+        window.addEventListener('scroll', () => {
+            if (!hasScrolled && window.scrollY > 100) {
+                hasScrolled = true;
+                document.querySelector('.scroll-indicator').style.opacity = '0';
+                setTimeout(() => {
+                    document.querySelector('.scroll-indicator').style.display = 'none';
+                }, 300);
+            }
+        });
+
+        // Track sponsorship inquiries
+        document.querySelectorAll('.pricing-button').forEach(button => {
+            button.addEventListener('click', () => {
+                if (window.va) {
+                    const tier = button.closest('.pricing-card').querySelector('.pricing-title').textContent;
+                    window.va('track', 'sponsorship_inquiry', { tier: tier });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
