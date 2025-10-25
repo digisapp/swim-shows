@@ -392,46 +392,98 @@
             box-shadow: 0 15px 40px rgba(255, 20, 147, 0.6);
         }
 
-        /* Value Props */
-        .value-props {
+        /* Hero Two Column Layout */
+        .hero-two-column {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
+            grid-template-columns: 45% 55%;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .value-prop {
+        .hero-image-col {
             text-align: center;
-            padding: 20px;
+        }
+
+        .hero-cover-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 20px;
+            border: 3px solid rgba(255, 105, 180, 0.6);
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.8),
+                        0 0 60px rgba(255, 105, 180, 0.4),
+                        inset 0 0 20px rgba(255, 105, 180, 0.2);
+        }
+
+        .hero-content-col {
+            text-align: left;
+        }
+
+        .hero-content-col .cover-title {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .hero-content-col .cover-subtitle {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        /* Hero Value List */
+        .hero-value-list {
+            margin: 30px 0;
+        }
+
+        .hero-value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
+            border-radius: 12px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .value-icon {
-            font-size: 36px;
-            display: block;
-            margin-bottom: 10px;
+        .hero-icon {
+            font-size: 28px;
+            flex-shrink: 0;
         }
 
-        .value-prop p {
+        .hero-value-item p {
             font-size: 16px;
             color: var(--light);
             margin: 0;
             font-weight: 600;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 968px) {
+            .hero-two-column {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-content-col .cover-title,
+            .hero-content-col .cover-subtitle {
+                text-align: center;
+            }
         }
 
         /* Hero CTAs */
         .hero-ctas {
             display: flex;
             gap: 20px;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
-            margin-top: 40px;
+            margin-top: 30px;
+        }
+
+        .cover-slide .hero-ctas {
+            justify-content: flex-start;
         }
 
         .cta-btn-large {
@@ -1244,40 +1296,46 @@
         <!-- Cover Slide -->
         <section class="slide cover-slide">
             <div class="slide-content">
-                <div style="text-align: center; margin-bottom: 20px;">
+                <div style="text-align: center; margin-bottom: 30px;">
                     <span class="hawaiian-emoji">🌺</span>
                     <span class="hawaiian-emoji">🌴</span>
                     <span class="hawaiian-emoji">🌊</span>
                 </div>
-                <div class="section-image-container" style="max-width: 500px; margin: 20px auto;">
-                    <img src="./images/swim-shows-cover1.jpg" alt="EXA Hawaii Shows" class="glow-image">
-                </div>
-                <h1 class="cover-title">EXA HAWAI'I SHOWS</h1>
-                <p class="cover-subtitle">February 2026 • Sponsorship Opportunities</p>
 
-                <!-- Value Props -->
-                <div class="value-props">
-                    <div class="value-prop">
-                        <span class="value-icon">🎯</span>
-                        <p>Taste-maker audience of fashion insiders & influencers</p>
+                <!-- Two Column Layout: Image Left, Content Right -->
+                <div class="hero-two-column">
+                    <div class="hero-image-col">
+                        <img src="./images/swim-shows-cover1.jpg" alt="EXA Hawaii Shows" class="hero-cover-image">
                     </div>
-                    <div class="value-prop">
-                        <span class="value-icon">📸</span>
-                        <p>High-impact content engine with global media reach</p>
-                    </div>
-                    <div class="value-prop">
-                        <span class="value-icon">🤝</span>
-                        <p>Turn-key activation team with proven ROI</p>
+                    <div class="hero-content-col">
+                        <h1 class="cover-title">EXA HAWAI'I SHOWS</h1>
+                        <p class="cover-subtitle">February 2026 • Sponsorship Opportunities</p>
+
+                        <!-- Value Props -->
+                        <div class="hero-value-list">
+                            <div class="hero-value-item">
+                                <span class="hero-icon">🎯</span>
+                                <p>Taste-maker audience of fashion insiders & influencers</p>
+                            </div>
+                            <div class="hero-value-item">
+                                <span class="hero-icon">📸</span>
+                                <p>High-impact content engine with global media reach</p>
+                            </div>
+                            <div class="hero-value-item">
+                                <span class="hero-icon">🤝</span>
+                                <p>Turn-key activation team with proven ROI</p>
+                            </div>
+                        </div>
+
+                        <!-- Dual CTAs -->
+                        <div class="hero-ctas">
+                            <a href="#contact?utm_source=hawaii-deck&utm_medium=hero&utm_campaign=sponsor-cta" class="cta-btn cta-btn-primary cta-btn-large">Book a Sponsor Call</a>
+                            <a href="mailto:info@examodels.com?subject=Request Hawaii Sponsorship Deck PDF&utm_source=hawaii-deck&utm_medium=hero&utm_campaign=pdf-download" class="cta-btn cta-btn-secondary cta-btn-large">Download PDF Deck</a>
+                        </div>
+
+                        <p class="aloha-text" style="margin-top: 30px; text-align: left;">🤙 Aloha & Mahalo 🤙</p>
                     </div>
                 </div>
-
-                <!-- Dual CTAs -->
-                <div class="hero-ctas">
-                    <a href="#contact?utm_source=hawaii-deck&utm_medium=hero&utm_campaign=sponsor-cta" class="cta-btn cta-btn-primary cta-btn-large">Book a Sponsor Call</a>
-                    <a href="mailto:info@examodels.com?subject=Request Hawaii Sponsorship Deck PDF&utm_source=hawaii-deck&utm_medium=hero&utm_campaign=pdf-download" class="cta-btn cta-btn-secondary cta-btn-large">Download PDF Deck</a>
-                </div>
-
-                <p class="aloha-text" style="margin-top: 40px;">🤙 Aloha & Mahalo 🤙</p>
             </div>
             <div class="scroll-indicator">
                 <i class="fas fa-chevron-down"></i>
