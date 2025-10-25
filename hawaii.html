@@ -124,10 +124,79 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: var(--darker);
+            background: linear-gradient(135deg, #001a33 0%, #003d5c 50%, #006699 100%);
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* Liquid Glass Effects */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                        inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5),
+                        inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+        }
+
+        /* Liquid Blob Animations */
+        @keyframes blob {
+            0%, 100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+        }
+
+        .liquid-blob {
+            position: absolute;
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.3), rgba(0, 255, 204, 0.3));
+            filter: blur(40px);
+            animation: blob 7s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        .liquid-blob-1 {
+            top: 10%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            animation-delay: 0s;
+        }
+
+        .liquid-blob-2 {
+            top: 50%;
+            right: 10%;
+            width: 400px;
+            height: 400px;
+            animation-delay: 2s;
+        }
+
+        .liquid-blob-3 {
+            bottom: 10%;
+            left: 50%;
+            width: 350px;
+            height: 350px;
+            animation-delay: 4s;
         }
 
         .deck-container {
@@ -155,23 +224,21 @@
 
         /* Cover Slide */
         .cover-slide {
-            background: var(--hawaii-gradient);
+            background: linear-gradient(135deg, rgba(28, 169, 201, 0.9), rgba(0, 139, 139, 0.9));
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .cover-slide::after {
+        .cover-slide::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 900px;
-            height: 60%;
-            background: url('./images/swim-shows-cover1.jpg') center/contain no-repeat;
-            opacity: 0.2;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 105, 180, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(0, 255, 204, 0.2) 0%, transparent 50%);
             z-index: 1;
         }
 
@@ -256,11 +323,14 @@
         }
 
         .welcome-content {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 25px;
             padding: 50px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                        inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
         }
 
         .welcome-content p {
@@ -300,17 +370,22 @@
         }
 
         .about-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                        inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
             padding: 40px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
         }
 
         .about-card:hover {
             transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: 0 20px 40px rgba(0, 255, 204, 0.3);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 12px 40px 0 rgba(0, 255, 204, 0.5),
+                        inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
         }
 
         .about-card .icon {
@@ -405,23 +480,31 @@
         }
 
         .pricing-card {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(44, 44, 44, 0.95));
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                        inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
             padding: 40px 30px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
             position: relative;
         }
 
         .pricing-card.featured {
-            border-color: var(--primary);
-            box-shadow: 0 0 40px rgba(255, 20, 147, 0.4);
+            background: rgba(255, 105, 180, 0.2);
+            border-color: rgba(255, 105, 180, 0.5);
+            box-shadow: 0 8px 40px rgba(255, 105, 180, 0.4),
+                        inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
             transform: scale(1.05);
         }
 
         .pricing-card:hover {
             transform: translateY(-10px) scale(1.02);
-            border-color: var(--secondary);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 12px 40px 0 rgba(0, 255, 204, 0.5),
+                        inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
         }
 
         .pricing-tier {
@@ -558,14 +641,19 @@
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 15px;
+            border-radius: 20px;
             aspect-ratio: 4/3;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .gallery-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(0, 255, 204, 0.4);
         }
 
         .gallery-item img {
@@ -971,11 +1059,52 @@
             </div>
         </section>
 
+        <!-- Media Coverage Section -->
+        <section class="gallery-section">
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <span class="hawaiian-emoji">📸</span>
+                    <span class="hawaiian-emoji">🎥</span>
+                    <span class="hawaiian-emoji">📰</span>
+                </div>
+                <h2 class="section-title">MEDIA COVERAGE</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 30px; color: var(--light); max-width: 800px; margin-left: auto; margin-right: auto;">
+                    EXA Shows consistently captures global attention with extensive media coverage across fashion publications, lifestyle magazines, and digital platforms. Our runway events generate millions of impressions through press features, influencer content, and social media buzz. From exclusive backstage access to front-row celebrity moments, EXA creates content that resonates with audiences worldwide and delivers unparalleled brand visibility for our sponsors.
+                </p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="./images/swim-shows-media.jpg" alt="EXA Media Coverage">
+                        <div class="gallery-overlay">
+                            <p>Press & Publications</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/swim-shows-media2.jpg" alt="EXA Event Coverage">
+                        <div class="gallery-overlay">
+                            <p>Live Event Coverage</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/swim-shows-sponsor.jpg" alt="EXA Brand Integration">
+                        <div class="gallery-overlay">
+                            <p>Brand Activations</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/swim-shows-sponsor2.jpg" alt="EXA Sponsor Visibility">
+                        <div class="gallery-overlay">
+                            <p>Sponsor Visibility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery Section -->
         <section class="gallery-section">
             <div class="slide-content">
                 <h2 class="section-title">Our Past Events</h2>
-                <p style="text-align: center; font-size: 18px; margin-bottom: 20px; color: var(--gray);">
+                <p style="text-align: center; font-size: 18px; margin-bottom: 20px; color: var(--light);">
                     Experience the energy, creativity, and impact of EXA Shows
                 </p>
                 <div class="gallery-grid">
