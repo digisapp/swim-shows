@@ -10,6 +10,22 @@
 
     <title>EXA Hawai'i Shows - February 2026 | Sponsorship Deck</title>
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swimshows.tv/hawaii">
+    <meta property="og:title" content="EXA Hawai'i Shows - February 2026 | Sponsorship Opportunities">
+    <meta property="og:description" content="Join us for world-class runway fashion in paradise. Sponsorship packages available with proven ROI, global media reach, and unparalleled brand visibility.">
+    <meta property="og:image" content="https://swimshows.tv/images/swim-shows-cover1.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimshows.tv/hawaii">
+    <meta name="twitter:title" content="EXA Hawai'i Shows - February 2026 | Sponsorship Opportunities">
+    <meta name="twitter:description" content="Join us for world-class runway fashion in paradise. Sponsorship packages available with proven ROI, global media reach, and unparalleled brand visibility.">
+    <meta name="twitter:image" content="https://swimshows.tv/images/swim-shows-cover1.jpg">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./images/swim-shows-icon.png">
 
@@ -31,8 +47,98 @@
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(10px);
             padding: 15px 30px;
-            z-index: 1000;
+            z-index: 1001;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Sticky CTA Bar */
+        .sticky-cta-bar {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 119, 190, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 12px 20px;
+            z-index: 1000;
+            border-bottom: 2px solid rgba(0, 255, 204, 0.3);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-cta-bar.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .sticky-toc {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .sticky-toc-link {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .sticky-toc-link:hover {
+            background: rgba(0, 255, 204, 0.2);
+            color: var(--secondary);
+        }
+
+        .sticky-cta-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .sticky-cta-btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .sticky-cta-btn-primary {
+            background: var(--gradient-1);
+            color: var(--light);
+            border: 2px solid var(--light);
+        }
+
+        .sticky-cta-btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 20, 147, 0.5);
+        }
+
+        .sticky-cta-btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--light);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .sticky-cta-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: var(--light);
         }
 
         .nav-container {
@@ -282,6 +388,70 @@
         .cover-cta:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(255, 20, 147, 0.6);
+        }
+
+        /* Value Props */
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .value-prop {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .value-icon {
+            font-size: 36px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .value-prop p {
+            font-size: 16px;
+            color: var(--light);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        /* Hero CTAs */
+        .hero-ctas {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .cta-btn-large {
+            padding: 18px 40px;
+            font-size: 18px;
+            min-width: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .value-props {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-btn-large {
+                width: 100%;
+            }
         }
 
         /* Welcome Letter Slide */
@@ -630,6 +800,162 @@
             padding: 100px 20px;
         }
 
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(0, 255, 204, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 204, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+        }
+
+        .metric-number {
+            font-size: 48px;
+            font-weight: 800;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            color: var(--light);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Case Study Tiles */
+        .case-tiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .case-tile {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            padding: 35px;
+            transition: all 0.4s ease;
+        }
+
+        .case-tile:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 255, 204, 0.5);
+            box-shadow: 0 15px 40px rgba(0, 255, 204, 0.3);
+        }
+
+        .case-header {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .case-header h3 {
+            font-size: 22px;
+            color: var(--light);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .case-tier {
+            font-size: 13px;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .case-section {
+            margin-bottom: 20px;
+        }
+
+        .case-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .case-section h4 {
+            font-size: 14px;
+            color: var(--secondary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .case-section p {
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .case-section strong {
+            color: var(--light);
+            font-weight: 700;
+        }
+
+        /* FAQs */
+        .faqs-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(0, 255, 204, 0.4);
+            transform: translateX(5px);
+        }
+
+        .faq-question {
+            font-size: 18px;
+            color: var(--light);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .faq-answer strong {
+            color: var(--light);
+            font-weight: 700;
+        }
+
         /* Hawaiian Decorations */
         .hawaiian-emoji {
             font-size: 48px;
@@ -893,6 +1219,24 @@
         </div>
     </nav>
 
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta-bar" id="stickyCTA">
+        <div class="sticky-cta-content">
+            <nav class="sticky-toc">
+                <a href="#welcome" class="sticky-toc-link">Overview</a>
+                <a href="#audience" class="sticky-toc-link">Audience</a>
+                <a href="#packages" class="sticky-toc-link">Packages</a>
+                <a href="#media" class="sticky-toc-link">Media</a>
+                <a href="#past-events" class="sticky-toc-link">Past Events</a>
+                <a href="#faqs" class="sticky-toc-link">FAQs</a>
+            </nav>
+            <div class="sticky-cta-buttons">
+                <a href="#contact" class="sticky-cta-btn sticky-cta-btn-primary">Become a Sponsor</a>
+                <a href="mailto:info@examodels.com?subject=Request Hawaii Sponsorship Deck PDF" class="sticky-cta-btn sticky-cta-btn-secondary">Get Deck</a>
+            </div>
+        </div>
+    </div>
+
     <div class="deck-container">
 
         <!-- Cover Slide -->
@@ -907,14 +1251,31 @@
                     <img src="./images/swim-shows-cover1.jpg" alt="EXA Hawaii Shows" class="glow-image">
                 </div>
                 <h1 class="cover-title">EXA HAWAI'I SHOWS</h1>
-                <p class="cover-subtitle">February 2026</p>
-                <p class="aloha-text">🤙 Aloha & Mahalo 🤙</p>
-                <p style="font-size: 20px; margin-bottom: 30px;">Sponsorship & Partnership Opportunities</p>
-                <div style="text-align: center; margin-top: 20px;">
-                    <span class="hawaiian-emoji">🏄</span>
-                    <span class="hawaiian-emoji">🐚</span>
-                    <span class="hawaiian-emoji">☀️</span>
+                <p class="cover-subtitle">February 2026 • Sponsorship Opportunities</p>
+
+                <!-- Value Props -->
+                <div class="value-props">
+                    <div class="value-prop">
+                        <span class="value-icon">🎯</span>
+                        <p>Taste-maker audience of fashion insiders & influencers</p>
+                    </div>
+                    <div class="value-prop">
+                        <span class="value-icon">📸</span>
+                        <p>High-impact content engine with global media reach</p>
+                    </div>
+                    <div class="value-prop">
+                        <span class="value-icon">🤝</span>
+                        <p>Turn-key activation team with proven ROI</p>
+                    </div>
                 </div>
+
+                <!-- Dual CTAs -->
+                <div class="hero-ctas">
+                    <a href="#contact?utm_source=hawaii-deck&utm_medium=hero&utm_campaign=sponsor-cta" class="cta-btn cta-btn-primary cta-btn-large">Book a Sponsor Call</a>
+                    <a href="mailto:info@examodels.com?subject=Request Hawaii Sponsorship Deck PDF&utm_source=hawaii-deck&utm_medium=hero&utm_campaign=pdf-download" class="cta-btn cta-btn-secondary cta-btn-large">Download PDF Deck</a>
+                </div>
+
+                <p class="aloha-text" style="margin-top: 40px;">🤙 Aloha & Mahalo 🤙</p>
             </div>
             <div class="scroll-indicator">
                 <i class="fas fa-chevron-down"></i>
@@ -930,11 +1291,11 @@
                 </div>
                 <div class="welcome-header">
                     <img src="./images/swim-shows-kyani1.jpg" alt="Kyani Bateman" class="founder-photo">
-                    <h2>WELCOME LETTER</h2>
-                    <p class="signature">Message from Kyani Bateman, Founder</p>
+                    <h2>WELCOME FROM OUR FOUNDER</h2>
+                    <p class="signature">Kyani Bateman, Founder & CEO</p>
                 </div>
                 <div class="welcome-content">
-                    <p><strong>Aloha, and mahalo</strong> 🌺 for your interest in partnering with EXA Hawaiʻi Shows. Our mission is to highlight Hawaiʻi's diverse fashion, culture, and talent through world-class shows that bring together designers, models, and community. Sponsors are the backbone of making these shows possible, and we look forward to aligning with brands who share our values of creativity, empowerment, and connection.</p>
+                    <p><strong>Aloha, and mahalo</strong> 🌺 for your interest in partnering with EXA Hawaiʻi Shows. We're bringing world-class runway fashion to the islands in February 2026, celebrating Hawaiʻi's diverse culture, creativity, and talent. Our sponsors are essential partners who share our values of creativity, empowerment, and authentic connection—let's build something unforgettable together.</p>
                 </div>
             </div>
         </section>
@@ -960,8 +1321,50 @@
             </div>
         </section>
 
+        <!-- Hawaii Experience Section -->
+        <section class="slide welcome-slide">
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="hawaiian-emoji">🌺</span>
+                    <span class="hawaiian-emoji">🏝️</span>
+                    <span class="hawaiian-emoji">🌊</span>
+                </div>
+                <h2 class="section-title" style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">The Hawai'i Experience</h2>
+
+                <div class="two-column-section" style="margin-bottom: 60px;">
+                    <div class="section-image-container">
+                        <img src="./images/swim-shows-vibe2.jpg" alt="Hawaii Venue" class="glow-image">
+                    </div>
+                    <div class="about-card">
+                        <h3>🏖️ Island Paradise Venue</h3>
+                        <p>Our February 2026 shows will take place at stunning Hawaii locations that capture the spirit of the islands—where ocean views meet high fashion. Expect intimate beachside venues, luxury resorts, and curated spaces that bring together the best of Hawaii's natural beauty and world-class production quality.</p>
+                    </div>
+                </div>
+
+                <div class="two-column-section reverse" style="margin-bottom: 60px;">
+                    <div class="section-image-container">
+                        <img src="./images/swim-shows-backdrop.jpg" alt="Cultural Integration" class="glow-image">
+                    </div>
+                    <div class="about-card">
+                        <h3>🌺 Cultural Respect & Stewardship</h3>
+                        <p>We partner with local talent and follow community guidance to ensure a respectful, positive impact. Our events honor Hawaiian culture and traditions, working closely with local artists, performers, and businesses to create an authentic experience that celebrates the islands' rich heritage.</p>
+                    </div>
+                </div>
+
+                <div class="two-column-section">
+                    <div class="section-image-container">
+                        <img src="./images/swim-shows-cover3.jpg" alt="Sustainability" class="glow-image">
+                    </div>
+                    <div class="about-card">
+                        <h3>🌱 Sustainability Pledge</h3>
+                        <p>EXA is committed to environmentally conscious events. We implement plastic-free backstage operations, partner with local sustainable vendors, and prioritize eco-friendly production practices. Our goal is to create stunning fashion experiences while protecting the beautiful islands that host us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Why Partner Section -->
-        <section class="slide about-slide">
+        <section id="audience" class="slide about-slide">
             <div class="slide-content">
                 <div style="text-align: center; margin-bottom: 20px;">
                     <span class="hawaiian-emoji">🤝</span>
@@ -1006,7 +1409,7 @@
         </section>
 
         <!-- Financial Sponsors -->
-        <section class="slide pricing-slide">
+        <section id="packages" class="slide pricing-slide">
             <div class="pricing-container">
                 <div style="text-align: center; margin-bottom: 20px;">
                     <span class="hawaiian-emoji">💰</span>
@@ -1181,16 +1584,37 @@
         </section>
 
         <!-- Media Coverage Section -->
-        <section class="gallery-section">
+        <section id="media" class="gallery-section">
             <div class="slide-content">
                 <div style="text-align: center; margin-bottom: 30px;">
                     <span class="hawaiian-emoji">📸</span>
                     <span class="hawaiian-emoji">🎥</span>
                     <span class="hawaiian-emoji">📰</span>
                 </div>
-                <h2 class="section-title">MEDIA COVERAGE</h2>
-                <p style="text-align: center; font-size: 18px; margin-bottom: 30px; color: var(--light); max-width: 800px; margin-left: auto; margin-right: auto;">
-                    EXA Shows consistently captures global attention with extensive media coverage across fashion publications, lifestyle magazines, and digital platforms. Our runway events generate millions of impressions through press features, influencer content, and social media buzz. From exclusive backstage access to front-row celebrity moments, EXA creates content that resonates with audiences worldwide and delivers unparalleled brand visibility for our sponsors.
+                <h2 class="section-title">MEDIA COVERAGE & ROI</h2>
+
+                <!-- Metrics Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-number">5M+</div>
+                        <div class="metric-label">Total Impressions Per Event</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">50+</div>
+                        <div class="metric-label">Press Outlets & Publications</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">200K+</div>
+                        <div class="metric-label">Combined Social Reach</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">100+</div>
+                        <div class="metric-label">Influencer Collaborations</div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; font-size: 18px; margin: 40px auto 30px; color: var(--light); max-width: 800px;">
+                    From exclusive backstage access to front-row celebrity moments, EXA creates content that resonates with audiences worldwide and delivers measurable brand visibility for our sponsors.
                 </p>
                 <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); max-width: 900px; margin: 0 auto;">
                     <div class="gallery-item">
@@ -1244,8 +1668,82 @@
             </div>
         </section>
 
+        <!-- Sponsor Case Studies Section -->
+        <section class="gallery-section" style="background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(0, 139, 139, 0.3));">
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <span class="hawaiian-emoji">📊</span>
+                    <span class="hawaiian-emoji">🎯</span>
+                    <span class="hawaiian-emoji">💡</span>
+                </div>
+                <h2 class="section-title">SPONSOR SUCCESS STORIES</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 50px; color: var(--light); max-width: 800px; margin-left: auto; margin-right: auto;">
+                    See how our sponsors achieved measurable results through strategic brand integrations at EXA Shows
+                </p>
+
+                <div class="case-tiles">
+                    <div class="case-tile">
+                        <div class="case-header">
+                            <h3>🌺 Luxury Beauty Brand</h3>
+                            <p class="case-tier">Ultimate Sponsor • Miami Swim Week 2024</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Objective</h4>
+                            <p>Launch new summer collection to fashion-forward audience</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Activation</h4>
+                            <p>Dedicated model photoshoot, backstage beauty station, VIP gift bags, 5 social posts</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Result</h4>
+                            <p><strong>2.3M impressions</strong>, <strong>45K+ engagement</strong>, <strong>12% increase</strong> in web traffic during event week</p>
+                        </div>
+                    </div>
+
+                    <div class="case-tile">
+                        <div class="case-header">
+                            <h3>🏝️ Resort Venue Partner</h3>
+                            <p class="case-tier">Tier 1 Venue • Art Basel Miami 2023</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Objective</h4>
+                            <p>Elevate brand positioning as luxury event destination</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Activation</h4>
+                            <p>Full venue branding, location tags in all content, 48-hour event hosting</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Result</h4>
+                            <p><strong>800K+ social impressions</strong>, featured in <strong>15 press outlets</strong>, <strong>28% boost</strong> in booking inquiries</p>
+                        </div>
+                    </div>
+
+                    <div class="case-tile">
+                        <div class="case-header">
+                            <h3>🍹 Premium Beverage Brand</h3>
+                            <p class="case-tier">Gold Sponsor • NYFW 2024</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Objective</h4>
+                            <p>Connect with millennial & Gen-Z tastemakers</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Activation</h4>
+                            <p>Branded bar, product placement in 50+ photos, influencer content partnerships</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Result</h4>
+                            <p><strong>1.5M reach</strong>, <strong>60+ influencer tags</strong>, <strong>8,000+</strong> branded content shares</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery Section -->
-        <section class="gallery-section">
+        <section id="past-events" class="gallery-section">
             <div class="slide-content">
                 <div style="text-align: center; margin-bottom: 30px;">
                     <span class="hawaiian-emoji">🎬</span>
@@ -1309,8 +1807,62 @@
             </div>
         </section>
 
+        <!-- FAQs Section -->
+        <section id="faqs" class="slide about-slide">
+            <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="hawaiian-emoji">❓</span>
+                    <span class="hawaiian-emoji">💬</span>
+                    <span class="hawaiian-emoji">📋</span>
+                </div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+
+                <div class="faqs-container">
+                    <div class="faq-item">
+                        <h3 class="faq-question">📸 What content rights do sponsors receive?</h3>
+                        <p class="faq-answer">Sponsors receive full usage rights to all content from their dedicated shoots and activations. This includes professional photos, video footage, and behind-the-scenes content. Ultimate and Gold sponsors also receive edited reels and social-ready content packages. All content can be used across your marketing channels indefinitely.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">📦 What deliverables are included in each package?</h3>
+                        <p class="faq-answer">Each tier includes specific deliverables: <strong>Ultimate</strong> sponsors receive 3+ social posts, dedicated photoshoots, VIP access, and branded highlight reels. <strong>Gold</strong> sponsors get 1-2 social posts, model content shoots, and event recognition. <strong>Silver</strong> sponsors receive group thank-you posts and program listings. All packages include logo placement on event materials and digital promotion appropriate to the tier.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">🎟️ How many complimentary tickets are included?</h3>
+                        <p class="faq-answer"><strong>Ultimate sponsors</strong> receive 8 VIP tickets with backstage access. <strong>Gold sponsors</strong> receive 4 VIP tickets. <strong>Silver sponsors</strong> receive 2 general admission tickets. Venue partners receive custom ticket allocations based on their tier. Additional tickets can be purchased at a discounted rate for all sponsors.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">📅 What are the key deadlines?</h3>
+                        <p class="faq-answer">Sponsorship commitment deadline is <strong>December 15, 2025</strong> for maximum visibility in pre-event marketing. Logo and brand assets due by <strong>January 5, 2026</strong>. Final activation details must be confirmed by <strong>January 20, 2026</strong>. Event dates: <strong>February 2026</strong> (exact dates TBD).</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">💰 What is the payment and refund policy?</h3>
+                        <p class="faq-answer">50% deposit due upon signing, remaining balance due 30 days before the event. We offer flexible payment plans for larger sponsorship packages. Cancellations made 60+ days before the event receive a 50% refund. Cancellations within 60 days are non-refundable, but sponsorship can be transferred to a future EXA event with approval.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">🎪 Can we customize our sponsorship package?</h3>
+                        <p class="faq-answer">Absolutely! We specialize in creating custom activations tailored to your brand's objectives. Whether you want to add influencer meet-and-greets, after-party presenting sponsorship, VIP cabanas, or unique brand experiences, we'll work with you to design the perfect partnership. Contact us to discuss custom packages.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">📊 How do you measure and report ROI?</h3>
+                        <p class="faq-answer">All sponsors receive a comprehensive post-event report including: total impressions, engagement metrics, press coverage summary, social media reach, content performance analytics, and high-resolution photo/video deliverables. Ultimate and Gold sponsors also receive influencer partnership data and web traffic referral analysis.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">🏝️ Why sponsor the Hawaii show specifically?</h3>
+                        <p class="faq-answer">The Hawaii show offers a unique opportunity to align your brand with paradise, wellness, and luxury lifestyle positioning. The island setting attracts affluent travelers, resort brands, and lifestyle-focused media. It's ideal for brands in beauty, wellness, resort wear, travel, hospitality, and luxury products looking to connect with a high-net-worth, vacation-minded audience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Final CTA -->
-        <section class="slide cta-slide">
+        <section id="contact" class="slide cta-slide">
             <div class="slide-content cta-content">
                 <h2>Ready to Partner?</h2>
                 <p>Join us in creating an unforgettable fashion experience in Hawai'i</p>
@@ -1330,6 +1882,67 @@
         </section>
 
     </div>
+
+    <!-- Event Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "EXA Hawai'i Shows 2026",
+        "description": "World-class runway fashion show featuring international designers, elite models, and swimwear collections in the beautiful setting of Hawaii. Sponsorship and partnership opportunities available.",
+        "startDate": "2026-02-01",
+        "endDate": "2026-02-28",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+            "@type": "Place",
+            "name": "Hawaii",
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "HI",
+                "@country": "US"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "EXA Models",
+            "url": "https://swimshows.tv",
+            "logo": "https://swimshows.tv/images/swim-shows-logo.png",
+            "email": "info@examodels.com"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Ultimate Sponsor Package",
+                "price": "8000",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://swimshows.tv/hawaii#packages"
+            },
+            {
+                "@type": "Offer",
+                "name": "Gold Sponsor Package",
+                "price": "5000",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://swimshows.tv/hawaii#packages"
+            },
+            {
+                "@type": "Offer",
+                "name": "Silver Sponsor Package",
+                "price": "2500",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://swimshows.tv/hawaii#packages"
+            }
+        ],
+        "image": [
+            "https://swimshows.tv/images/swim-shows-cover1.jpg",
+            "https://swimshows.tv/images/swim-shows-vibe1.jpg",
+            "https://swimshows.tv/images/swim-shows-media.jpg"
+        ]
+    }
+    </script>
 
     <!-- Vercel Analytics -->
     <script>
@@ -1352,8 +1965,9 @@
             });
         });
 
-        // Hide scroll indicator after first scroll
+        // Hide scroll indicator after first scroll & Show sticky CTA bar
         let hasScrolled = false;
+        const stickyCTA = document.getElementById('stickyCTA');
         window.addEventListener('scroll', () => {
             if (!hasScrolled && window.scrollY > 100) {
                 hasScrolled = true;
@@ -1361,6 +1975,13 @@
                 setTimeout(() => {
                     document.querySelector('.scroll-indicator').style.display = 'none';
                 }, 300);
+            }
+
+            // Show sticky CTA after scrolling past hero
+            if (window.scrollY > 600) {
+                stickyCTA.classList.add('visible');
+            } else {
+                stickyCTA.classList.remove('visible');
             }
         });
 
