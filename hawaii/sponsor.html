@@ -1273,24 +1273,6 @@
         </div>
     </nav>
 
-    <!-- Sticky CTA Bar -->
-    <div class="sticky-cta-bar" id="stickyCTA">
-        <div class="sticky-cta-content">
-            <nav class="sticky-toc">
-                <a href="#welcome" class="sticky-toc-link">Overview</a>
-                <a href="#audience" class="sticky-toc-link">Audience</a>
-                <a href="#packages" class="sticky-toc-link">Packages</a>
-                <a href="#media" class="sticky-toc-link">Media</a>
-                <a href="#past-events" class="sticky-toc-link">Past Events</a>
-                <a href="#faqs" class="sticky-toc-link">FAQs</a>
-            </nav>
-            <div class="sticky-cta-buttons">
-                <a href="#contact" class="sticky-cta-btn sticky-cta-btn-primary">Become a Sponsor</a>
-                <a href="mailto:info@examodels.com?subject=Request Hawaii Sponsorship Deck PDF" class="sticky-cta-btn sticky-cta-btn-secondary">Get Deck</a>
-            </div>
-        </div>
-    </div>
-
     <div class="deck-container">
 
         <!-- Cover Slide -->
@@ -1995,9 +1977,8 @@
             });
         });
 
-        // Hide scroll indicator after first scroll & Show sticky CTA bar
+        // Hide scroll indicator after first scroll
         let hasScrolled = false;
-        const stickyCTA = document.getElementById('stickyCTA');
         window.addEventListener('scroll', () => {
             if (!hasScrolled && window.scrollY > 100) {
                 hasScrolled = true;
@@ -2005,13 +1986,6 @@
                 setTimeout(() => {
                     document.querySelector('.scroll-indicator').style.display = 'none';
                 }, 300);
-            }
-
-            // Show sticky CTA after scrolling past hero
-            if (window.scrollY > 600) {
-                stickyCTA.classList.add('visible');
-            } else {
-                stickyCTA.classList.remove('visible');
             }
         });
 
