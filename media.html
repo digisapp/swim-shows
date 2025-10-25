@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swim Shows Media - Press credentials, media coverage, and press kit. Apply for media access to our fashion shows.">
+    <meta name="keywords" content="Swim Shows, Media, Press, Fashion Media, Runway Coverage, Media Credentials, Press Kit">
+    <meta name="author" content="Swim Shows">
+    <meta name="theme-color" content="#ff1493">
+
+    <title>Media | Swim Shows</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/swim-shows-icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/swim-shows-icon-16.png">
+    <link rel="shortcut icon" type="image/png" href="./images/swim-shows-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/swim-shows-icon-180.png">
+
+    <!-- Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        :root {
+            --accent-color: #ff69b4;
+            --border-radius-large: 20px;
+            --border-radius-medium: 15px;
+            --border-radius-small: 10px;
+            --primary-color: #ff1493;
+            --secondary-color: #00ffcc;
+            --tertiary-color: #00b7a8;
+            --transition-standard: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --backdrop-blur: blur(10px);
+            --z-index-header: 1000;
+            --container-max-width: 1200px;
+            --container-padding: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: var(--white);
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Header */
+        .sticky-header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--backdrop-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: var(--z-index-header);
+        }
+
+        .sticky-header-content {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: var(--container-max-width);
+            padding: 15px var(--container-padding);
+            gap: 20px;
+        }
+
+        .sticky-logo {
+            height: 60px;
+            width: auto;
+            filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
+            transition: var(--transition-standard);
+        }
+
+        .sticky-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .sticky-cta-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .sticky-cta-button {
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            border-radius: 35px;
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: var(--transition-standard);
+        }
+
+        .sticky-cta-button:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: translateY(-3px);
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: var(--container-max-width);
+            margin: 40px auto;
+        }
+
+        .page-title {
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientText 6s ease infinite;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .page-subtitle {
+            font-size: clamp(16px, 2vw, 20px);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Info Section */
+        .info-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(44, 44, 44, 0.9));
+            border: 2px solid var(--glass-border);
+            border-radius: var(--border-radius-large);
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition-standard);
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 255, 204, 0.4);
+        }
+
+        .info-icon {
+            font-size: 48px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .info-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .info-text {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        /* Application Form */
+        .application-section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .form-container {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(44, 44, 44, 0.9));
+            border: 2px solid var(--glass-border);
+            border-radius: var(--border-radius-large);
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-intro h3 {
+            font-size: clamp(24px, 3vw, 32px);
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .form-intro p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--glass-border);
+            border-radius: var(--border-radius-small);
+            color: var(--white);
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition-standard);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border: 2px solid var(--white);
+            border-radius: 40px;
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 700;
+            padding: 18px 50px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition-standard);
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .form-submit:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
+            box-shadow: 0 12px 30px rgba(0, 255, 204, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--glass-bg);
+            backdrop-filter: var(--backdrop-blur);
+            border: 2px solid var(--glass-border);
+            border-radius: var(--border-radius-medium);
+            color: var(--white);
+            margin: 60px auto 40px;
+            padding: 40px;
+            text-align: center;
+            max-width: var(--container-max-width);
+        }
+
+        .contact-info {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        @keyframes gradientText {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .sticky-header-content {
+                flex-direction: column;
+            }
+
+            .form-container {
+                padding: 30px 20px;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="sticky-header-content">
+            <a href="/">
+                <img src="./images/swim-shows-logo.png"
+                     alt="Swim Shows Logo"
+                     class="sticky-logo"
+                     width="120"
+                     height="60">
+            </a>
+            <nav class="sticky-cta-buttons">
+                <a href="/" class="sticky-cta-button">HOME</a>
+                <a href="/models.html" class="sticky-cta-button">MODELS</a>
+                <a href="/designers.html" class="sticky-cta-button">DESIGNERS</a>
+                <a href="/media.html" class="sticky-cta-button">MEDIA</a>
+                <a href="/shop.html" class="sticky-cta-button">SWIM SHOP</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1 class="page-title">Media & Press</h1>
+            <p class="page-subtitle">Coverage, credentials, and media opportunities for Swim Shows events</p>
+        </section>
+
+        <section class="info-section">
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-camera"></i></div>
+                    <h3 class="info-title">Photography</h3>
+                    <p class="info-text">Professional photo access to capture runway shows and behind-the-scenes moments</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-video"></i></div>
+                    <h3 class="info-title">Video Coverage</h3>
+                    <p class="info-text">Videography opportunities including runway footage and designer interviews</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-newspaper"></i></div>
+                    <h3 class="info-title">Press Coverage</h3>
+                    <p class="info-text">Editorial access for fashion journalists, bloggers, and media outlets</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="application-section">
+            <div class="form-container">
+                <div class="form-intro">
+                    <h3>Media Credential Application</h3>
+                    <p>Apply for media access to Swim Shows events. We welcome photographers, videographers, journalists, and content creators.</p>
+                </div>
+
+                <form action="https://www.examodels.com/swimmedia" method="GET">
+                    <div class="form-group">
+                        <label class="form-label" for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="outlet">Media Outlet/Publication *</label>
+                        <input type="text" id="outlet" name="outlet" class="form-input" required placeholder="e.g., Vogue, YouTube Channel, Instagram, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="media-type">Media Type *</label>
+                        <select id="media-type" name="media_type" class="form-select" required>
+                            <option value="">Select media type</option>
+                            <option value="photography">Photography</option>
+                            <option value="videography">Videography</option>
+                            <option value="print-journalism">Print/Online Journalism</option>
+                            <option value="blogger-influencer">Blogger/Influencer</option>
+                            <option value="tv-broadcast">TV/Broadcast</option>
+                            <option value="podcast">Podcast</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="website">Website/Portfolio/Social Media *</label>
+                        <input type="url" id="website" name="website" class="form-input" required placeholder="https://">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="event">Event Interest *</label>
+                        <select id="event" name="event" class="form-select" required>
+                            <option value="">Select an event</option>
+                            <option value="art-basel-2025">Art Basel Show - December 2025</option>
+                            <option value="hawaii-2026">Hawaii Show - February 2026</option>
+                            <option value="miami-swim-week-2025">Miami Swim Week - May 2025</option>
+                            <option value="all-events">All Events</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="audience">Audience/Reach *</label>
+                        <input type="text" id="audience" name="audience" class="form-input" required placeholder="e.g., 100K Instagram followers, 50K monthly readers, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="coverage-plan">Coverage Plan *</label>
+                        <textarea id="coverage-plan" name="coverage_plan" class="form-textarea" required placeholder="Describe what you plan to cover, where it will be published, and your intended angle/focus..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="previous-work">Previous Work/Experience</label>
+                        <textarea id="previous-work" name="previous_work" class="form-textarea" placeholder="List any previous fashion events covered, notable publications, or relevant experience..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Submit Application</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="contact-info">
+            Contact: <a href="mailto:info@examodels.com">info@examodels.com</a>
+        </div>
+        <p class="copyright">© 2025 Swim Shows. All rights reserved.</p>
+    </footer>
+
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

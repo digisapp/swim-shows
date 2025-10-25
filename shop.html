@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swim Shows Shop - Purchase exclusive swimwear and resort wear from our featured designers.">
+    <meta name="keywords" content="Swim Shows, Shop, Swimwear, Resort Wear, Designer Swimwear, Buy Swimwear">
+    <meta name="author" content="Swim Shows">
+    <meta name="theme-color" content="#ff1493">
+
+    <title>Swim Shop | Swim Shows</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/swim-shows-icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/swim-shows-icon-16.png">
+    <link rel="shortcut icon" type="image/png" href="./images/swim-shows-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/swim-shows-icon-180.png">
+
+    <!-- Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        :root {
+            --accent-color: #ff69b4;
+            --border-radius-large: 20px;
+            --border-radius-medium: 15px;
+            --border-radius-small: 10px;
+            --primary-color: #ff1493;
+            --secondary-color: #00ffcc;
+            --tertiary-color: #00b7a8;
+            --transition-standard: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --backdrop-blur: blur(10px);
+            --z-index-header: 1000;
+            --container-max-width: 1200px;
+            --container-padding: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: var(--white);
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Header */
+        .sticky-header {
+            background: var(--glass-bg);
+            backdrop-filter: var(--backdrop-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: var(--z-index-header);
+        }
+
+        .sticky-header-content {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: var(--container-max-width);
+            padding: 15px var(--container-padding);
+            gap: 20px;
+        }
+
+        .sticky-logo {
+            height: 60px;
+            width: auto;
+            filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
+            transition: var(--transition-standard);
+        }
+
+        .sticky-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .sticky-cta-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .sticky-cta-button {
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            border-radius: 35px;
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: var(--transition-standard);
+        }
+
+        .sticky-cta-button:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: translateY(-3px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.2), rgba(0, 255, 204, 0.2));
+            border-radius: var(--border-radius-large);
+            margin: 40px auto;
+            max-width: var(--container-max-width);
+        }
+
+        .page-title {
+            font-size: clamp(40px, 7vw, 64px);
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientText 6s ease infinite;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .page-subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+
+        .shop-cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border: 2px solid var(--white);
+            border-radius: 40px;
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 700;
+            padding: 20px 60px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: var(--transition-standard);
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .shop-cta:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
+            box-shadow: 0 12px 30px rgba(0, 255, 204, 0.6);
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        /* Features Section */
+        .features-section {
+            max-width: var(--container-max-width);
+            margin: 80px auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(44, 44, 44, 0.9));
+            border: 2px solid var(--glass-border);
+            border-radius: var(--border-radius-large);
+            padding: 50px 40px;
+            text-align: center;
+            transition: var(--transition-standard);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 255, 204, 0.4);
+            border-color: var(--secondary-color);
+        }
+
+        .feature-icon {
+            font-size: 56px;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .feature-text {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        /* Collections Section */
+        .collections-section {
+            max-width: var(--container-max-width);
+            margin: 80px auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .collection-card {
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.15), rgba(0, 255, 204, 0.15));
+            border: 2px solid var(--glass-border);
+            border-radius: var(--border-radius-medium);
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition-standard);
+        }
+
+        .collection-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 255, 204, 0.5);
+        }
+
+        .collection-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .collection-type {
+            font-size: 14px;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--glass-bg);
+            backdrop-filter: var(--backdrop-blur);
+            border: 2px solid var(--glass-border);
+            border-radius: var(--border-radius-medium);
+            color: var(--white);
+            margin: 60px auto 40px;
+            padding: 40px;
+            text-align: center;
+            max-width: var(--container-max-width);
+        }
+
+        .contact-info {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        @keyframes gradientText {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .sticky-header-content {
+                flex-direction: column;
+            }
+
+            .hero-section {
+                padding: 60px 20px;
+            }
+
+            .shop-cta {
+                font-size: 16px;
+                padding: 16px 40px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .collections-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="sticky-header-content">
+            <a href="/">
+                <img src="./images/swim-shows-logo.png"
+                     alt="Swim Shows Logo"
+                     class="sticky-logo"
+                     width="120"
+                     height="60">
+            </a>
+            <nav class="sticky-cta-buttons">
+                <a href="/" class="sticky-cta-button">HOME</a>
+                <a href="/models.html" class="sticky-cta-button">MODELS</a>
+                <a href="/designers.html" class="sticky-cta-button">DESIGNERS</a>
+                <a href="/media.html" class="sticky-cta-button">MEDIA</a>
+                <a href="/shop.html" class="sticky-cta-button">SWIM SHOP</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1 class="page-title">Swim Shop</h1>
+            <p class="page-subtitle">Exclusive swimwear and resort wear from our featured designers</p>
+            <a href="https://www.examodels.com/shop" target="_blank" rel="noopener noreferrer" class="shop-cta">
+                <i class="fas fa-shopping-bag"></i> Shop Now
+            </a>
+        </section>
+
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3 class="feature-title">Designer Collections</h3>
+                    <p class="feature-text">Exclusive pieces from world-renowned swimwear designers featured at Swim Shows</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h3 class="feature-title">Fast Shipping</h3>
+                    <p class="feature-text">Quick and reliable delivery to get your favorites to you as soon as possible</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="feature-title">Secure Checkout</h3>
+                    <p class="feature-text">Safe and encrypted payment processing for your peace of mind</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="collections-section">
+            <h2 class="section-title">Featured Collections</h2>
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <h3 class="collection-name">EXA Swim</h3>
+                    <p class="collection-type">Luxury Swimwear</p>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-name">Mariella Swim</h3>
+                    <p class="collection-type">Designer Bikinis</p>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-name">Bronzed</h3>
+                    <p class="collection-type">Resort Wear</p>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-name">Super</h3>
+                    <p class="collection-type">Modern Swimwear</p>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-name">Veve</h3>
+                    <p class="collection-type">Luxury Collection</p>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-name">Capristan</h3>
+                    <p class="collection-type">Premium Beachwear</p>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-name">Goalden</h3>
+                    <p class="collection-type">Designer Swimwear</p>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-name">Suzu</h3>
+                    <p class="collection-type">Contemporary Swim</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="https://www.examodels.com/shop" target="_blank" rel="noopener noreferrer" class="shop-cta">
+                    Visit Full Store
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="contact-info">
+            Contact: <a href="mailto:info@examodels.com">info@examodels.com</a>
+        </div>
+        <p class="copyright">© 2025 Swim Shows. All rights reserved.</p>
+    </footer>
+
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
