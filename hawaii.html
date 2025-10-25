@@ -106,6 +106,11 @@
             --primary: #ff1493;
             --secondary: #00ffcc;
             --accent: #ff69b4;
+            --hawaii-blue: #0077BE;
+            --hawaii-teal: #008B8B;
+            --hawaii-coral: #FF6F61;
+            --hawaii-sunset: #FF8C42;
+            --hawaii-ocean: #1CA9C9;
             --dark: #0a0a0a;
             --darker: #000000;
             --light: #ffffff;
@@ -113,6 +118,8 @@
             --gradient-1: linear-gradient(135deg, #ff1493, #ff69b4);
             --gradient-2: linear-gradient(135deg, #00ffcc, #00b7a8);
             --gradient-3: linear-gradient(135deg, rgba(255, 20, 147, 0.9), rgba(0, 255, 204, 0.9));
+            --hawaii-gradient: linear-gradient(135deg, #1CA9C9, #008B8B, #0077BE);
+            --hawaii-sunset-gradient: linear-gradient(135deg, #FF8C42, #FF6F61);
         }
 
         body {
@@ -148,21 +155,29 @@
 
         /* Cover Slide */
         .cover-slide {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(255, 20, 147, 0.3)), url('./images/swim-shows-cover1.jpg') center/cover no-repeat;
-            background-blend-mode: overlay;
-            background-attachment: fixed;
+            background: var(--hawaii-gradient);
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
-        .cover-slide::before {
+        .cover-slide::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 900px;
+            height: 60%;
+            background: url('./images/swim-shows-cover1.jpg') center/contain no-repeat;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
         }
 
         .cover-title {
@@ -204,8 +219,8 @@
 
         /* Welcome Letter Slide */
         .welcome-slide {
-            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(26, 26, 26, 0.95)), url('./images/swim-shows-backdrop.jpg') center/cover no-repeat fixed;
-            background-blend-mode: overlay;
+            background: var(--hawaii-sunset-gradient);
+            position: relative;
         }
 
         .founder-photo {
@@ -262,8 +277,8 @@
 
         /* About Section */
         .about-slide {
-            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(26, 26, 26, 0.9)), url('./images/swim-shows-vibe1.jpg') center/cover no-repeat fixed;
-            background-blend-mode: overlay;
+            background: linear-gradient(135deg, var(--hawaii-ocean), var(--hawaii-teal));
+            position: relative;
         }
 
         .section-title {
@@ -373,8 +388,7 @@
 
         /* Pricing Tables */
         .pricing-slide {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.92), rgba(10, 10, 10, 0.92)), url('./images/swim-shows-backdrop2.jpg') center/cover no-repeat fixed;
-            background-blend-mode: overlay;
+            background: linear-gradient(135deg, var(--hawaii-blue), var(--hawaii-ocean));
             padding: 100px 20px;
         }
 
@@ -478,27 +492,60 @@
 
         /* CTA Slide */
         .cta-slide {
-            background: linear-gradient(135deg, rgba(255, 20, 147, 0.7), rgba(0, 255, 204, 0.6)), url('./images/swim-shows-vibe2.png') center/cover no-repeat;
-            background-blend-mode: overlay;
-            background-attachment: fixed;
+            background: var(--hawaii-sunset-gradient);
             text-align: center;
             position: relative;
         }
 
-        .cta-slide::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, transparent 20%, rgba(0, 0, 0, 0.5) 100%);
-        }
-
         /* Image Gallery Section */
         .gallery-section {
-            background: var(--dark);
+            background: linear-gradient(135deg, var(--hawaii-teal), var(--hawaii-blue));
             padding: 100px 20px;
+        }
+
+        /* Hawaiian Decorations */
+        .hawaiian-emoji {
+            font-size: 48px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            margin: 0 10px;
+        }
+
+        .hawaiian-emoji:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .hawaiian-emoji:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        .aloha-text {
+            font-size: 24px;
+            color: var(--hawaii-coral);
+            font-weight: 600;
+            text-align: center;
+            margin: 20px 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
         }
 
         .gallery-grid {
@@ -686,9 +733,20 @@
         <!-- Cover Slide -->
         <section class="slide cover-slide">
             <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="hawaiian-emoji">🌺</span>
+                    <span class="hawaiian-emoji">🌴</span>
+                    <span class="hawaiian-emoji">🌊</span>
+                </div>
                 <h1 class="cover-title">EXA HAWAI'I SHOWS</h1>
                 <p class="cover-subtitle">February 2026</p>
+                <p class="aloha-text">🤙 Aloha & Mahalo 🤙</p>
                 <p style="font-size: 20px; margin-bottom: 30px;">Sponsorship & Partnership Opportunities</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <span class="hawaiian-emoji">🏄</span>
+                    <span class="hawaiian-emoji">🐚</span>
+                    <span class="hawaiian-emoji">☀️</span>
+                </div>
             </div>
             <div class="scroll-indicator">
                 <i class="fas fa-chevron-down"></i>
@@ -698,13 +756,17 @@
         <!-- Welcome Letter -->
         <section id="welcome" class="slide welcome-slide">
             <div class="slide-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="hawaiian-emoji">🌺</span>
+                    <span class="hawaiian-emoji">🌸</span>
+                </div>
                 <div class="welcome-header">
                     <img src="./images/swim-shows-kyani1.jpg" alt="Kyani Bateman" class="founder-photo">
                     <h2>WELCOME LETTER</h2>
                     <p class="signature">Message from Kyani Bateman, Founder</p>
                 </div>
                 <div class="welcome-content">
-                    <p><strong>Aloha, and mahalo</strong> for your interest in partnering with EXA Hawaiʻi Shows. Our mission is to highlight Hawaiʻi's diverse fashion, culture, and talent through world-class shows that bring together designers, models, and community. Sponsors are the backbone of making these shows possible, and we look forward to aligning with brands who share our values of creativity, empowerment, and connection.</p>
+                    <p><strong>Aloha, and mahalo</strong> 🌺 for your interest in partnering with EXA Hawaiʻi Shows. Our mission is to highlight Hawaiʻi's diverse fashion, culture, and talent through world-class shows that bring together designers, models, and community. Sponsors are the backbone of making these shows possible, and we look forward to aligning with brands who share our values of creativity, empowerment, and connection.</p>
                 </div>
             </div>
         </section>
