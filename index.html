@@ -274,447 +274,6 @@
             min-height: calc(100vh - 200px);
         }
 
-        /* Hero Banner Section */
-        .hero-banner {
-            position: relative;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
-            margin: 40px auto;
-            max-width: var(--container-max-width);
-            background: linear-gradient(135deg, rgba(255, 20, 147, 0.3), rgba(0, 255, 204, 0.3));
-            border-radius: var(--border-radius-large);
-            overflow: hidden;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero-main-title {
-            font-size: clamp(48px, 10vw, 96px);
-            font-weight: 700;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            background-size: 300% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientText 6s ease infinite;
-            margin-bottom: 20px;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-        }
-
-        .hero-tagline {
-            font-size: clamp(20px, 3vw, 32px);
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .hero-description {
-            font-size: clamp(16px, 2vw, 20px);
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-
-        .hero-ctas {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
-
-        .cta-primary {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border: 3px solid var(--white);
-            border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.5);
-            color: var(--white);
-            font-size: 18px;
-            font-weight: 700;
-            padding: 20px 50px;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: var(--transition-standard);
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: 0.6s;
-        }
-
-        .cta-primary:hover::before {
-            left: 100%;
-        }
-
-        .cta-primary:hover {
-            background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
-            box-shadow: 0 15px 40px rgba(0, 255, 204, 0.6);
-            transform: translateY(-5px) scale(1.05);
-        }
-
-        .cta-secondary {
-            background: transparent;
-            border: 3px solid var(--secondary-color);
-            border-radius: 50px;
-            color: var(--white);
-            font-size: 18px;
-            font-weight: 700;
-            padding: 20px 50px;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: var(--transition-standard);
-            display: inline-block;
-        }
-
-        .cta-secondary:hover {
-            background: var(--secondary-color);
-            color: var(--primary-color);
-            transform: translateY(-5px);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .hero-stat {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .hero-stat .stat-number {
-            font-size: clamp(36px, 5vw, 56px);
-            font-weight: 700;
-            color: var(--secondary-color);
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .hero-stat .stat-label {
-            font-size: clamp(14px, 1.5vw, 18px);
-            color: var(--white);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Brand Story Section */
-        .brand-story {
-            max-width: var(--container-max-width);
-            margin: 80px auto;
-            padding: 0 var(--container-padding);
-        }
-
-        .brand-story-content {
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: clamp(32px, 5vw, 48px);
-            font-weight: 700;
-            margin-bottom: 30px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            background-size: 300% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .brand-intro {
-            font-size: clamp(16px, 2vw, 20px);
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto 50px;
-        }
-
-        .brand-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .highlight-card {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(44, 44, 44, 0.9));
-            border: 2px solid var(--glass-border);
-            border-radius: var(--border-radius-large);
-            padding: 40px 30px;
-            text-align: center;
-            transition: var(--transition-standard);
-        }
-
-        .highlight-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 255, 204, 0.4);
-            border-color: var(--secondary-color);
-        }
-
-        .highlight-icon {
-            font-size: 56px;
-            margin-bottom: 20px;
-        }
-
-        .highlight-card h3 {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .highlight-card p {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-        }
-
-        /* Newsletter Section */
-        .newsletter-section {
-            max-width: 800px;
-            margin: 80px auto;
-            padding: 0 var(--container-padding);
-        }
-
-        .newsletter-container {
-            background: linear-gradient(135deg, rgba(255, 20, 147, 0.2), rgba(0, 255, 204, 0.2));
-            border: 2px solid var(--glass-border);
-            border-radius: var(--border-radius-large);
-            padding: 60px 40px;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-        }
-
-        .newsletter-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-
-        .newsletter-title {
-            font-size: clamp(28px, 4vw, 42px);
-            font-weight: 700;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .newsletter-description {
-            font-size: clamp(16px, 2vw, 18px);
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 35px;
-            line-height: 1.6;
-        }
-
-        .newsletter-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group-inline {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            padding: 18px 25px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid var(--glass-border);
-            border-radius: 50px;
-            color: var(--white);
-            font-size: 16px;
-            font-family: 'Poppins', sans-serif;
-            transition: var(--transition-standard);
-        }
-
-        .newsletter-input:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-        }
-
-        .newsletter-input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .newsletter-submit {
-            padding: 18px 40px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border: 2px solid var(--white);
-            border-radius: 50px;
-            color: var(--white);
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: var(--transition-standard);
-            white-space: nowrap;
-        }
-
-        .newsletter-submit:hover {
-            background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
-            box-shadow: 0 8px 25px rgba(0, 255, 204, 0.5);
-            transform: translateY(-3px);
-        }
-
-        .privacy-note {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
-            margin-top: 10px;
-        }
-
-        .newsletter-success {
-            background: rgba(0, 255, 0, 0.1);
-            border: 2px solid rgba(0, 255, 0, 0.3);
-            border-radius: var(--border-radius-medium);
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        .newsletter-success p {
-            color: #00ff00;
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        /* Photo Gallery Section */
-        .photo-gallery-section {
-            max-width: var(--container-max-width);
-            margin: 80px auto;
-            padding: 0 var(--container-padding);
-        }
-
-        .section-title-centered {
-            font-size: clamp(32px, 5vw, 48px);
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            background-size: 300% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-transform: uppercase;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: clamp(16px, 2vw, 20px);
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 50px;
-        }
-
-        .photo-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: var(--border-radius-medium);
-            overflow: hidden;
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(44, 44, 44, 0.9));
-            border: 2px solid var(--glass-border);
-            aspect-ratio: 1;
-            transition: var(--transition-standard);
-            cursor: pointer;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 255, 204, 0.5);
-            border-color: var(--secondary-color);
-        }
-
-        .gallery-item-large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-standard);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            padding: 20px;
-            transform: translateY(100%);
-            transition: var(--transition-standard);
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-
-        .gallery-label {
-            color: var(--white);
-            font-weight: 600;
-            font-size: 18px;
-        }
-
-        .gallery-placeholder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            gap: 15px;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .gallery-placeholder p {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
         .title-section {
             text-align: center;
             margin: 40px auto;
@@ -889,7 +448,6 @@
         .show-item:nth-child(1) { animation-delay: 0.1s; }
         .show-item:nth-child(2) { animation-delay: 0.3s; }
         .show-item:nth-child(3) { animation-delay: 0.5s; }
-        .show-item:nth-child(4) { animation-delay: 0.7s; }
 
         .show-date-badge {
             align-items: center;
@@ -1225,54 +783,6 @@
             border-radius: var(--border-radius-medium);
         }
 
-        /* Mobile Sticky CTA */
-        .mobile-sticky-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px 20px;
-            background: linear-gradient(135deg, rgba(255, 20, 147, 0.98), rgba(255, 105, 180, 0.98));
-            backdrop-filter: var(--backdrop-blur);
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            display: none;
-            animation: slideUp 0.3s ease;
-        }
-
-        .mobile-sticky-cta.visible {
-            display: block;
-        }
-
-        .mobile-ticket-btn {
-            display: block;
-            width: 100%;
-            background: linear-gradient(135deg, var(--white), rgba(255, 255, 255, 0.9));
-            color: var(--primary-color);
-            font-size: 18px;
-            font-weight: 700;
-            padding: 15px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: var(--transition-standard);
-        }
-
-        .mobile-ticket-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
         /* Responsive design */
         @media (max-width: 1024px) {
             .content-wrapper {
@@ -1288,58 +798,11 @@
             .video-grid {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
-
-            .brand-highlights {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-item-large {
-                grid-column: span 1;
-                grid-row: span 1;
-            }
         }
 
         @media (max-width: 768px) {
             :root {
                 --container-padding: 15px;
-            }
-
-            .hero-banner {
-                min-height: 500px;
-                padding: 60px 20px;
-            }
-
-            .hero-ctas {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .cta-primary,
-            .cta-secondary {
-                width: 100%;
-                padding: 16px 30px;
-                font-size: 16px;
-            }
-
-            .hero-stats {
-                gap: 25px;
-            }
-
-            .form-group-inline {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .newsletter-submit {
-                width: 100%;
-            }
-
-            .newsletter-container {
-                padding: 40px 25px;
-            }
-
-            .mobile-sticky-cta {
-                display: block;
             }
 
             .sticky-header-content {
@@ -1573,64 +1036,11 @@
     </header>
 
     <main id="main-content" class="main-content">
-        <!-- Hero Banner Section -->
-        <section class="hero-banner fade-in" aria-labelledby="hero-title">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1 id="hero-title" class="hero-main-title">SWIM SHOWS</h1>
-                <p class="hero-tagline">Where Luxury Meets the Runway</p>
-                <p class="hero-description">Experience the world's premier swimwear fashion events featuring top international designers and models</p>
-                <div class="hero-ctas">
-                    <a href="/hawaii.html" class="cta-primary">
-                        <span>🌺 Hawaii 2026 - Coming Soon</span>
-                    </a>
-                    <a href="#upcoming-shows" class="cta-secondary">
-                        <span>View All Shows</span>
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Designers</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Shows</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="stat-number">30+</span>
-                        <span class="stat-label">Countries</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Brand Story Section -->
-        <section class="brand-story fade-in">
-            <div class="brand-story-content">
-                <h2 class="section-title">The Premier Swimwear Fashion Experience</h2>
-                <p class="brand-intro">
-                    Swim Shows showcases the world's finest swimwear and resort fashion designers across Miami, Hawai'i, and beyond.
-                    We connect top international talent with global audiences, launching careers and celebrating design excellence.
-                </p>
-                <div class="brand-highlights">
-                    <div class="highlight-card">
-                        <div class="highlight-icon">🎯</div>
-                        <h3>Our Mission</h3>
-                        <p>To celebrate swimwear design excellence and connect global fashion talent</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">⭐</div>
-                        <h3>Our Impact</h3>
-                        <p>Launching careers and creating unforgettable runway experiences worldwide</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">🌍</div>
-                        <h3>Our Reach</h3>
-                        <p>Featured in major fashion weeks and exclusive events across the globe</p>
-                    </div>
-                </div>
-            </div>
+        <section class="title-section fade-in" aria-labelledby="hero-title">
+            <h1 id="hero-title" class="sr-only">Swim Shows - Premier Swim & Resort Fashion</h1>
+            <p class="hero-tagline" role="banner">
+                🔥Featuring the World's Top Models showcasing global Swimwear Brands🔥
+            </p>
         </section>
 
         <div class="content-wrapper fade-in">
@@ -1659,7 +1069,7 @@
             </section>
 
             <aside class="right-column">
-                <section id="upcoming-shows" class="upcoming-shows-container" aria-labelledby="upcoming-shows-title">
+                <section class="upcoming-shows-container" aria-labelledby="upcoming-shows-title">
                     <h2 id="upcoming-shows-title" class="upcoming-shows-title">Upcoming Shows</h2>
                     <div class="upcoming-shows-list" role="list">
                         <article class="show-item" role="listitem">
@@ -1681,7 +1091,7 @@
                                 </a>
                             </div>
                         </article>
-                        
+
                         <article class="show-item" role="listitem">
                             <div class="show-date-badge" aria-label="February 2026">
                                 <span aria-hidden="true">Feb</span>
@@ -1710,10 +1120,10 @@
                                 <p class="show-location">Miami, FL</p>
                             </div>
                             <div class="show-actions">
-                                <a href="https://www.examodels.com/tickets"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="show-button"
+                                <a href="https://www.examodels.com/tickets" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="show-button" 
                                    aria-label="Purchase tickets for Miami Swim Week show on May 27th-28th">
                                    Tickets
                                 </a>
@@ -1751,78 +1161,6 @@
                 </section>
             </aside>
         </div>
-
-        <!-- Newsletter Signup Section -->
-        <section class="newsletter-section fade-in">
-            <div class="newsletter-container">
-                <div class="newsletter-icon">💌</div>
-                <h2 class="newsletter-title">Never Miss a Show</h2>
-                <p class="newsletter-description">Get exclusive updates, early ticket access, and behind-the-scenes content delivered to your inbox</p>
-                <form class="newsletter-form" id="newsletter-form">
-                    <div class="form-group-inline">
-                        <input type="email"
-                               id="newsletter-email"
-                               name="email"
-                               placeholder="Enter your email address"
-                               required
-                               class="newsletter-input">
-                        <button type="submit" class="newsletter-submit">Subscribe</button>
-                    </div>
-                    <p class="privacy-note">🔒 We respect your privacy. Unsubscribe anytime.</p>
-                </form>
-                <div class="newsletter-success" id="newsletter-success" style="display: none;">
-                    <p>✅ Thanks for subscribing! Check your email for confirmation.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo Gallery Section -->
-        <section class="photo-gallery-section fade-in">
-            <h2 class="section-title-centered">Experience Swim Shows</h2>
-            <p class="section-subtitle">Moments from our exclusive runway events</p>
-            <div class="photo-gallery-grid">
-                <div class="gallery-item gallery-item-large">
-                    <img src="./images/swim-shows-artbasel-flyer.png"
-                         alt="Art Basel Show runway moment"
-                         loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label">Art Basel 2025</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./images/swim-shows-models.png"
-                         alt="Top models backstage"
-                         loading="lazy">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label">Our Models</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-camera" style="font-size: 48px; color: var(--secondary-color);"></i>
-                        <p>Runway Moments</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-star" style="font-size: 48px; color: var(--secondary-color);"></i>
-                        <p>Designer Collections</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-users" style="font-size: 48px; color: var(--secondary-color);"></i>
-                        <p>Behind the Scenes</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-heart" style="font-size: 48px; color: var(--secondary-color);"></i>
-                        <p>VIP Experiences</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="video-group fade-in" aria-labelledby="videos-title">
             <h2 id="videos-title" class="video-section-title">Swim Shows TV</h2>
@@ -2334,21 +1672,14 @@
 
     <footer class="main-footer fade-in" role="contentinfo">
         <div class="contact-info">
-            Contact:
-            <a href="mailto:info@examodels.com"
+            Contact: 
+            <a href="mailto:info@examodels.com" 
                aria-label="Send email to Swim Shows">
                info@examodels.com
             </a>
         </div>
         <p class="copyright">© 2025 Swim Shows. All rights reserved.</p>
     </footer>
-
-    <!-- Mobile Sticky CTA -->
-    <div class="mobile-sticky-cta" id="mobile-sticky-cta">
-        <a href="https://www.examodels.com/tickets" class="mobile-ticket-btn">
-            🎫 Get Tickets Now
-        </a>
-    </div>
 
     <script>
         // Performance and accessibility improvements
@@ -2558,134 +1889,13 @@
             });
         }
 
-        // Newsletter Form Handler
-        function initNewsletter() {
-            const form = document.getElementById('newsletter-form');
-            const successMsg = document.getElementById('newsletter-success');
-
-            if (form) {
-                form.addEventListener('submit', async (e) => {
-                    e.preventDefault();
-
-                    const email = document.getElementById('newsletter-email').value;
-                    const submitBtn = form.querySelector('.newsletter-submit');
-                    const originalText = submitBtn.textContent;
-
-                    // Update button state
-                    submitBtn.textContent = 'Subscribing...';
-                    submitBtn.disabled = true;
-
-                    // Track with analytics
-                    if (window.va) {
-                        window.va('track', 'newsletter_signup', { email_domain: email.split('@')[1] });
-                    }
-
-                    // Simulate API call (replace with actual endpoint)
-                    setTimeout(() => {
-                        form.style.display = 'none';
-                        successMsg.style.display = 'block';
-
-                        // You can replace this with actual API call:
-                        // fetch('/api/newsletter', {
-                        //     method: 'POST',
-                        //     headers: { 'Content-Type': 'application/json' },
-                        //     body: JSON.stringify({ email })
-                        // });
-                    }, 1000);
-                });
-            }
-        }
-
-        // Mobile Sticky CTA Handler
-        function initMobileStickyCTA() {
-            const mobileCTA = document.getElementById('mobile-sticky-cta');
-            const heroSection = document.querySelector('.hero-banner');
-
-            if (!mobileCTA || !heroSection) return;
-
-            let lastScroll = 0;
-            const showThreshold = 300; // Show after scrolling 300px
-
-            function toggleMobileCTA() {
-                const currentScroll = window.pageYOffset;
-                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-
-                // Show CTA when scrolled past hero and scrolling down
-                if (currentScroll > showThreshold && currentScroll > heroBottom) {
-                    mobileCTA.classList.add('visible');
-                } else {
-                    mobileCTA.classList.remove('visible');
-                }
-
-                lastScroll = currentScroll;
-            }
-
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    requestAnimationFrame(() => {
-                        toggleMobileCTA();
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            }, { passive: true });
-        }
-
-        // Enhanced Analytics Tracking
-        function initAnalyticsTracking() {
-            // Track ticket button clicks
-            document.querySelectorAll('.show-button, .cta-primary, .mobile-ticket-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    if (window.va) {
-                        const eventName = btn.closest('.show-item') ?
-                            btn.closest('.show-item').querySelector('.show-name')?.textContent :
-                            'General Tickets';
-                        window.va('track', 'ticket_click', { event: eventName });
-                    }
-                });
-            });
-
-            // Track navigation clicks
-            document.querySelectorAll('.sticky-cta-button').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    if (window.va) {
-                        window.va('track', 'navigation_click', {
-                            page: btn.textContent.trim()
-                        });
-                    }
-                });
-            });
-
-            // Track video plays (when iframe loads)
-            const videoContainers = document.querySelectorAll('.video-container');
-            const videoObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const iframe = entry.target.querySelector('iframe');
-                        if (iframe && window.va) {
-                            const videoTitle = iframe.getAttribute('title');
-                            window.va('track', 'video_view', { video: videoTitle });
-                        }
-                        videoObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            videoContainers.forEach(container => {
-                videoObserver.observe(container);
-            });
-        }
-
         // Initialize app
         document.addEventListener('DOMContentLoaded', () => {
             try {
                 new SwimShowsApp();
-                initNewsletter();
-                initMobileStickyCTA();
-                initAnalyticsTracking();
                 preloadCriticalResources();
                 registerServiceWorker();
-
+                
                 // Performance optimization
                 if ('requestIdleCallback' in window) {
                     requestIdleCallback(() => {
