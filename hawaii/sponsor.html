@@ -1194,37 +1194,272 @@
         }
 
         /* Responsive */
+        /* Mobile Optimizations */
+        @media (max-width: 968px) {
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .case-tiles {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr !important;
+                gap: 15px;
+            }
+        }
+
         @media (max-width: 768px) {
             .slide {
-                padding: 60px 20px;
+                padding: 60px 15px;
+                min-height: auto;
+            }
+
+            .slide-content {
+                padding: 0;
             }
 
             .welcome-content {
-                padding: 30px 25px;
+                padding: 25px 20px;
+                border-radius: 15px;
+            }
+
+            .welcome-content p {
+                font-size: 16px;
+                line-height: 1.7;
             }
 
             .pricing-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .pricing-card {
+                padding: 30px 20px;
             }
 
             .pricing-card.featured {
                 transform: scale(1);
             }
 
+            .pricing-amount {
+                font-size: 36px;
+            }
+
+            .pricing-features li {
+                font-size: 14px;
+                padding: 10px 0;
+            }
+
             .about-grid {
                 grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .about-card {
+                padding: 30px 20px;
+            }
+
+            .about-card h3 {
+                font-size: 20px;
+            }
+
+            .about-card p {
+                font-size: 15px;
             }
 
             .categories-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .category-card {
+                padding: 35px 25px;
+            }
+
+            .category-card h3 {
+                font-size: 24px;
             }
 
             .cta-buttons {
                 flex-direction: column;
+                gap: 15px;
             }
 
             .cta-btn {
                 width: 100%;
+                padding: 16px 30px;
+                font-size: 16px;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cover-cta, .cta-btn-large {
+                width: 100%;
+                text-align: center;
+            }
+
+            .sticky-cta-content {
+                flex-direction: column;
+                gap: 15px;
+                padding: 12px 15px;
+            }
+
+            .sticky-toc {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .sticky-toc-link {
+                font-size: 12px;
+                padding: 5px 10px;
+                flex-shrink: 0;
+            }
+
+            .sticky-cta-buttons {
+                width: 100%;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .sticky-cta-btn {
+                width: 100%;
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .metric-card {
+                padding: 20px 15px;
+            }
+
+            .metric-number {
+                font-size: 36px;
+            }
+
+            .metric-label {
+                font-size: 12px;
+            }
+
+            .case-tile {
+                padding: 25px 20px;
+            }
+
+            .case-header h3 {
+                font-size: 18px;
+            }
+
+            .case-section h4 {
+                font-size: 13px;
+            }
+
+            .case-section p {
+                font-size: 14px;
+            }
+
+            .faqs-container {
+                padding: 0;
+            }
+
+            .faq-item {
+                padding: 20px 18px;
+                margin-bottom: 15px;
+            }
+
+            .faq-question {
+                font-size: 16px;
+            }
+
+            .faq-answer {
+                font-size: 14px;
+            }
+
+            .section-image-container {
+                max-width: 100%;
+                margin: 15px auto;
+            }
+
+            .founder-photo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .hawaiian-emoji {
+                font-size: 36px;
+                margin: 0 5px;
+            }
+
+            .aloha-text {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                padding: 50px 12px;
+            }
+
+            .section-title {
+                font-size: clamp(28px, 8vw, 36px);
+                margin-bottom: 30px;
+            }
+
+            .cover-title {
+                font-size: clamp(28px, 7vw, 48px);
+            }
+
+            .cover-subtitle {
+                font-size: clamp(18px, 5vw, 28px);
+            }
+
+            .welcome-content {
+                padding: 20px 15px;
+            }
+
+            .pricing-card {
+                padding: 25px 15px;
+            }
+
+            .pricing-button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .about-card {
+                padding: 25px 15px;
+            }
+
+            .about-card .icon {
+                font-size: 36px;
+            }
+
+            .metric-card {
+                padding: 15px 12px;
+            }
+
+            .metric-number {
+                font-size: 28px;
+            }
+
+            .hawaiian-emoji {
+                font-size: 28px;
+            }
+
+            .founder-photo {
+                width: 150px;
+                height: 150px;
             }
         }
 

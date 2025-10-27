@@ -267,7 +267,11 @@
 
         @media (max-width: 768px) {
             .top-nav {
-                padding: 10px 20px;
+                padding: 10px 15px;
+            }
+
+            .nav-container {
+                gap: 10px;
             }
 
             .nav-logo {
@@ -275,20 +279,151 @@
             }
 
             .nav-links {
-                gap: 8px;
+                gap: 6px;
+                justify-content: flex-end;
             }
 
             .nav-link {
-                padding: 8px 15px;
-                font-size: 12px;
+                padding: 8px 12px;
+                font-size: 11px;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 100px 15px 50px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 0;
+            }
+
+            .hero-title {
+                font-size: clamp(36px, 10vw, 64px);
+                line-height: 1.1;
+            }
+
+            .hero-subtitle {
+                font-size: clamp(18px, 5vw, 28px);
+                margin-bottom: 20px;
+            }
+
+            .hero-description {
+                font-size: clamp(15px, 3vw, 18px);
+                margin-bottom: 30px;
+                padding: 0 5px;
             }
 
             .cta-buttons {
                 flex-direction: column;
+                gap: 12px;
+                width: 100%;
             }
 
             .cta-btn {
                 width: 100%;
+                padding: 16px 30px;
+                font-size: 16px;
+                min-height: 48px;
+            }
+
+            .info-section {
+                padding: 60px 15px;
+            }
+
+            .section-title {
+                font-size: clamp(28px, 8vw, 42px);
+                margin-bottom: 40px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-bottom: 40px;
+            }
+
+            .info-card {
+                padding: 30px 20px;
+            }
+
+            .info-icon {
+                font-size: 42px;
+            }
+
+            .info-card h3 {
+                font-size: 22px;
+            }
+
+            .info-card p {
+                font-size: 15px;
+            }
+
+            #tickets {
+                margin-top: 40px;
+            }
+
+            #tickets p {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-nav {
+                padding: 8px 10px;
+            }
+
+            .nav-logo {
+                height: 35px;
+            }
+
+            .nav-link {
+                padding: 6px 10px;
+                font-size: 10px;
+            }
+
+            .hero {
+                padding: 90px 12px 40px;
+            }
+
+            .hero-title {
+                font-size: clamp(28px, 12vw, 48px);
+            }
+
+            .hero-subtitle {
+                font-size: clamp(16px, 6vw, 22px);
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .cta-btn {
+                padding: 14px 25px;
+                font-size: 15px;
+            }
+
+            .info-section {
+                padding: 50px 12px;
+            }
+
+            .info-card {
+                padding: 25px 18px;
+            }
+
+            .info-icon {
+                font-size: 36px;
+            }
+
+            .info-card h3 {
+                font-size: 20px;
+            }
+
+            .info-card p {
+                font-size: 14px;
             }
         }
     </style>
