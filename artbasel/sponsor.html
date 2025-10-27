@@ -210,29 +210,29 @@
 
         :root {
             --primary: #ff1493;
-            --secondary: #00ffcc;
-            --accent: #ff69b4;
-            --hawaii-blue: #0077BE;
-            --hawaii-teal: #008B8B;
-            --hawaii-coral: #FF6F61;
-            --hawaii-sunset: #FF8C42;
-            --hawaii-ocean: #1CA9C9;
+            --secondary: #00D4FF;
+            --accent: #FF6B35;
+            --miami-pink: #FF1493;
+            --miami-cyan: #00D4FF;
+            --miami-purple: #9D4EDD;
+            --miami-orange: #FF6B35;
+            --miami-gold: #FFD60A;
             --dark: #0a0a0a;
             --darker: #000000;
             --light: #ffffff;
             --gray: rgba(255, 255, 255, 0.8);
-            --gradient-1: linear-gradient(135deg, #ff1493, #ff69b4);
-            --gradient-2: linear-gradient(135deg, #00ffcc, #00b7a8);
-            --gradient-3: linear-gradient(135deg, rgba(255, 20, 147, 0.9), rgba(0, 255, 204, 0.9));
-            --hawaii-gradient: linear-gradient(135deg, #1CA9C9, #008B8B, #0077BE);
-            --hawaii-sunset-gradient: linear-gradient(135deg, #FF8C42, #FF6F61);
+            --gradient-1: linear-gradient(135deg, #FF1493, #FF6B35);
+            --gradient-2: linear-gradient(135deg, #00D4FF, #9D4EDD);
+            --gradient-3: linear-gradient(135deg, rgba(255, 20, 147, 0.9), rgba(157, 78, 221, 0.9));
+            --miami-gradient: linear-gradient(135deg, #FF1493, #FF6B35, #FFD60A);
+            --miami-sunset-gradient: linear-gradient(135deg, #FF6B35, #FF1493, #9D4EDD);
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             background:
-                linear-gradient(135deg, rgba(0, 26, 51, 0.75) 0%, rgba(0, 61, 92, 0.70) 50%, rgba(0, 102, 153, 0.65) 100%),
-                url('https://images.unsplash.com/photo-1542259009477-d625272157b7?q=80&w=2940&auto=format&fit=crop') center/cover fixed;
+                linear-gradient(135deg, rgba(20, 0, 40, 0.85) 0%, rgba(40, 10, 60, 0.75) 50%, rgba(60, 20, 80, 0.70) 100%),
+                url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=2940&auto=format&fit=crop') center/cover fixed;
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
@@ -332,7 +332,7 @@
 
         /* Cover Slide */
         .cover-slide {
-            background: linear-gradient(135deg, rgba(28, 169, 201, 0.9), rgba(0, 139, 139, 0.9));
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.9), rgba(255, 107, 53, 0.9), rgba(157, 78, 221, 0.9));
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -510,7 +510,7 @@
 
         /* Welcome Letter Slide */
         .welcome-slide {
-            background: var(--hawaii-sunset-gradient);
+            background: var(--miami-sunset-gradient);
             position: relative;
         }
 
@@ -615,7 +615,7 @@
 
         /* About Section */
         .about-slide {
-            background: linear-gradient(135deg, var(--hawaii-ocean), var(--hawaii-teal));
+            background: linear-gradient(135deg, var(--miami-purple), var(--miami-cyan));
             position: relative;
         }
 
@@ -731,7 +731,7 @@
 
         /* Pricing Tables */
         .pricing-slide {
-            background: linear-gradient(135deg, var(--hawaii-blue), var(--hawaii-ocean));
+            background: linear-gradient(135deg, var(--miami-pink), var(--miami-purple));
             padding: 100px 20px;
         }
 
@@ -843,14 +843,14 @@
 
         /* CTA Slide */
         .cta-slide {
-            background: var(--hawaii-sunset-gradient);
+            background: var(--miami-gradient);
             text-align: center;
             position: relative;
         }
 
         /* Image Gallery Section */
         .gallery-section {
-            background: linear-gradient(135deg, var(--hawaii-teal), var(--hawaii-blue));
+            background: linear-gradient(135deg, var(--miami-cyan), var(--miami-purple));
             padding: 100px 20px;
         }
 
@@ -1037,7 +1037,7 @@
 
         .aloha-text {
             font-size: 24px;
-            color: var(--hawaii-coral);
+            color: var(--miami-orange);
             font-weight: 600;
             text-align: center;
             margin: 20px 0;
