@@ -1,2 +1,5 @@
 # macOS system files
 .DS_Store
+.env*.local
+.env.local
+blob-url-mapping.json
