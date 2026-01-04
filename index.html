@@ -67,25 +67,6 @@
         "event": [
             {
                 "@type": "Event",
-                "name": "Art Basel Show",
-                "startDate": "2025-12-03",
-                "endDate": "2025-12-06",
-                "location": {
-                    "@type": "Place",
-                    "name": "Miami, FL"
-                }
-            },
-            {
-                "@type": "Event",
-                "name": "Hawai'i Show",
-                "startDate": "2026-02-01",
-                "location": {
-                    "@type": "Place",
-                    "name": "Hawai'i"
-                }
-            },
-            {
-                "@type": "Event",
                 "name": "Miami Swim Week",
                 "startDate": "2025-05-27",
                 "endDate": "2025-05-28",
@@ -119,6 +100,107 @@
             --z-index-modal: 2000;
             --container-max-width: 1200px;
             --container-padding: 20px;
+        }
+
+        /* Rolling Banner Styles */
+        .announcement-banner {
+            background: linear-gradient(90deg, #ff1493, #ff69b4, #00ffcc, #ff1493);
+            background-size: 300% 100%;
+            animation: bannerGradient 8s ease infinite;
+            padding: 12px 0;
+            overflow: hidden;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
+        }
+
+        .announcement-banner:hover {
+            box-shadow: 0 6px 25px rgba(0, 255, 204, 0.6);
+        }
+
+        @keyframes bannerGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .banner-track {
+            display: flex;
+            animation: scroll 20s linear infinite;
+            white-space: nowrap;
+        }
+
+        .banner-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner-content span {
+            margin: 0 15px;
+        }
+
+        .banner-emoji {
+            font-size: 20px;
+            animation: bounce 1s ease infinite;
+        }
+
+        .banner-emoji:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .banner-highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            .announcement-banner {
+                top: 60px;
+                padding: 10px 0;
+            }
+
+            .banner-content {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .banner-emoji {
+                font-size: 16px;
+            }
+
+            .main-content {
+                padding-top: 50px;
+            }
         }
 
         /* Reset and base styles */
@@ -227,6 +309,7 @@
         /* Main content styles */
         .main-content {
             min-height: calc(100vh - 200px);
+            padding-top: 50px;
         }
 
         .title-section {
@@ -962,15 +1045,44 @@
             <a href="/">
                 <img src="https://zq81x3lxctdph81r.public.blob.vercel-storage.com/swim-shows-logo.png" alt="Swim Shows Logo" class="nav-logo">
             </a>
-            <div class="nav-links">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/models" class="nav-link">Models</a>
-                <a href="/designers" class="nav-link">Designers</a>
-                <a href="/media" class="nav-link">Media</a>
-                <a href="/shop" class="nav-link">Shop</a>
-            </div>
         </div>
     </nav>
+
+    <!-- Rolling Announcement Banner -->
+    <a href="https://examodels.com" target="_blank" rel="noopener noreferrer" class="announcement-banner" aria-label="Sign up at examodels.com">
+        <div class="banner-track">
+            <div class="banner-content">
+                <span class="banner-emoji">✨</span>
+                <span>Models</span>
+                <span class="banner-emoji">👗</span>
+                <span>Designers</span>
+                <span class="banner-emoji">🌴</span>
+                <span>Brands</span>
+                <span class="banner-emoji">⭐</span>
+                <span>Sponsors</span>
+                <span class="banner-emoji">📸</span>
+                <span>Media</span>
+                <span class="banner-emoji">🔥</span>
+                <span class="banner-highlight">Sign Up at EXAMODELS.COM</span>
+                <span class="banner-emoji">🌊</span>
+            </div>
+            <div class="banner-content">
+                <span class="banner-emoji">✨</span>
+                <span>Models</span>
+                <span class="banner-emoji">👗</span>
+                <span>Designers</span>
+                <span class="banner-emoji">🌴</span>
+                <span>Brands</span>
+                <span class="banner-emoji">⭐</span>
+                <span>Sponsors</span>
+                <span class="banner-emoji">📸</span>
+                <span>Media</span>
+                <span class="banner-emoji">🔥</span>
+                <span class="banner-highlight">Sign Up at EXAMODELS.COM</span>
+                <span class="banner-emoji">🌊</span>
+            </div>
+        </div>
+    </a>
 
     <main id="main-content" class="main-content">
         <section class="title-section fade-in" aria-labelledby="hero-title">
@@ -999,42 +1111,6 @@
                 <section class="upcoming-shows-container" aria-labelledby="upcoming-shows-title">
                     <h2 id="upcoming-shows-title" class="upcoming-shows-title">Upcoming Shows</h2>
                     <div class="upcoming-shows-list" role="list">
-                        <article class="show-item" role="listitem">
-                            <div class="show-date-badge" aria-label="December 3rd to 6th">
-                                <span aria-hidden="true">Dec</span>
-                                <span aria-hidden="true">3-6</span>
-                            </div>
-                            <div class="show-details">
-                                <h3 class="show-name">Art Basel Show</h3>
-                                <p class="show-location">Miami, FL</p>
-                            </div>
-                            <div class="show-actions">
-                                <a href="/artbasel"
-                                   class="show-button"
-                                   aria-label="View Art Basel Show on December 3rd-6th">
-                                   View
-                                </a>
-                            </div>
-                        </article>
-
-                        <article class="show-item" role="listitem">
-                            <div class="show-date-badge" aria-label="February 2026">
-                                <span aria-hidden="true">Feb</span>
-                                <span aria-hidden="true">2026</span>
-                            </div>
-                            <div class="show-details">
-                                <h3 class="show-name">Hawai'i Show</h3>
-                                <p class="show-location">Hawai'i</p>
-                            </div>
-                            <div class="show-actions">
-                                <a href="/hawaii"
-                                   class="show-button"
-                                   aria-label="View Hawaii Show in February 2026">
-                                   View
-                                </a>
-                            </div>
-                        </article>
-
                         <article class="show-item" role="listitem">
                             <div class="show-date-badge" aria-label="May 27th to 28th">
                                 <span aria-hidden="true">May</span>
